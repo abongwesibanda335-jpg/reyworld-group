@@ -1,97 +1,807 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 
 <head>
-    <title>Tony & Brian Projects | REYWORLD GROUP</title>
-    <link rel="stylesheet" href="style.css">
+
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tony & Brian Projects | REYWORLD GROUP</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        background: #0b0b0b;
+        color: #f5f5f5;
+        font-family: Arial, sans-serif;
+    }
+
+    /* ==============================
+       NAVIGATION
+    ============================== */
+
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 22px 6%;
+
+        background: rgba(11, 11, 11, 0.97);
+        border-bottom: 1px solid #292929;
+    }
+
+    .logo {
+        color: #d4af37;
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 4px;
+    }
+
+    .logo span {
+        color: white;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 28px;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 1px;
+
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: #d97832;
+    }
+
+
+    /* ==============================
+       MAIN
+    ============================== */
+
+    .container {
+        width: min(1150px, 92%);
+        margin: auto;
+
+        padding: 70px 0 100px;
+    }
+
+
+    /* ==============================
+       HERO
+    ============================== */
+
+    .hero {
+        position: relative;
+
+        min-height: 500px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 50px 30px;
+
+        text-align: center;
+
+        overflow: hidden;
+
+        background:
+            linear-gradient(
+                rgba(0, 0, 0, 0.68),
+                rgba(0, 0, 0, 0.82)
+            ),
+            url("images/tb-project-1.png");
+
+        background-size: cover;
+        background-position: center;
+
+        border: 1px solid #292929;
+    }
+
+    .hero::after {
+        content: "";
+
+        position: absolute;
+
+        bottom: 0;
+        left: 50%;
+
+        width: 80px;
+        height: 3px;
+
+        transform: translateX(-50%);
+
+        background: #d97832;
+    }
+
+    .badge {
+        margin-bottom: 20px;
+        padding: 9px 16px;
+
+        border: 1px solid #d97832;
+
+        color: #d97832;
+
+        font-size: 12px;
+        font-weight: bold;
+
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .hero h1 {
+        margin: 0 0 18px;
+
+        color: white;
+
+        font-size: clamp(42px, 7vw, 76px);
+
+        line-height: 1.1;
+        letter-spacing: 2px;
+    }
+
+    .tagline {
+        margin: 0;
+
+        color: #d97832;
+
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+
+    /* ==============================
+       ABOUT
+    ============================== */
+
+    .about {
+        margin-top: 30px;
+        padding: 45px;
+
+        background: #121212;
+
+        border-left: 4px solid #d97832;
+        border-top: 1px solid #292929;
+        border-right: 1px solid #292929;
+        border-bottom: 1px solid #292929;
+    }
+
+    .about p {
+        margin: 0 0 20px;
+
+        color: #c9c9c9;
+
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+    .about p:last-child {
+        margin-bottom: 0;
+    }
+
+    .about strong {
+        color: white;
+    }
+
+
+    /* ==============================
+       SECTION HEADINGS
+    ============================== */
+
+    .section-title {
+        margin: 80px 0 35px;
+
+        color: white;
+
+        font-size: 34px;
+        letter-spacing: 1px;
+    }
+
+    .section-title::after {
+        content: "";
+
+        display: block;
+
+        width: 50px;
+        height: 3px;
+
+        margin-top: 14px;
+
+        background: #d97832;
+    }
+
+
+    /* ==============================
+       PORTFOLIO
+    ============================== */
+
+    .gallery {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 22px;
+    }
+
+    .project {
+        position: relative;
+
+        height: 360px;
+
+        overflow: hidden;
+
+        background: #151515;
+
+        border: 1px solid #292929;
+
+        transition:
+            transform 0.35s ease,
+            border-color 0.35s ease,
+            box-shadow 0.35s ease;
+    }
+
+    .project:first-child {
+        grid-column: span 2;
+        height: 470px;
+    }
+
+    .project img {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center;
+
+        transition: transform 0.6s ease;
+    }
+
+    .project::after {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+
+        background:
+            linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.9),
+                rgba(0, 0, 0, 0.05) 70%
+            );
+    }
+
+    .project:hover {
+        transform: translateY(-6px);
+
+        border-color: #d97832;
+
+        box-shadow:
+            0 20px 45px rgba(217, 120, 50, 0.15);
+    }
+
+    .project:hover img {
+        transform: scale(1.05);
+    }
+
+    .caption {
+        position: absolute;
+
+        left: 25px;
+        bottom: 22px;
+
+        z-index: 2;
+
+        color: white;
+
+        font-size: 16px;
+        font-weight: bold;
+
+        letter-spacing: 1px;
+    }
+
+
+    /* ==============================
+       SERVICES + CONTACT
+    ============================== */
+
+    .bottom-grid {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 25px;
+
+        margin-top: 80px;
+    }
+
+    .card {
+        padding: 40px;
+
+        background: #121212;
+
+        border: 1px solid #292929;
+    }
+
+    .card h2 {
+        margin: 0 0 30px;
+
+        color: white;
+
+        font-size: 28px;
+    }
+
+    .card h2::after {
+        content: "";
+
+        display: block;
+
+        width: 45px;
+        height: 3px;
+
+        margin-top: 13px;
+
+        background: #d97832;
+    }
+
+
+    /* ==============================
+       SERVICES
+    ============================== */
+
+    .services {
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+    }
+
+    .services li {
+        margin-bottom: 10px;
+        padding: 15px 18px;
+
+        background: #181818;
+
+        border-left: 2px solid #d97832;
+
+        color: #cccccc;
+    }
+
+    .services li:last-child {
+        margin-bottom: 0;
+    }
+
+
+    /* ==============================
+       CONTACT
+    ============================== */
+
+    .contact p {
+        margin: 0 0 22px;
+
+        color: #bdbdbd;
+
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .contact strong {
+        color: white;
+
+        font-size: 13px;
+
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .whatsapp {
+        display: inline-block;
+
+        margin-top: 5px;
+        padding: 13px 24px;
+
+        border: 1px solid #25D366;
+
+        color: #25D366;
+
+        text-decoration: none;
+
+        font-size: 13px;
+        font-weight: bold;
+
+        letter-spacing: 1px;
+
+        transition: 0.3s;
+    }
+
+    .whatsapp:hover {
+        background: #25D366;
+        color: #07140b;
+    }
+
+
+    /* ==============================
+       BACK BUTTON
+    ============================== */
+
+    .back {
+        display: block;
+
+        width: fit-content;
+
+        margin: 55px auto 0;
+        padding: 13px 24px;
+
+        border: 1px solid #444;
+
+        color: #aaa;
+
+        text-decoration: none;
+
+        font-size: 13px;
+
+        letter-spacing: 1px;
+
+        transition: 0.3s;
+    }
+
+    .back:hover {
+        border-color: #d97832;
+        color: #d97832;
+    }
+
+
+    /* ==============================
+       MOBILE
+    ============================== */
+
+    @media (max-width: 800px) {
+
+        nav {
+            flex-direction: column;
+            gap: 18px;
+
+            padding: 20px;
+        }
+
+        .nav-links {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            gap: 15px;
+        }
+
+        .container {
+            width: 92%;
+
+            padding: 45px 0 70px;
+        }
+
+        .hero {
+            min-height: 430px;
+
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+        }
+
+        .tagline {
+            font-size: 17px;
+        }
+
+        .about {
+            padding: 30px 25px;
+        }
+
+        .section-title {
+            margin-top: 60px;
+
+            font-size: 29px;
+        }
+
+        .gallery {
+            grid-template-columns: 1fr;
+        }
+
+        .project,
+        .project:first-child {
+            grid-column: span 1;
+
+            height: 300px;
+        }
+
+        .bottom-grid {
+            grid-template-columns: 1fr;
+
+            margin-top: 60px;
+        }
+
+        .card {
+            padding: 30px 25px;
+        }
+
+    }
+
+</style>
+```
+
 </head>
 
 <body>
 
+```
+<!-- NAVIGATION -->
+
 <nav>
-    <div class="logo">REYWORLD</div>
+
+    <div class="logo">
+        REYWORLD <span>GROUP</span>
+    </div>
 
     <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="index.html#businesses">Businesses</a>
-        <a href="index.html#services">Services</a>
-        <a href="index.html#contact">Contact</a>
-    </div>
-</nav>
 
-<section class="business-page">
+        <a href="index.html">
+            Home
+        </a>
 
-    <h1>Tony & Brian Projects</h1>
+        <a href="index.html#businesses">
+            Businesses
+        </a>
 
-    <p class="business-type">Construction & Development</p>
+        <a href="index.html#services">
+            Services
+        </a>
 
-    <p class="business-tagline">
-        Where ideas take shape.
-    </p>
-
-    <div class="business-description">
-
-        <p>
-            For all your house and shop renovations, contact Tony & Brian Projects.
-        </p>
-
-        <p>
-            We are a registered construction company with more than 20 years
-            of experience in the building industry.
-        </p>
-
-        <p>
-            We have successfully completed various building contracts to a high
-            standard, with a commitment to quality workmanship and customer
-            satisfaction.
-        </p>
-
-    </div>
-
-    <div class="business-services">
-
-        <h2>Our Services</h2>
-
-        <ul>
-            <li>House Renovations</li>
-            <li>Shop Renovations</li>
-            <li>Building Projects</li>
-            <li>Construction & Development</li>
-            <li>Renovation Projects</li>
-        </ul>
-
-    </div>
-
-    <div class="business-contact">
-
-        <h2>Contact Tony & Brian Projects</h2>
-
-        <p>
-            <strong>Address:</strong><br>
-            60 North Road, Table View, 7441
-        </p>
-
-        <p>
-            <strong>Phone:</strong><br>
-            +27 84 783 3719
-        </p>
-
-        <p>
-            <strong>Email:</strong><br>
-            brianmhondoro@gmail.com
-        </p>
-
-        <a href="https://wa.me/27847833719" class="contact-button">
-            WhatsApp Us
+        <a href="index.html#contact">
+            Contact
         </a>
 
     </div>
 
-    <a href="index.html#businesses" class="back-button">
+</nav>
+
+
+<!-- MAIN -->
+
+<main class="container">
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <span class="badge">
+            Construction & Development
+        </span>
+
+        <h1>
+            Tony & Brian Projects
+        </h1>
+
+        <p class="tagline">
+            “Where ideas take shape.”
+        </p>
+
+    </header>
+
+
+    <!-- ABOUT -->
+
+    <section class="about">
+
+        <p>
+            For all your house and shop renovations, contact
+            <strong>Tony & Brian Projects</strong>.
+            We are a registered construction company with more than
+            20 years of experience in the building industry.
+        </p>
+
+        <p>
+            We have successfully completed various building contracts
+            to a high standard, with a commitment to quality workmanship
+            and customer satisfaction.
+        </p>
+
+    </section>
+
+
+    <!-- PORTFOLIO -->
+
+    <h2 class="section-title">
+        Featured Portfolio
+    </h2>
+
+
+    <section class="gallery">
+
+
+        <!-- IMAGE 1 -->
+
+        <div class="project">
+
+            <img
+                src="images/tb-project-1.png"
+                alt="Tony and Brian construction project"
+            >
+
+            <div class="caption">
+                Construction & Renovation
+            </div>
+
+        </div>
+
+
+        <!-- IMAGE 2 -->
+
+        <div class="project">
+
+            <img
+                src="images/tb-project-2.png"
+                alt="Tony and Brian renovation project"
+            >
+
+            <div class="caption">
+                Renovation & Finishing
+            </div>
+
+        </div>
+
+
+        <!-- IMAGE 3 -->
+
+        <div class="project">
+
+            <img
+                src="images/tb-project-3.png"
+                alt="Custom Interior Space Design"
+            >
+
+            <div class="caption">
+                Custom Interior Space Design
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- SERVICES + CONTACT -->
+
+    <div class="bottom-grid">
+
+
+        <!-- SERVICES -->
+
+        <section class="card">
+
+            <h2>
+                Our Services
+            </h2>
+
+            <ul class="services">
+
+                <li>
+                    House Renovations
+                </li>
+
+                <li>
+                    Shop Renovations
+                </li>
+
+                <li>
+                    Building Projects
+                </li>
+
+                <li>
+                    Construction & Development
+                </li>
+
+                <li>
+                    Renovation Projects
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- CONTACT -->
+
+        <section class="card contact">
+
+            <h2>
+                Contact Us
+            </h2>
+
+            <p>
+                <strong>Address</strong><br>
+                60 North Road, Table View, 7441
+            </p>
+
+            <p>
+                <strong>Phone</strong><br>
+                +27 84 783 3719
+            </p>
+
+            <p>
+                <strong>Email</strong><br>
+                brianmhondoro@gmail.com
+            </p>
+
+            <a
+                href="https://wa.me/27847833719"
+                class="whatsapp"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                WhatsApp Us
+            </a>
+
+        </section>
+
+
+    </div>
+
+
+    <!-- BACK -->
+
+    <a
+        href="index.html#businesses"
+        class="back"
+    >
         ← Back to Businesses
     </a>
 
-</section>
+
+</main>
+```
 
 </body>
+
 </html>
+```
+
+### One important thing 😭
+
+This version **doesn't use your external `style.css` at all** for the Tony & Brian page. Everything needed for this page is inside the HTML, so we don't have to worry about your homepage CSS interfering with it.
+
+And the three images are already correctly connected:
+
+```text
+images/tb-project-1.png
+images/tb-project-2.png
+images/tb-project-3.png
+```
+
+The pictures will **fill their frames without being stretched** because we're using `object-fit: cover`.
+
+If one of the pictures gets cropped a little, that's normal with `cover` — it keeps the image proportional rather than squashing it.
+
