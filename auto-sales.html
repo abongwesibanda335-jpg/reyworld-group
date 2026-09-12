@@ -1,0 +1,891 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Sales | REYWORLD GROUP</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080808;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        nav {
+            height: 80px;
+            padding: 0 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #050505;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: #d4af37;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .back {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        .back:hover {
+            color: #d4af37;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 7%;
+            background:
+                linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+                radial-gradient(circle at center, #4a3b0a 0%, #080808 55%);
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6.5rem);
+            line-height: 0.95;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+        }
+
+        .gold {
+            color: #d4af37;
+        }
+
+        .hero p {
+            color: #ccc;
+            font-size: 1.15rem;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            border: 1px solid #d4af37;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+        }
+
+        section {
+            padding: 90px 7%;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 55px;
+        }
+
+        .section-heading h2 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .section-heading p {
+            color: #aaa;
+        }
+
+        .inventory {
+            background: #0d0d0d;
+        }
+
+        .car-card {
+            max-width: 1200px;
+            margin: 0 auto 70px;
+            background: #111;
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+
+        .car-header {
+            padding: 35px;
+            border-bottom: 1px solid #222;
+        }
+
+        .car-header h3 {
+            color: #d4af37;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .negotiable {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4px;
+            background: #000;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .gallery img:hover {
+            opacity: 0.8;
+        }
+
+        .car-content {
+            padding: 35px;
+        }
+
+        .car-content h4 {
+            color: #d4af37;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .spec {
+            background: #181818;
+            padding: 18px;
+            border-radius: 10px;
+            border: 1px solid #252525;
+        }
+
+        .spec strong {
+            display: block;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .spec span {
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 30px;
+            margin-bottom: 30px;
+        }
+
+        .features p {
+            color: #ccc;
+        }
+
+        .features p::before {
+            content: "✓";
+            color: #d4af37;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .notes {
+            padding: 20px;
+            background: #171717;
+            border-left: 3px solid #d4af37;
+            margin-top: 25px;
+            color: #bbb;
+        }
+
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .whatsapp {
+            display: inline-block;
+            padding: 14px 25px;
+            background: #d4af37;
+            color: #080808;
+            text-decoration: none;
+            font-weight: 800;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .whatsapp:hover {
+            transform: translateY(-3px);
+            background: #f0cf55;
+        }
+
+        .secondary-btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border: 1px solid #555;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .secondary-btn:hover {
+            border-color: #d4af37;
+            color: #d4af37;
+        }
+
+        .buying {
+            background:
+                linear-gradient(rgba(212,175,55,0.08), rgba(212,175,55,0.02)),
+                #090909;
+            text-align: center;
+        }
+
+        .buying-content {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .buying h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .buying p {
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+
+        .return-section {
+            text-align: center;
+            padding: 60px 7%;
+            background: #050505;
+        }
+
+        .back-to-businesses {
+            display: inline-block;
+            padding: 15px 28px;
+            border: 1px solid #d4af37;
+            color: #d4af37;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .back-to-businesses:hover {
+            background: #d4af37;
+            color: #050505;
+        }
+
+        footer {
+            padding: 30px 7%;
+            text-align: center;
+            background: #000;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        footer span {
+            color: #d4af37;
+        }
+
+        @media (max-width: 900px) {
+            .spec-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                padding: 0 5%;
+            }
+
+            .logo {
+                font-size: 1.1rem;
+            }
+
+            .back {
+                font-size: 0.8rem;
+            }
+
+            section {
+                padding: 65px 5%;
+            }
+
+            .hero {
+                min-height: 65vh;
+                padding: 60px 5%;
+            }
+
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+
+            .car-header,
+            .car-content {
+                padding: 25px;
+            }
+
+            .car-header h3 {
+                font-size: 1.5rem;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery img {
+                height: 260px;
+            }
+
+            .spec-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .price {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">
+            AUTO SALES
+        </div>
+
+        <a href="index.html" class="back">
+            ← REYWORLD GROUP
+        </a>
+    </nav>
+
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>
+                FIND YOUR<br>
+                <span class="gold">NEXT DRIVE.</span>
+            </h1>
+
+            <p>
+                Quality vehicles. Straightforward listings.
+                Find a vehicle that fits your needs and your lifestyle.
+            </p>
+
+            <div class="hero-tag">
+                Cape Town • Viewing By Appointment
+            </div>
+        </div>
+    </header>
+
+
+    <!-- INVENTORY -->
+    <section class="inventory" id="inventory">
+
+        <div class="section-heading">
+            <h2>Available <span class="gold">Vehicles</span></h2>
+
+            <p>
+                Browse the current vehicles available for sale.
+                Serious buyers are welcome to arrange a viewing by appointment.
+            </p>
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- CAR 1 - CHEVROLET AVEO -->
+        <!-- ========================= -->
+
+        <div class="car-card">
+
+            <div class="car-header">
+                <h3>2010 Chevrolet Aveo Sedan 1.6 LS Manual</h3>
+
+                <div class="price">
+                    R45,000
+                </div>
+
+                <div class="negotiable">
+                    Slightly negotiable • No swaps • No trade-ins
+                </div>
+            </div>
+
+
+            <div class="gallery">
+
+                <img
+                    src="images/WhatsApp Image 2026-09-12 at 19.19.25.jpeg"
+                    alt="2010 Chevrolet Aveo">
+
+                <img
+                    src="images/WhatsApp Image 2026-09-12 at 19.15.31.jpeg"
+                    alt="2010 Chevrolet Aveo">
+
+                <img
+                    src="images/WhatsApp Image 2026-09-12 at 19.19.24.jpeg"
+                    alt="2010 Chevrolet Aveo">
+
+            </div>
+
+
+            <div class="car-content">
+
+                <h4>Vehicle Overview</h4>
+
+                <div class="spec-grid">
+
+                    <div class="spec">
+                        <strong>271,000 KM</strong>
+                        <span>On the clock</span>
+                    </div>
+
+                    <div class="spec">
+                        <strong>1.6L Petrol</strong>
+                        <span>Engine</span>
+                    </div>
+
+                    <div class="spec">
+                        <strong>5 Speed</strong>
+                        <span>Manual transmission</span>
+                    </div>
+
+                    <div class="spec">
+                        <strong>Alpine White</strong>
+                        <span>Exterior colour</span>
+                    </div>
+
+                </div>
+
+
+                <h4>Features & Specifications</h4>
+
+                <div class="features">
+
+                    <p>4 Door Sedan</p>
+                    <p>Cloth Interior</p>
+                    <p>Air Conditioning Working</p>
+                    <p>Central Locking</p>
+                    <p>Electric Windows</p>
+                    <p>MP3 / USB Radio</p>
+                    <p>Spacious Boot</p>
+                    <p>Papers in Order</p>
+                    <p>Licensed</p>
+                    <p>Accident Free</p>
+                    <p>Good Runner</p>
+                    <p>Mechanically Sound</p>
+                    <p>Economical</p>
+                    <p>Reliable Daily Driver</p>
+
+                </div>
+
+
+                <div class="notes">
+                    <strong>Important:</strong>
+                    First come, first serve. Viewing is by appointment in Cape Town.
+                </div>
+
+
+                <div class="contact-row">
+
+                    <a
+                        href="https://wa.me/27681006782"
+                        class="whatsapp"
+                        target="_blank">
+                        WhatsApp Seller
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ========================= -->
+        <!-- CAR 2 - BMW 320i -->
+        <!-- ========================= -->
+
+        <div class="car-card">
+
+            <div class="car-header">
+
+                <h3>
+                    2016 BMW 320i M Sport LCI (B48)
+                </h3>
+
+                <div class="price">
+                    R209,000
+                </div>
+
+                <div class="negotiable">
+                    Slightly negotiable
+                </div>
+
+            </div>
+
+
+            <div class="gallery">
+
+                <img
+                    src="images/WhatsApp Image 2026-09-12 at 19.15.19.jpeg"
+                    alt="2016 BMW 320i M Sport">
+
+                <img
+                    src="images/WhatsApp Image 2026-09-12 at 19.15.22.jpeg"
+                    alt="2016 BMW 320i M Sport">
+
+                <img
+                    src="images/WhatsApp Image 2026-09-12 at 19.15.23.jpeg"
+                    alt="2016 BMW 320i M Sport">
+
+                <img
+                    src="images/WhatsApp Image 2026-09-12 at 19.15.26.jpeg"
+                    alt="2016 BMW 320i M Sport">
+
+                <img
+                    src="images/WhatsApp Image 2026-09-12 at 19.15.27.jpeg"
+                    alt="2016 BMW 320i M Sport">
+
+                <img
+                    src="images/WhatsApp Image 2026-09-12 at 19.15.31.jpeg"
+                    alt="2016 BMW 320i M Sport">
+
+            </div>
+
+
+            <div class="car-content">
+
+                <h4>Vehicle Overview</h4>
+
+                <div class="spec-grid">
+
+                    <div class="spec">
+                        <strong>170,000 KM</strong>
+                        <span>Mileage</span>
+                    </div>
+
+                    <div class="spec">
+                        <strong>B48 Petrol</strong>
+                        <span>Engine</span>
+                    </div>
+
+                    <div class="spec">
+                        <strong>Automatic</strong>
+                        <span>Transmission</span>
+                    </div>
+
+                    <div class="spec">
+                        <strong>Alpine White</strong>
+                        <span>Exterior</span>
+                    </div>
+
+                </div>
+
+
+                <h4>Features & Specifications</h4>
+
+                <div class="features">
+
+                    <p>M Sport Package</p>
+                    <p>Sunroof</p>
+                    <p>Coral Red Leather Interior</p>
+                    <p>Electric Seats</p>
+                    <p>Memory Seats</p>
+                    <p>M Sport 19 Inch Wheels</p>
+                    <p>LED Headlights</p>
+                    <p>LED Fog Lights</p>
+                    <p>Front & Rear PDC</p>
+                    <p>Reverse Camera</p>
+                    <p>M Sport Steering Wheel</p>
+                    <p>Paddle Shift</p>
+                    <p>iDrive Navigation</p>
+                    <p>Bluetooth & USB</p>
+                    <p>Cruise Control</p>
+                    <p>Keyless Start</p>
+                    <p>Automatic Lights & Wipers</p>
+                    <p>Full Service History</p>
+                    <p>Two Keys</p>
+                    <p>Accident Free</p>
+
+                </div>
+
+
+                <div class="notes">
+
+                    <strong>Additional:</strong>
+
+                    M Performance front lip and black kidney grilles.
+                    Mechanically perfect with no faults or warning lights.
+                    Interior and exterior in excellent condition.
+                    Tyres in good condition.
+
+                </div>
+
+
+                <div class="contact-row">
+
+                    <a
+                        href="https://wa.me/27681006782"
+                        class="whatsapp"
+                        target="_blank">
+                        WhatsApp Seller
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ========================= -->
+        <!-- CAR 3 - VW POLO -->
+        <!-- ========================= -->
+
+        <div class="car-card">
+
+            <div class="car-header">
+
+                <h3>
+                    2012 VW Polo Sedan 1.6 TDI Manual
+                </h3>
+
+                <div class="price">
+                    R100,000
+                </div>
+
+                <div class="negotiable">
+                    Slightly negotiable • No swaps • No trade-ins
+                </div>
+
+            </div>
+
+
+            <div class="gallery">
+
+                <img
+                    src="images/WhatsApp Image 2026-09-12 at 19.15.31_2.jpeg"
+                    alt="2012 VW Polo Sedan">
+
+                <img
+                    src="images/WhatsApp Image 2026-09-12 at 19.15.32 (1).jpeg"
+                    alt="2012 VW Polo Sedan">
+
+                <img
+                    src="images/WhatsApp Image 2026-09-12 at 19.15.32 (2).jpeg"
+                    alt="2012 VW Polo Sedan">
+
+                <img
+                    src="images/WhatsApp Image 2026-09-12 at 19.15.32.jpeg"
+                    alt="2012 VW Polo Sedan">
+
+                <img
+                    src="images/WhatsApp Image 2026-09-12 at 19.15.33 (1).jpeg"
+                    alt="2012 VW Polo Sedan">
+
+                <img
+                    src="images/WhatsApp Image 2026-09-12 at 19.15.33.jpeg"
+                    alt="2012 VW Polo Sedan">
+
+            </div>
+
+
+            <div class="car-content">
+
+                <h4>Vehicle Overview</h4>
+
+                <div class="spec-grid">
+
+                    <div class="spec">
+                        <strong>21,958 KM</strong>
+                        <span>Ultra low mileage</span>
+                    </div>
+
+                    <div class="spec">
+                        <strong>1.6L TDI</strong>
+                        <span>Diesel engine</span>
+                    </div>
+
+                    <div class="spec">
+                        <strong>5 Speed</strong>
+                        <span>Manual transmission</span>
+                    </div>
+
+                    <div class="spec">
+                        <strong>Reflex Silver</strong>
+                        <span>Metallic</span>
+                    </div>
+
+                </div>
+
+
+                <h4>Features & Specifications</h4>
+
+                <div class="features">
+
+                    <p>15 Inch Alloy Wheels</p>
+                    <p>Fog Lights</p>
+                    <p>Electric Windows</p>
+                    <p>Central Locking</p>
+                    <p>Bluetooth / USB</p>
+                    <p>Clean Cloth Seats</p>
+                    <p>Non-Smoker Interior</p>
+                    <p>Air Conditioning</p>
+                    <p>Excellent Fuel Economy</p>
+                    <p>Mechanically Perfect</p>
+                    <p>Good Tyres</p>
+                    <p>Papers in Order</p>
+                    <p>Licensed & Valid</p>
+                    <p>Accident Free</p>
+                    <p>Full Service History</p>
+
+                </div>
+
+
+                <div class="notes">
+
+                    <strong>Condition:</strong>
+
+                    Immaculate condition with very low mileage.
+                    Economical, reliable and comfortable.
+                    Ready to drive.
+
+                </div>
+
+
+                <div class="contact-row">
+
+                    <a
+                        href="https://wa.me/27681006782"
+                        class="whatsapp"
+                        target="_blank">
+                        WhatsApp Seller
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- BUYING SECTION -->
+
+    <section class="buying">
+
+        <div class="buying-content">
+
+            <h2>
+                Ready for your <span class="gold">next drive?</span>
+            </h2>
+
+            <p>
+                All vehicles are located in Cape Town and are available
+                for viewing by appointment.
+            </p>
+
+            <p>
+                Contact the seller on WhatsApp to enquire about a vehicle,
+                arrange a viewing or discuss the listing.
+            </p>
+
+            <a
+                href="https://wa.me/27681006782"
+                class="whatsapp"
+                target="_blank">
+                Contact Auto Sales
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- BACK TO BUSINESS -->
+
+    <section class="return-section">
+
+        <a
+            href="index.html#businesses"
+            class="back-to-businesses">
+            ← Back to Businesses
+        </a>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 <span>REYWORLD GROUP</span>.
+        Building Vision. Creating Legacy.
+
+    </footer>
+
+
+</body>
+</html>
+```
