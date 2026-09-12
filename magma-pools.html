@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Magma Pools | REYWORLD GROUP</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: #061014;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px 45px;
+
+            background: rgba(6, 16, 20, 0.96);
+            border-bottom: 1px solid #12343d;
+        }
+
+        .logo {
+            color: #20c7e6;
+            font-size: 23px;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        .back {
+            color: #b8c9cd;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+
+            transition: 0.3s ease;
+        }
+
+        .back:hover {
+            color: #20c7e6;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            min-height: 88vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            padding: 90px 30px;
+
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at 50% 35%,
+                    rgba(32, 199, 230, 0.25),
+                    transparent 45%
+                ),
+                linear-gradient(
+                    180deg,
+                    #07171d,
+                    #061014
+                );
+        }
+
+        .hero-label {
+            margin-bottom: 20px;
+
+            color: #20c7e6;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            margin: 0 0 18px;
+
+            color: white;
+
+            font-size: clamp(52px, 9vw, 100px);
+
+            letter-spacing: 6px;
+            line-height: 1;
+        }
+
+        .hero h2 {
+            margin: 0 0 25px;
+
+            color: #20c7e6;
+
+            font-size: 25px;
+            font-weight: normal;
+
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            max-width: 720px;
+
+            margin: 0 auto 35px;
+
+            color: #b8c9cd;
+
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .hero-button {
+            display: inline-block;
+
+            padding: 15px 30px;
+
+            border: 1px solid #20c7e6;
+
+            color: #20c7e6;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            transition: 0.3s ease;
+        }
+
+        .hero-button:hover {
+            background: #20c7e6;
+            color: #061014;
+        }
+
+        .hero-button.secondary {
+            border-color: #52727a;
+            color: #b8c9cd;
+        }
+
+        .hero-button.secondary:hover {
+            background: #52727a;
+            color: white;
+        }
+
+
+        /* GENERAL SECTIONS */
+
+        .section {
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 100px 30px;
+        }
+
+        .section-title {
+            margin-bottom: 18px;
+
+            text-align: center;
+
+            font-size: 42px;
+
+            letter-spacing: 2px;
+        }
+
+        .section-subtitle {
+            max-width: 700px;
+
+            margin: 0 auto 55px;
+
+            text-align: center;
+
+            color: #9eb1b6;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+        }
+
+        .section-title::after {
+            content: "";
+
+            display: block;
+
+            width: 55px;
+            height: 3px;
+
+            margin: 18px auto 0;
+
+            background: #20c7e6;
+        }
+
+
+        /* INTRO */
+
+        .intro-section {
+            background: #08171c;
+        }
+
+        .intro-content {
+            max-width: 900px;
+
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .intro-content p {
+            color: #b8c9cd;
+
+            font-size: 18px;
+
+            line-height: 1.9;
+        }
+
+        .intro-highlight {
+            margin-top: 35px;
+
+            color: white !important;
+
+            font-size: 24px !important;
+            font-weight: bold;
+        }
+
+
+        /* WHY MAGMA POOLS */
+
+        .why-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .why-card {
+            padding: 35px 28px;
+
+            background: #0b1a1f;
+
+            border: 1px solid #15343d;
+
+            border-top: 3px solid #20c7e6;
+
+            transition: 0.3s ease;
+        }
+
+        .why-card:hover {
+            transform: translateY(-7px);
+
+            border-color: #20c7e6;
+
+            box-shadow:
+                0 15px 40px rgba(32, 199, 230, 0.10);
+        }
+
+        .why-number {
+            margin-bottom: 15px;
+
+            color: #20c7e6;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            letter-spacing: 2px;
+        }
+
+        .why-card h3 {
+            margin-bottom: 12px;
+
+            font-size: 20px;
+        }
+
+        .why-card p {
+            margin: 0;
+
+            color: #9eb1b6;
+
+            line-height: 1.7;
+        }
+
+
+        /* SERVICES */
+
+        .services {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+        .service {
+            padding: 38px 32px;
+
+            background: linear-gradient(
+                135deg,
+                #0d2026,
+                #09171b
+            );
+
+            border: 1px solid #15343d;
+
+            border-left: 4px solid #20c7e6;
+
+            transition: 0.3s ease;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 15px 35px rgba(32, 199, 230, 0.10);
+        }
+
+        .service h3 {
+            margin-bottom: 15px;
+
+            color: #20c7e6;
+
+            font-size: 22px;
+        }
+
+        .service p {
+            margin: 0;
+
+            color: #b8c9cd;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+        }
+
+
+        /* GALLERY */
+
+        .gallery {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+        .gallery-item {
+            position: relative;
+
+            overflow: hidden;
+
+            background: #0b1a1f;
+
+            border: 1px solid #16424d;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 380px;
+
+            display: block;
+
+            object-fit: cover;
+
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            padding: 18px 20px;
+
+            background: #0b1a1f;
+        }
+
+        .gallery-caption h3 {
+            margin: 0 0 6px;
+
+            color: #20c7e6;
+
+            font-size: 17px;
+        }
+
+        .gallery-caption p {
+            margin: 0;
+
+            color: #8fa5aa;
+
+            font-size: 14px;
+        }
+
+
+        /* PROCESS */
+
+        .process {
+            display: grid;
+
+            grid-template-columns: repeat(5, 1fr);
+
+            gap: 15px;
+        }
+
+        .process-step {
+            padding: 30px 20px;
+
+            text-align: center;
+
+            background: #0b1a1f;
+
+            border: 1px solid #15343d;
+        }
+
+        .process-number {
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin: 0 auto 18px;
+
+            border: 1px solid #20c7e6;
+
+            border-radius: 50%;
+
+            color: #20c7e6;
+
+            font-weight: bold;
+        }
+
+        .process-step h3 {
+            margin-bottom: 10px;
+
+            font-size: 17px;
+        }
+
+        .process-step p {
+            margin: 0;
+
+            color: #8fa5aa;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+
+        /* LIFESTYLE */
+
+        .experience {
+            background:
+                linear-gradient(
+                    135deg,
+                    #0b2027,
+                    #061014
+                );
+        }
+
+        .experience-content {
+            max-width: 900px;
+
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .experience-content p {
+            color: #b8c9cd;
+
+            font-size: 18px;
+
+            line-height: 1.9;
+        }
+
+        .experience-list {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 12px;
+
+            margin-top: 35px;
+
+            text-align: left;
+        }
+
+        .experience-list div {
+            padding: 17px 20px;
+
+            background: rgba(255,255,255,0.03);
+
+            border-left: 2px solid #20c7e6;
+
+            color: #d5e0e2;
+        }
+
+
+        /* BIG CTA */
+
+        .cta {
+            padding: 110px 30px;
+
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(32, 199, 230, 0.18),
+                    transparent 55%
+                ),
+                #061014;
+        }
+
+        .cta h2 {
+            margin-bottom: 20px;
+
+            font-size: 45px;
+
+            letter-spacing: 2px;
+        }
+
+        .cta p {
+            max-width: 650px;
+
+            margin: 0 auto 35px;
+
+            color: #b8c9cd;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+
+            padding: 17px 35px;
+
+            background: #20c7e6;
+
+            color: #061014;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            transition: 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: white;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact-info {
+            margin: 35px auto;
+
+            max-width: 500px;
+        }
+
+        .contact-info p {
+            margin: 12px 0;
+
+            color: #b8c9cd;
+
+            font-size: 17px;
+        }
+
+        .contact-info strong {
+            color: #20c7e6;
+        }
+
+        .contact-buttons {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+        .contact-button {
+            display: inline-block;
+
+            padding: 15px 28px;
+
+            border: 1px solid #20c7e6;
+
+            color: #20c7e6;
+
+            font-weight: bold;
+
+            transition: 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background: #20c7e6;
+
+            color: #061014;
+        }
+
+
+        /* BACK TO BUSINESSES */
+
+        .return-section {
+            padding: 20px 30px 100px;
+
+            text-align: center;
+        }
+
+        .back-to-businesses {
+            display: inline-block;
+
+            padding: 15px 30px;
+
+            border: 1px solid #20c7e6;
+
+            color: #20c7e6;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            transition: 0.3s ease;
+        }
+
+        .back-to-businesses:hover {
+            background: #20c7e6;
+
+            color: #061014;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            padding: 50px 25px 25px;
+
+            background: #040b0e;
+
+            border-top: 1px solid #12343d;
+
+            text-align: center;
+        }
+
+        .footer-logo {
+            margin-bottom: 12px;
+
+            color: #20c7e6;
+
+            font-size: 22px;
+            font-weight: bold;
+
+            letter-spacing: 4px;
+        }
+
+        footer p {
+            margin: 6px 0;
+
+            color: #667d83;
+
+            font-size: 13px;
+        }
+
+        .footer-brand {
+            margin-top: 20px;
+
+            color: #53686d;
+
+            font-size: 12px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+
+            nav {
+                padding: 18px 20px;
+            }
+
+            .logo {
+                font-size: 18px;
+                letter-spacing: 3px;
+            }
+
+            .back {
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: 80vh;
+
+                padding: 80px 20px;
+            }
+
+            .hero h1 {
+                font-size: clamp(45px, 13vw, 70px);
+
+                letter-spacing: 4px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .section {
+                padding: 75px 20px;
+            }
+
+            .section-title {
+                font-size: 34px;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery img {
+                height: 300px;
+            }
+
+            .process {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-list {
+                grid-template-columns: 1fr;
+            }
+
+            .cta h2 {
+                font-size: 34px;
+            }
+
+            .return-section {
+                padding: 10px 20px 75px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="logo">
+        MAGMA POOLS
+    </div>
+
+    <a
+        href="index.html"
+        class="back"
+    >
+        ← REYWORLD GROUP
+    </a>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-label">
+        REYWORLD GROUP BUSINESS
+    </div>
+
+    <h1>
+        MAGMA POOLS
+    </h1>
+
+    <h2>
+        Built to enjoy. Maintained to last.
+    </h2>
+
+    <p>
+        Transform your outdoor space into a place worth
+        coming home to. From pool construction and
+        upgrades to cleaning and maintenance, Magma Pools
+        helps bring your outdoor vision to life.
+    </p>
+
+    <div class="hero-buttons">
+
+        <a
+            href="https://wa.me/27846518219"
+            target="_blank"
+            class="hero-button"
+        >
+            GET A QUOTE
+        </a>
+
+        <a
+            href="#work"
+            class="hero-button secondary"
+        >
+            VIEW OUR WORK
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="section intro-section">
+
+    <div class="intro-content">
+
+        <h2 class="section-title">
+            MORE THAN JUST A POOL
+        </h2>
+
+        <p>
+            A pool can completely change the way you experience
+            your outdoor space. It can become the centre of family
+            weekends, a place to entertain friends, a space to relax
+            or simply a feature that gives your property a whole
+            different feel.
+        </p>
+
+        <p>
+            At Magma Pools, we focus on creating outdoor spaces
+            that are practical, visually appealing and made to be
+            enjoyed.
+        </p>
+
+        <p class="intro-highlight">
+            Your backyard has potential. Let's turn it into something special.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- WHY MAGMA POOLS -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        WHY MAGMA POOLS?
+    </h2>
+
+    <p class="section-subtitle">
+        We believe a great pool is about more than the water.
+        It's about the design, the finish, the surrounding space
+        and how the finished result fits into your lifestyle.
+    </p>
+
+
+    <div class="why-grid">
+
+
+        <div class="why-card">
+
+            <div class="why-number">
+                01
+            </div>
+
+            <h3>
+                Built Around Your Space
+            </h3>
+
+            <p>
+                Every outdoor space is different. We focus on
+                solutions that work with the available space,
+                the property and the look you're trying to achieve.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-number">
+                02
+            </div>
+
+            <h3>
+                Attention To Detail
+            </h3>
+
+            <p>
+                From the main pool structure to the finishing
+                features, the details help turn a basic pool
+                into an outdoor space you'll be proud of.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-number">
+                03
+            </div>
+
+            <h3>
+                Complete Pool Care
+            </h3>
+
+            <p>
+                We don't only focus on building pools. Cleaning
+                and maintenance help keep your investment looking
+                fresh and ready to enjoy.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        WHAT WE DO
+    </h2>
+
+    <p class="section-subtitle">
+        From creating a brand-new pool to keeping an existing
+        one clean and enjoyable, Magma Pools offers solutions
+        for different stages of your pool journey.
+    </p>
+
+
+    <div class="services">
+
+
+        <div class="service">
+
+            <h3>
+                Pool Construction
+            </h3>
+
+            <p>
+                Ready to create your own pool? We help transform
+                unused outdoor space into an inviting swimming
+                and entertainment area. We consider the layout,
+                overall look and finishing details to create a
+                pool that works with your space and lifestyle.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <h3>
+                Pool Cleaning
+            </h3>
+
+            <p>
+                A beautiful pool needs to stay beautiful. Regular
+                cleaning helps keep your pool looking fresh, clear
+                and ready to enjoy, while giving you more time to
+                actually use your outdoor space.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <h3>
+                Pool Maintenance
+            </h3>
+
+            <p>
+                Ongoing care helps keep your pool looking its best.
+                Our maintenance services help you stay on top of
+                routine pool care so your swimming area remains
+                enjoyable throughout the year.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <h3>
+                Pool Upgrades & Refreshing
+            </h3>
+
+            <p>
+                Already have a pool but feel like something is
+                missing? Improvements and new features can give
+                an existing pool area a completely different feel.
+                Let's explore what your space could become.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- OUR WORK -->
+
+<section
+    class="section"
+    id="work"
+>
+
+    <h2 class="section-title">
+        OUR WORK
+    </h2>
+
+    <p class="section-subtitle">
+        Explore some of the pool projects and features that
+        showcase the possibilities of creating a unique outdoor
+        space.
+    </p>
+
+
+    <div class="gallery">
+
+
+        <div class="gallery-item">
+
+            <img
+                src="images/WhatsApp Image 2026-09-11 at 10.52.59.jpeg"
+                alt="Swimming pool with rock wall and blue slide"
+            >
+
+            <div class="gallery-caption">
+
+                <h3>
+                    Pool & Rock Feature
+                </h3>
+
+                <p>
+                    A swimming space brought to life with a
+                    natural-looking rock feature and slide.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="images/WhatsApp Image 2026-09-11 at 10.53.01.jpeg"
+                alt="Large outdoor swimming pool with yellow water slide"
+            >
+
+            <div class="gallery-caption">
+
+                <h3>
+                    Family Entertainment Pool
+                </h3>
+
+                <p>
+                    A larger outdoor pool designed around
+                    swimming, fun and entertainment.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="images/WhatsApp Image 2026-09-11 at 10.53.00 (1).jpeg"
+                alt="Swimming pool with tiered rock waterfall feature"
+            >
+
+            <div class="gallery-caption">
+
+                <h3>
+                    Waterfall Feature
+                </h3>
+
+                <p>
+                    A layered rock feature that adds character,
+                    movement and atmosphere to the pool area.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="images/WhatsApp Image 2026-09-11 at 10.53.00.jpeg"
+                alt="Pool rock wall waterfall feature with green lighting"
+            >
+
+            <div class="gallery-caption">
+
+                <h3>
+                    Feature Pool Design
+                </h3>
+
+                <p>
+                    A statement rock and waterfall feature
+                    designed to make the pool area stand out.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        FROM IDEA TO FINISHED POOL
+    </h2>
+
+    <p class="section-subtitle">
+        Every project starts with an idea. We help turn that
+        idea into an outdoor space you can actually enjoy.
+    </p>
+
+
+    <div class="process">
+
+
+        <div class="process-step">
+
+            <div class="process-number">
+                01
+            </div>
+
+            <h3>
+                Consultation
+            </h3>
+
+            <p>
+                Tell us what you're looking for.
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <div class="process-number">
+                02
+            </div>
+
+            <h3>
+                Planning
+            </h3>
+
+            <p>
+                We look at the space and your vision.
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <div class="process-number">
+                03
+            </div>
+
+            <h3>
+                Construction
+            </h3>
+
+            <p>
+                The vision starts becoming reality.
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <div class="process-number">
+                04
+            </div>
+
+            <h3>
+                Finishing
+            </h3>
+
+            <p>
+                The details bring everything together.
+            </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+            <div class="process-number">
+                05
+            </div>
+
+            <h3>
+                Enjoy
+            </h3>
+
+            <p>
+                Your outdoor space is ready to use.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- LIFESTYLE -->
+
+<section class="section experience">
+
+    <div class="experience-content">
+
+        <h2 class="section-title">
+            DESIGNED FOR THE WAY YOU LIVE
+        </h2>
+
+        <p>
+            Whether you want a simple family swimming pool,
+            a place to entertain guests or a standout feature
+            for your property, the right pool can become one
+            of the most enjoyable parts of your outdoor space.
+        </p>
+
+        <div class="experience-list">
+
+            <div>
+                Family swimming spaces
+            </div>
+
+            <div>
+                Outdoor entertainment areas
+            </div>
+
+            <div>
+                Pool features & waterfalls
+            </div>
+
+            <div>
+                Pool slides & recreational features
+            </div>
+
+            <div>
+                Existing pool improvements
+            </div>
+
+            <div>
+                Ongoing cleaning & maintenance
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BIG CTA -->
+
+<section class="cta">
+
+    <h2>
+        READY TO BUILD YOUR POOL?
+    </h2>
+
+    <p>
+        Have an idea for your outdoor space?
+        Tell us what you're looking for and let's discuss
+        how we can bring your vision to life.
+    </p>
+
+    <a
+        href="https://wa.me/27846518219"
+        target="_blank"
+        class="cta-button"
+    >
+        WHATSAPP MAGMA POOLS
+    </a>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section contact">
+
+    <h2 class="section-title">
+        CONTACT MAGMA POOLS
+    </h2>
+
+    <p class="section-subtitle">
+        Whether you're planning a new pool, upgrading an
+        existing one or need reliable pool care, get in touch
+        and let's talk about your project.
+    </p>
+
+
+    <div class="contact-info">
+
+        <p>
+            <strong>Phone / WhatsApp</strong>
+        </p>
+
+        <p>
+            084 651 8219
+        </p>
+
+
+        <p>
+            <strong>Email</strong>
+        </p>
+
+        <p>
+            Magmapools8@gmail.com
+        </p>
+
+    </div>
+
+
+    <div class="contact-buttons">
+
+        <a
+            href="https://wa.me/27846518219"
+            target="_blank"
+            class="contact-button"
+        >
+            WhatsApp Us
+        </a>
+
+        <a
+            href="mailto:Magmapools8@gmail.com"
+            class="contact-button"
+        >
+            Email Us
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- BACK TO BUSINESSES -->
+
+<section class="return-section">
+
+    <a
+        href="index.html#businesses"
+        class="back-to-businesses"
+    >
+        ← Back to Businesses
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-logo">
+        MAGMA POOLS
+    </div>
+
+    <p>
+        Built to enjoy. Maintained to last.
+    </p>
+
+    <p>
+        084 651 8219 · Magmapools8@gmail.com
+    </p>
+
+    <p class="footer-brand">
+        A REYWORLD GROUP business
+    </p>
+
+    <p>
+        © 2026 Magma Pools | REYWORLD GROUP
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
