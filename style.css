@@ -730,3 +730,43 @@ body {
 .btn-back:hover {
     color: #fff;
 }
+/* =========================================
+   TEXT VISIBILITY FIX
+   ========================================= */
+
+.about-card,
+.services-card,
+.contact-card,
+.business-container {
+    color: #f0f0f0;
+}
+
+.about-card p,
+.services-card p,
+.contact-card p,
+.business-container p {
+    color: #cccccc;
+}
+
+.about-card h2,
+.services-card h2,
+.contact-card h2 {
+    color: #ffffff;
+}
+
+.services-list li,
+.contact-info p {
+    color: #cccccc;
+}
+
+.business-header .tagline {
+    color: #cfcfcf;
+}
+
+.business-header h1 {
+    color: #ffffff;
+}
+
+.category-badge {
+    color: #ff6d00;
+}
