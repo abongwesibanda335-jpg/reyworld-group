@@ -1,406 +1,643 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="REYWORLD GROUP — Building Vision. Creating Legacy.">
     <title>REYWORLD GROUP</title>
-    <link rel="stylesheet" href="style.css">
+
+```
+<link rel="stylesheet" href="style.css">
+```
+
 </head>
 
 <body>
 
-<nav>
-
 ```
-<div class="logo">
-    REYWORLD
-</div>
+<!-- HEADER -->
+<header class="site-header">
 
-<div class="nav-links">
+    <div class="header-inner">
 
-    <a href="#">
-        Home
-    </a>
+        <a href="#" class="logo">
+            REYWORLD
+        </a>
 
-    <a href="#about">
-        About
-    </a>
-
-    <a href="#businesses">
-        Businesses
-    </a>
-
-    <a href="#services">
-        Services
-    </a>
-
-    <div class="contact-dropdown">
-
-        <button class="contact-button">
-            Contact Us
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
 
-        <div class="contact-options">
+    </div>
+
+    <!-- THREE-DOT MENU -->
+    <div class="menu-panel" id="menuPanel">
+
+        <div class="menu-panel-inner">
+
+            <div class="menu-heading">
+                <span>REYWORLD GROUP</span>
+                <small>Navigation</small>
+            </div>
+
+            <nav class="menu-links">
+
+                <a href="#">
+                    <span>01</span>
+                    Home
+                </a>
+
+                <a href="#about">
+                    <span>02</span>
+                    About
+                </a>
+
+                <a href="#businesses">
+                    <span>03</span>
+                    Businesses
+                </a>
+
+                <a href="#services">
+                    <span>04</span>
+                    Services
+                </a>
+
+                <a href="#contact">
+                    <span>05</span>
+                    Contact Us
+                </a>
+
+            </nav>
+
+            <div class="menu-social">
+
+                <span>CONNECT</span>
+
+                <a href="#" aria-label="Instagram">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <rect
+                            x="3"
+                            y="3"
+                            width="18"
+                            height="18"
+                            rx="5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="4"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+
+                        <circle
+                            cx="17.5"
+                            cy="6.5"
+                            r="1.2"
+                            fill="currentColor"
+                        />
+                    </svg>
+
+                    <span>Instagram</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                REYWORLD GROUP
+            </p>
+
+            <h1>
+                Building Vision.<br>
+                Creating Legacy.
+            </h1>
+
+            <p class="hero-text">
+                A growing group of businesses driven by vision,
+                quality and purpose.
+            </p>
+
+            <a href="#businesses" class="primary-button">
+                Explore Our Businesses
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- BUSINESSES -->
+    <section id="businesses" class="section businesses-section">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="section-label">01 / OUR GROUP</p>
+
+                <h2>
+                    Our Businesses
+                </h2>
+            </div>
+
+            <p class="section-intro">
+                Different industries. One vision.
+                Each business represents another part
+                of the REYWORLD journey.
+            </p>
+
+        </div>
+
+
+        <div class="business-grid">
+
+            <article class="business-card construction-card">
+
+                <div class="card-number">01</div>
+
+                <div class="card-content">
+
+                    <p class="card-category">
+                        Construction
+                    </p>
+
+                    <h3>
+                        Tony & Brian Projects
+                    </h3>
+
+                    <p>
+                        Construction & Development
+                    </p>
+
+                    <span class="card-tagline">
+                        Where ideas take shape.
+                    </span>
+
+                    <a href="tony-brian.html" class="card-link">
+                        View Business
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="business-card pools-card">
+
+                <div class="card-number">02</div>
+
+                <div class="card-content">
+
+                    <p class="card-category">
+                        Pools
+                    </p>
+
+                    <h3>
+                        Magma Pools
+                    </h3>
+
+                    <p>
+                        Pool Construction, Cleaning & Maintenance
+                    </p>
+
+                    <span class="card-tagline">
+                        Built to enjoy. Maintained to last.
+                    </span>
+
+                    <a href="magma-pools.html" class="card-link">
+                        View Business
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="business-card auto-card">
+
+                <div class="card-number">03</div>
+
+                <div class="card-content">
+
+                    <p class="card-category">
+                        Automotive
+                    </p>
+
+                    <h3>
+                        Colmad Auto
+                    </h3>
+
+                    <p>
+                        Automotive Repairs, Servicing & Detailing
+                    </p>
+
+                    <span class="card-tagline">
+                        Quality in every detail.
+                    </span>
+
+                    <a href="colmad-auto.html" class="card-link">
+                        View Business
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="business-card sales-card">
+
+                <div class="card-number">04</div>
+
+                <div class="card-content">
+
+                    <p class="card-category">
+                        Vehicle Sales
+                    </p>
+
+                    <h3>
+                        Auto Sales
+                    </h3>
+
+                    <p>
+                        Vehicle Sales
+                    </p>
+
+                    <span class="card-tagline">
+                        Find your next drive.
+                    </span>
+
+                    <a href="auto-sales.html" class="card-link">
+                        View Business
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="business-card records-card">
+
+                <div class="card-number">05</div>
+
+                <div class="card-content">
+
+                    <p class="card-category">
+                        Entertainment
+                    </p>
+
+                    <h3>
+                        Rey Records
+                    </h3>
+
+                    <p>
+                        Record Label
+                    </p>
+
+                    <span class="card-tagline">
+                        Music. Vision. Culture.
+                    </span>
+
+                    <a href="#" class="card-link coming-soon">
+                        Coming Soon
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="business-card clothing-card">
+
+                <div class="card-number">06</div>
+
+                <div class="card-content">
+
+                    <p class="card-category">
+                        Fashion
+                    </p>
+
+                    <h3>
+                        Rey Clothing
+                    </h3>
+
+                    <p>
+                        Fashion & Clothing
+                    </p>
+
+                    <span class="card-tagline">
+                        Wear the vision.
+                    </span>
+
+                    <a href="#" class="card-link coming-soon">
+                        Coming Soon
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="section about-section">
+
+        <div class="about-grid">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    02 / OUR STORY
+                </p>
+
+                <h2>
+                    More Than<br>
+                    A Business.
+                </h2>
+
+            </div>
+
+            <div class="about-copy">
+
+                <p class="large-copy">
+                    What started as a vision became
+                    REYWORLD GROUP — a growing collection
+                    of businesses built around passion,
+                    ambition and purpose.
+                </p>
+
+                <p>
+                    From construction and pools to automotive,
+                    music, fashion and more, each part of
+                    REYWORLD represents a different chapter
+                    of the journey.
+                </p>
+
+                <p>
+                    This is more than a business.
+                    It's a growing legacy, built one
+                    vision at a time.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section id="services" class="section services-section">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="section-label">
+                    03 / WHAT WE DO
+                </p>
+
+                <h2>
+                    Our Services
+                </h2>
+            </div>
+
+            <p class="section-intro">
+                A diverse range of services across
+                the REYWORLD GROUP portfolio.
+            </p>
+
+        </div>
+
+
+        <div class="services-list">
+
+            <div class="service-item">
+                <span>01</span>
+                <p>Construction & Development</p>
+            </div>
+
+            <div class="service-item">
+                <span>02</span>
+                <p>Pool Construction & Installation</p>
+            </div>
+
+            <div class="service-item">
+                <span>03</span>
+                <p>Pool Cleaning & Maintenance</p>
+            </div>
+
+            <div class="service-item">
+                <span>04</span>
+                <p>Automotive Repairs & Servicing</p>
+            </div>
+
+            <div class="service-item">
+                <span>05</span>
+                <p>Vehicle Detailing</p>
+            </div>
+
+            <div class="service-item">
+                <span>06</span>
+                <p>Vehicle Sales</p>
+            </div>
+
+            <div class="service-item">
+                <span>07</span>
+                <p>Music & Artist Management</p>
+            </div>
+
+            <div class="service-item">
+                <span>08</span>
+                <p>Fashion & Clothing</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+
+        <div class="contact-grid">
+
+            <div>
+
+                <p class="section-label">
+                    04 / GET IN TOUCH
+                </p>
+
+                <h2>
+                    Let's Build<br>
+                    Something.
+                </h2>
+
+                <p class="contact-text">
+                    Have a question about one of our
+                    businesses? Send us a message and
+                    the REYWORLD team will get back to you.
+                </p>
+
+            </div>
+
+
+            <form
+                class="contact-form"
+                action="https://formspree.io/f/xjyvlnlr"
+                method="POST"
+            >
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Your Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Your Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Type your question here..."
+                        rows="5"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit" class="submit-button">
+                    Send Message
+                    <span>→</span>
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+
+            <h2>
+                REYWORLD
+            </h2>
+
+            <p>
+                Building Vision. Creating Legacy.
+            </p>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <p class="footer-label">
+                CONTACT
+            </p>
+
+            <a href="mailto:kingreyog@gmail.com">
+                kingreyog@gmail.com
+            </a>
 
             <a
                 href="https://wa.me/27681006782"
                 target="_blank"
             >
-                <span class="social-icon whatsapp-icon">●</span>
-                WhatsApp
-                <span>068 100 6782</span>
-            </a>
-
-            <a
-                href="#"
-                class="instagram-option"
-            >
-                <svg
-                    class="instagram-icon"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                >
-                    <rect
-                        x="3"
-                        y="3"
-                        width="18"
-                        height="18"
-                        rx="5"
-                        ry="5"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    />
-                    <circle
-                        cx="12"
-                        cy="12"
-                        r="4"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    />
-                    <circle
-                        cx="17.5"
-                        cy="6.5"
-                        r="1"
-                        fill="currentColor"
-                    />
-                </svg>
-
-                Instagram
-                <span>Coming Soon</span>
+                WhatsApp Us
             </a>
 
         </div>
 
     </div>
 
-</div>
-```
 
-</nav>
+    <div class="footer-bottom">
 
-<div class="hero">
-
-```
-<h1>
-    REYWORLD GROUP
-</h1>
-
-<p class="tagline">
-    Building Vision. Creating Legacy.
-</p>
-
-<p class="intro">
-    A growing group of businesses driven by vision,
-    quality and purpose.
-</p>
-
-<a href="#businesses">
-    Explore Our Businesses
-</a>
-```
-
-</div>
-
-<section id="businesses">
-
-```
-<h2>
-    Our Businesses
-</h2>
-
-
-<div class="business-card construction-card">
-
-    <h3>
-        Tony & Brian Projects
-    </h3>
-
-    <p>
-        Construction & Development
-    </p>
-
-    <p>
-        Where ideas take shape.
-    </p>
-
-    <a href="tony-brian.html">
-        View Business
-    </a>
-
-</div>
-
-
-<div class="business-card pools-card">
-
-    <h3>
-        Magma Pools
-    </h3>
-
-    <p>
-        Pool Construction, Cleaning & Maintenance
-    </p>
-
-    <p>
-        Built to enjoy. Maintained to last.
-    </p>
-
-    <a href="magma-pools.html">
-        View Business
-    </a>
-
-</div>
-
-
-<div class="business-card auto-card">
-
-    <h3>
-        Colmad Auto
-    </h3>
-
-    <p>
-        Automotive Repairs, Servicing & Detailing
-    </p>
-
-    <p>
-        Quality in every detail.
-    </p>
-
-    <a href="colmad-auto.html">
-        View Business
-    </a>
-
-</div>
-
-
-<div class="business-card sales-card">
-
-    <h3>
-        Auto Sales
-    </h3>
-
-    <p>
-        Vehicle Sales
-    </p>
-
-    <p>
-        Find your next drive.
-    </p>
-
-    <a href="auto-sales.html">
-        View Business
-    </a>
-
-</div>
-
-
-<div class="business-card records-card">
-
-    <h3>
-        Rey Records
-    </h3>
-
-    <p>
-        Record Label
-    </p>
-
-    <p>
-        Music. Vision. Culture.
-    </p>
-
-    <a href="#">
-        Coming Soon
-    </a>
-
-</div>
-
-
-<div class="business-card clothing-card">
-
-    <h3>
-        Rey Clothing
-    </h3>
-
-    <p>
-        Fashion & Clothing
-    </p>
-
-    <p>
-        Wear the vision.
-    </p>
-
-    <a href="#">
-        Coming Soon
-    </a>
-
-</div>
-```
-
-</section>
-
-<section id="about">
-
-```
-<h2>
-    My Story
-</h2>
-
-<p>
-    What started as a vision became ReyWorld Group —
-    a growing collection of businesses built around
-    passion, ambition and purpose.
-    From construction and pools to automotive,
-    music, fashion and more, each part of ReyWorld
-    represents a different chapter of the journey.
-</p>
-
-<p>
-    This is more than a business.
-    It’s a growing legacy, built one vision at a time.
-</p>
-```
-
-</section>
-
-<section id="services">
-
-```
-<h2>
-    Our Services
-</h2>
-
-<ul>
-
-    <li>
-        Construction & Development
-    </li>
-
-    <li>
-        Pool Construction & Installation
-    </li>
-
-    <li>
-        Pool Cleaning & Maintenance
-    </li>
-
-    <li>
-        Automotive Repairs & Servicing
-    </li>
-
-    <li>
-        Vehicle Detailing
-    </li>
-
-    <li>
-        Vehicle Sales
-    </li>
-
-    <li>
-        Music & Artist Management
-    </li>
-
-    <li>
-        Fashion & Clothing
-    </li>
-
-</ul>
-```
-
-</section>
-
-<section id="contact">
-
-```
-<h2>
-    Have a Question?
-</h2>
-
-<p>
-    Have a question about one of our businesses?
-    Send us a message and our team will get back to you.
-</p>
-
-<form
-    action="https://formspree.io/f/xjyvlnlr"
-    method="POST"
->
-
-    <label for="name">
-        Your Name
-    </label>
-
-    <input
-        type="text"
-        id="name"
-        name="name"
-        placeholder="Enter your name"
-        required
-    >
-
-    <label for="email">
-        Your Email
-    </label>
-
-    <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Enter your email"
-        required
-    >
-
-    <label for="message">
-        Your Message
-    </label>
-
-    <textarea
-        id="message"
-        name="message"
-        placeholder="Type your question here..."
-        rows="6"
-        required
-    ></textarea>
-
-    <button type="submit">
-        Send Message
-    </button>
-
-</form>
-```
-
-</section>
-
-<footer>
-
-```
-<div class="footer-content">
-
-    <div class="footer-brand">
-
-        <h2>
-            REYWORLD
-        </h2>
+        <p>
+            © 2026 REYWORLD GROUP. All Rights Reserved.
+        </p>
 
         <p>
             Building Vision. Creating Legacy.
@@ -408,45 +645,11 @@
 
     </div>
 
-
-    <div class="footer-contact">
-
-        <h3>
-            Contact Us
-        </h3>
-
-        <p>
-            Have a question, want to work with us,
-            or interested in one of our businesses?
-            Get in touch with the REYWORLD team.
-        </p>
-
-        <a href="mailto:kingreyog@gmail.com">
-            kingreyog@gmail.com
-        </a>
-
-        <a
-            href="https://wa.me/27681006782"
-            target="_blank"
-        >
-            WhatsApp Us
-        </a>
-
-    </div>
-
-</div>
-
-
-<div class="footer-bottom">
-
-    <p>
-        © 2026 REYWORLD GROUP. All Rights Reserved.
-    </p>
-
-</div>
-```
-
 </footer>
+
+
+<script src="script.js"></script>
+```
 
 </body>
 
