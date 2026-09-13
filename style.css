@@ -1,772 +1,994 @@
-```css
 /* =========================================
-   REYWORLD GROUP
-   Main Stylesheet
-   ========================================= */
-
-
-/* =========================================
-   GENERAL
-   ========================================= */
+REYWORLD GROUP
+MAIN STYLESHEET
+========================================= */
 
 * {
-    box-sizing: border-box;
-}
+  box-sizing: border-box;
+  }
 
 html {
-    scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background: #0b0b0b;
-    color: #f5f5f5;
-    font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background: #0b0b0b;
+color: #f5f5f5;
+font-family: Arial, sans-serif;
 }
 
 h1,
 h2,
 h3,
+h4,
 p {
-    margin-top: 0;
+margin-top: 0;
 }
 
 a {
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
+color: #ffffff;
+text-decoration: none;
+transition: all 0.3s ease;
 }
 
 p {
-    font-size: 18px;
-    line-height: 1.7;
+font-size: 18px;
+line-height: 1.7;
 }
-
 
 /* =========================================
-   HEADER / NAVIGATION
-   ========================================= */
+NAVIGATION
+========================================= */
 
 nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+position: sticky;
+top: 0;
+z-index: 1000;
 
-    width: 100%;
-    min-height: 80px;
+```
+width: 100%;
+min-height: 80px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
 
-    padding: 20px 40px;
+padding: 20px 40px;
 
-    background: #0b0b0b;
-    border-bottom: 1px solid #292929;
+background: #0b0b0b;
+border-bottom: 1px solid #292929;
+```
+
 }
-
-
-/* REYWORLD LOGO */
 
 .logo {
-    display: block;
+display: block;
 
-    color: #d4af37 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
+```
+color: #d4af37 !important;
+opacity: 1;
+visibility: visible;
 
-    font-size: 23px;
-    font-weight: 700;
-    letter-spacing: 4px;
-    white-space: nowrap;
+font-size: 23px;
+font-weight: 700;
+letter-spacing: 4px;
+white-space: nowrap;
+```
+
 }
 
-
-/* NAV LINKS */
-
 .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 28px;
+display: flex;
+align-items: center;
+gap: 28px;
 }
 
 .nav-links > a {
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    white-space: nowrap;
+color: #ffffff;
+font-size: 14px;
+font-weight: 600;
+letter-spacing: 1px;
+white-space: nowrap;
 }
 
 .nav-links > a:hover {
-    color: #d4af37;
+color: #d4af37;
 }
 
-
 /* =========================================
-   CONTACT DROPDOWN
-   ========================================= */
+CONTACT DROPDOWN
+========================================= */
 
 .contact-dropdown {
-    position: relative;
+position: relative;
 }
 
 .contact-button {
-    background: transparent;
-    border: none;
+background: transparent;
+border: none;
 
-    color: #ffffff;
+```
+color: #ffffff;
 
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
+font-family: Arial, sans-serif;
+font-size: 14px;
+font-weight: 600;
+letter-spacing: 1px;
 
-    cursor: pointer;
-    padding: 0;
+cursor: pointer;
+padding: 0;
+```
+
 }
 
 .contact-button:hover {
-    color: #d4af37;
+color: #d4af37;
 }
-
-
-/* DROPDOWN BOX */
 
 .contact-options {
-    display: none;
+display: none;
 
-    position: absolute;
-    right: 0;
-    top: 32px;
+```
+position: absolute;
+right: 0;
+top: 32px;
 
-    width: 260px;
+width: 260px;
 
-    background: #151515;
-    border: 1px solid #333333;
+background: #151515;
+border: 1px solid #333333;
 
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 
-    padding: 8px 0;
+padding: 8px 0;
 
-    z-index: 2000;
+z-index: 2000;
+```
+
 }
-
-
-/* SHOW DROPDOWN */
 
 .contact-dropdown:hover .contact-options {
-    display: block;
+display: block;
 }
 
-
-/* DROPDOWN LINKS */
-
 .contact-options a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
 
-    gap: 15px;
+```
+gap: 15px;
 
-    padding: 15px 18px;
+padding: 15px 18px;
 
-    color: #ffffff;
+color: #ffffff;
 
-    font-size: 14px;
+font-size: 14px;
+```
+
 }
 
 .contact-options a:hover {
-    background: #222222;
-    color: #d4af37;
+background: #222222;
+color: #d4af37;
 }
 
 .contact-options span {
-    color: #999999;
-    font-size: 12px;
-    white-space: nowrap;
+color: #999999;
+font-size: 12px;
+white-space: nowrap;
 }
-
 
 /* =========================================
-   HERO
-   ========================================= */
+HERO
+========================================= */
 
 .hero {
-    min-height: 90vh;
+min-height: 90vh;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+```
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
-    padding: 80px 40px;
+padding: 80px 40px;
 
-    text-align: center;
+text-align: center;
 
-    background:
-        radial-gradient(
-            circle at 50% 30%,
-            rgba(212, 175, 55, 0.13),
-            transparent 38%
-        ),
-        #0b0b0b;
+background:
+    radial-gradient(
+        circle at 50% 30%,
+        rgba(212, 175, 55, 0.13),
+        transparent 38%
+    ),
+    #0b0b0b;
+```
+
 }
-
 
 .hero h1 {
-    margin-bottom: 18px;
+margin-bottom: 18px;
 
-    color: #ffffff;
+```
+color: #ffffff;
 
-    font-size: clamp(48px, 8vw, 86px);
-    font-weight: 700;
+font-size: clamp(48px, 8vw, 86px);
+font-weight: 700;
 
-    letter-spacing: 6px;
-    text-transform: uppercase;
+letter-spacing: 6px;
+text-transform: uppercase;
+```
+
 }
-
 
 .hero .tagline {
-    margin-bottom: 20px;
+margin-bottom: 20px;
 
-    color: #d4af37;
+```
+color: #d4af37;
 
-    font-size: 22px;
-    letter-spacing: 3px;
+font-size: 22px;
+letter-spacing: 3px;
+```
+
 }
-
 
 .hero .intro {
-    max-width: 650px;
-    margin: 0 auto 30px;
+max-width: 650px;
+margin: 0 auto 30px;
 
-    color: #bdbdbd;
+```
+color: #bdbdbd;
 
-    font-size: 18px;
-    line-height: 1.8;
+font-size: 18px;
+line-height: 1.8;
+```
+
 }
 
-
 .hero > a {
-    display: inline-block;
+display: inline-block;
 
-    margin-top: 10px;
-    padding: 15px 32px;
+```
+margin-top: 10px;
+padding: 15px 32px;
 
-    border: 1px solid #d4af37;
+border: 1px solid #d4af37;
 
-    color: #d4af37;
+color: #d4af37;
 
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
+font-size: 14px;
+font-weight: 600;
+letter-spacing: 1px;
+```
+
 }
 
 .hero > a:hover {
-    background: #d4af37;
-    color: #0b0b0b;
+background: #d4af37;
+color: #0b0b0b;
 }
 
-
 /* =========================================
-   GENERAL SECTIONS
-   ========================================= */
+GENERAL SECTIONS
+========================================= */
 
 section {
-    padding: 90px 40px;
+padding: 90px 40px;
 }
 
 section h2 {
-    color: #ffffff;
+color: #ffffff;
 
-    font-size: 42px;
-    letter-spacing: 2px;
+```
+font-size: 42px;
+letter-spacing: 2px;
+```
+
 }
-
 
 /* =========================================
-   BUSINESSES
-   ========================================= */
+SECTION HEADINGS
+========================================= */
 
-#businesses {
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-    padding-top: 90px;
-    padding-bottom: 100px;
-}
-
-
-#businesses h2 {
-    margin-bottom: 55px;
-
-    text-align: center;
+#businesses h2,
+#about h2,
+#services h2,
+#contact h2 {
+position: relative;
 }
 
 #businesses h2::after,
 #about h2::after,
 #services h2::after,
 #contact h2::after {
-    content: "";
+content: "";
 
-    display: block;
+```
+display: block;
 
-    width: 55px;
-    height: 3px;
+width: 55px;
+height: 3px;
 
-    margin: 18px auto 0;
+margin: 18px auto 0;
 
-    background: #d4af37;
+background: #d4af37;
+```
+
 }
-
 
 /* =========================================
-   BUSINESS CARDS
-   ========================================= */
+BUSINESSES
+========================================= */
+
+#businesses {
+max-width: 1200px;
+
+```
+margin: 0 auto;
+
+padding-top: 90px;
+padding-bottom: 100px;
+```
+
+}
+
+#businesses h2 {
+margin-bottom: 55px;
+
+```
+text-align: center;
+```
+
+}
+
+/* =========================================
+BUSINESS CARDS
+========================================= */
 
 .business-card {
-    position: relative;
+position: relative;
 
-    min-height: 260px;
+```
+min-height: 260px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
 
-    margin-bottom: 25px;
-    padding: 40px;
+margin-bottom: 25px;
+padding: 40px;
 
-    overflow: hidden;
+overflow: hidden;
 
-    background: linear-gradient(
-        135deg,
-        #171717,
-        #101010
-    );
+background: linear-gradient(
+    135deg,
+    #171717,
+    #101010
+);
 
-    border: 1px solid #292929;
-    border-left: 4px solid #444444;
+border: 1px solid #292929;
+border-left: 4px solid #444444;
 
-    transition:
-        transform 0.4s ease,
-        border-color 0.4s ease,
-        box-shadow 0.4s ease;
+transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+```
+
 }
-
-
-/* DARK OVERLAY */
 
 .business-card::before {
-    content: "";
+content: "";
 
-    position: absolute;
-    inset: 0;
+```
+position: absolute;
+inset: 0;
 
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.9),
-        rgba(0, 0, 0, 0.15)
-    );
+background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.15)
+);
 
-    pointer-events: none;
+pointer-events: none;
+```
+
 }
-
-
-/* KEEP CONTENT ABOVE OVERLAY */
 
 .business-card h3,
 .business-card p,
 .business-card a {
-    position: relative;
-    z-index: 2;
+position: relative;
+z-index: 2;
 }
-
-
-/* BUSINESS NAME */
 
 .business-card h3 {
-    margin-bottom: 10px;
+margin-bottom: 10px;
 
-    font-size: 28px;
-    letter-spacing: 1px;
+```
+font-size: 28px;
+letter-spacing: 1px;
+```
+
 }
-
-
-/* BUSINESS TYPE */
 
 .business-card p:first-of-type {
-    margin-bottom: 8px;
+margin-bottom: 8px;
 
-    font-size: 16px;
-    letter-spacing: 1px;
+```
+font-size: 16px;
+letter-spacing: 1px;
+```
+
 }
-
-
-/* TAGLINE */
 
 .business-card p:nth-of-type(2) {
-    color: #cccccc;
+color: #cccccc;
 }
 
-
-/* BUSINESS BUTTON */
-
 .business-card > a {
-    align-self: flex-start;
+align-self: flex-start;
 
-    margin-top: 20px;
-    padding: 11px 22px;
+```
+margin-top: 20px;
+padding: 11px 22px;
 
-    border: 1px solid;
+border: 1px solid;
 
-    font-size: 13px;
-    font-weight: 600;
+font-size: 13px;
+font-weight: 600;
 
-    letter-spacing: 1px;
+letter-spacing: 1px;
+```
+
 }
 
 .business-card > a:hover {
-    background: #ffffff;
-    color: #0b0b0b;
+background: #ffffff;
+color: #0b0b0b;
 }
-
 
 /* =========================================
-   BUSINESS COLOURS
-   ========================================= */
+BUSINESS COLOURS
+========================================= */
 
-
-/* TONY & BRIAN - ORANGE */
+/* TONY & BRIAN */
 
 .construction-card {
-    border-left-color: #d97832;
+border-left-color: #d97832;
 }
 
-.construction-card h3 {
-    color: #d97832;
-}
-
+.construction-card h3,
 .construction-card p:first-of-type {
-    color: #d97832;
+color: #d97832;
 }
 
 .construction-card > a {
-    border-color: #d97832;
-    color: #d97832;
+border-color: #d97832;
+color: #d97832;
 }
 
 .construction-card:hover {
-    border-color: #d97832;
-    box-shadow: 0 15px 40px rgba(217, 120, 50, 0.12);
+border-color: #d97832;
+box-shadow: 0 15px 40px rgba(217, 120, 50, 0.12);
 }
 
-
-/* MAGMA POOLS - AQUA */
+/* MAGMA POOLS */
 
 .pools-card {
-    border-left-color: #18b9d4;
+border-left-color: #18b9d4;
 }
 
-.pools-card h3 {
-    color: #18b9d4;
-}
-
+.pools-card h3,
 .pools-card p:first-of-type {
-    color: #18b9d4;
+color: #18b9d4;
 }
 
 .pools-card > a {
-    border-color: #18b9d4;
-    color: #18b9d4;
+border-color: #18b9d4;
+color: #18b9d4;
 }
 
 .pools-card:hover {
-    border-color: #18b9d4;
-    box-shadow: 0 15px 40px rgba(24, 185, 212, 0.12);
+border-color: #18b9d4;
+box-shadow: 0 15px 40px rgba(24, 185, 212, 0.12);
 }
 
-
-/* COLMAD AUTO - RED */
+/* COLMAD AUTO */
 
 .auto-card {
-    border-left-color: #d94b4b;
+border-left-color: #d94b4b;
 }
 
-.auto-card h3 {
-    color: #d94b4b;
-}
-
+.auto-card h3,
 .auto-card p:first-of-type {
-    color: #d94b4b;
+color: #d94b4b;
 }
 
 .auto-card > a {
-    border-color: #d94b4b;
-    color: #d94b4b;
+border-color: #d94b4b;
+color: #d94b4b;
 }
 
 .auto-card:hover {
-    border-color: #d94b4b;
-    box-shadow: 0 15px 40px rgba(217, 75, 75, 0.12);
+border-color: #d94b4b;
+box-shadow: 0 15px 40px rgba(217, 75, 75, 0.12);
 }
 
-
-/* AUTO SALES - GOLD */
+/* AUTO SALES */
 
 .sales-card {
-    border-left-color: #d4af37;
+border-left-color: #d4af37;
 }
 
-.sales-card h3 {
-    color: #d4af37;
+.sales-card h3,
+.sales-card p:first-of-type {
+color: #d4af37;
 }
 
-.sales-card p:first-of-typ
-```
-/* --- REYWORLD / TONY & BRIAN STYLES --- */
+.sales-card > a {
+border-color: #d4af37;
+color: #d4af37;
+}
+
+.sales-card:hover {
+border-color: #d4af37;
+box-shadow: 0 15px 40px rgba(212, 175, 55, 0.12);
+}
+
+/* REY RECORDS */
+
+.records-card {
+border-left-color: #9b59b6;
+}
+
+.records-card h3,
+.records-card p:first-of-type {
+color: #9b59b6;
+}
+
+.records-card > a {
+border-color: #9b59b6;
+color: #9b59b6;
+}
+
+.records-card:hover {
+border-color: #9b59b6;
+box-shadow: 0 15px 40px rgba(155, 89, 182, 0.12);
+}
+
+/* REY CLOTHING */
+
+.clothing-card {
+border-left-color: #e7dfc6;
+}
+
+.clothing-card h3,
+.clothing-card p:first-of-type {
+color: #e7dfc6;
+}
+
+.clothing-card > a {
+border-color: #e7dfc6;
+color: #e7dfc6;
+}
+
+.clothing-card:hover {
+border-color: #e7dfc6;
+box-shadow: 0 15px 40px rgba(231, 223, 198, 0.12);
+}
+
+/* =========================================
+ABOUT / SERVICES / CONTACT
+========================================= */
+
+#about,
+#services,
+#contact {
+max-width: 1200px;
+margin: 0 auto;
+}
+
+#about p,
+#services p,
+#contact p {
+color: #cccccc;
+}
+
+/* =========================================
+BUSINESS PAGE STYLES
+========================================= */
 
 :root {
-    --bg-dark: #0a0a0a;
-    --card-bg: #141414;
-    --border-color: #262626;
-    --gold: #d4af37;
-    --orange-accent: #ff6d00;
-    --text-main: #f0f0f0;
-    --text-muted: #a0a0a0;
+--bg-dark: #0a0a0a;
+--card-bg: #141414;
+--border-color: #262626;
+--gold: #d4af37;
+--orange-accent: #ff6d00;
+--text-main: #f0f0f0;
+--text-muted: #a0a0a0;
 }
 
-body {
-    background-color: var(--bg-dark);
-    color: var(--text-main);
-    font-family: system-ui, -apple-system, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Navigation */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 5%;
-    border-bottom: 1px solid var(--border-color);
-    background-color: #000;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+```
+padding: 1.5rem 5%;
+
+border-bottom: 1px solid var(--border-color);
+background-color: #000;
+```
+
 }
 
-.logo {
-    font-size: 1.2rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: #fff;
+.navbar .logo {
+color: #d4af37 !important;
 }
 
-.logo span {
-    color: var(--gold);
-}
-
-.nav-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    margin-left: 2rem;
-    font-size: 0.9rem;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: var(--gold);
-}
-
-/* Layout Container */
 .business-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 3rem 1.5rem;
+max-width: 1100px;
+margin: 0 auto;
+padding: 3rem 1.5rem;
+
+```
+color: var(--text-main);
+```
+
 }
 
-/* Header */
 .business-header {
-    text-align: center;
-    margin-bottom: 3rem;
+text-align: center;
+margin-bottom: 3rem;
 }
 
 .category-badge {
-    color: var(--orange-accent);
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+color: var(--orange-accent);
+font-size: 0.85rem;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 2px;
 }
 
 .business-header h1 {
-    font-size: 2.8rem;
-    margin: 0.5rem 0;
-    color: #fff;
+font-size: 2.8rem;
+margin: 0.5rem 0;
+color: #ffffff;
 }
 
-.tagline {
-    color: var(--text-muted);
-    font-style: italic;
-    font-size: 1.1rem;
+.business-header .tagline {
+color: #cfcfcf;
+font-style: italic;
+font-size: 1.1rem;
 }
 
-/* About & Cards */
-.about-card, .services-card, .contact-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 3rem;
-    line-height: 1.6;
-}
-
-/* Gallery Grid */
-.gallery-wrapper {
-    margin-bottom: 3rem;
-}
-
-.gallery-wrapper h2, .services-card h2, .contact-card h2 {
-    color: var(--gold);
-    font-size: 1.4rem;
-    margin-bottom: 1.5rem;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.2rem;
-}
-
-.project-card {
-    position: relative;
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    overflow: hidden;
-    height: 220px;
-}
-
-.project-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
-}
-
-.project-card:hover img {
-    transform: scale(1.05);
-}
-
-.card-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 1rem 0.8rem 0.6rem;
-    background: linear-gradient(transparent, rgba(0,0,0,0.95));
-    color: #fff;
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
-/* Content Split Layout */
-.content-split {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.services-list {
-    list-style: none;
-    padding: 0;
-}
-
-.services-list li {
-    padding: 0.6rem 0;
-    border-bottom: 1px solid var(--border-color);
-    color: #ccc;
-}
-
-.services-list li:last-child {
-    border-bottom: none;
-}
-
-.contact-info p {
-    margin-bottom: 1rem;
-    color: #ccc;
-}
-
-.btn-whatsapp {
-    display: inline-block;
-    background-color: var(--orange-accent);
-    color: #fff;
-    text-decoration: none;
-    padding: 0.8rem 1.8rem;
-    border-radius: 4px;
-    font-weight: 600;
-    margin-top: 1rem;
-    transition: background 0.3s;
-}
-
-.btn-whatsapp:hover {
-    background-color: #d95b00;
-}
-
-.back-link-wrapper {
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.btn-back {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s;
-}
-
-.btn-back:hover {
-    color: #fff;
-}
 /* =========================================
-   TEXT VISIBILITY FIX
-   ========================================= */
+BUSINESS PAGE CARDS
+========================================= */
 
 .about-card,
 .services-card,
-.contact-card,
-.business-container {
-    color: #f0f0f0;
+.contact-card {
+background-color: var(--card-bg);
+
+```
+border: 1px solid var(--border-color);
+
+padding: 2rem;
+
+border-radius: 8px;
+
+margin-bottom: 3rem;
+
+line-height: 1.6;
+
+color: #f0f0f0;
+```
+
 }
 
 .about-card p,
 .services-card p,
-.contact-card p,
-.business-container p {
-    color: #cccccc;
+.contact-card p {
+color: #cccccc;
 }
 
 .about-card h2,
 .services-card h2,
 .contact-card h2 {
-    color: #ffffff;
+color: #ffffff;
 }
 
-.services-list li,
+/* =========================================
+GALLERY
+========================================= */
+
+.gallery-wrapper {
+margin-bottom: 3rem;
+}
+
+.gallery-wrapper h2,
+.services-card h2,
+.contact-card h2 {
+color: var(--gold);
+font-size: 1.4rem;
+margin-bottom: 1.5rem;
+}
+
+.project-grid {
+display: grid;
+
+```
+grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+gap: 1.2rem;
+```
+
+}
+
+.project-card {
+position: relative;
+
+```
+background-color: var(--card-bg);
+
+border: 1px solid var(--border-color);
+
+border-radius: 8px;
+
+overflow: hidden;
+
+height: 220px;
+```
+
+}
+
+.project-card img {
+width: 100%;
+height: 100%;
+
+```
+object-fit: cover;
+
+display: block;
+
+transition: transform 0.4s ease;
+```
+
+}
+
+.project-card:hover img {
+transform: scale(1.05);
+}
+
+.card-caption {
+position: absolute;
+
+```
+bottom: 0;
+left: 0;
+right: 0;
+
+padding: 1rem 0.8rem 0.6rem;
+
+background: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.95)
+);
+
+color: #ffffff;
+
+font-size: 0.85rem;
+font-weight: 500;
+```
+
+}
+
+/* =========================================
+CONTENT SPLIT
+========================================= */
+
+.content-split {
+display: grid;
+
+```
+grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
+gap: 2rem;
+```
+
+}
+
+/* =========================================
+SERVICES
+========================================= */
+
+.services-list {
+list-style: none;
+padding: 0;
+}
+
+.services-list li {
+padding: 0.6rem 0;
+
+```
+border-bottom: 1px solid var(--border-color);
+
+color: #cccccc;
+```
+
+}
+
+.services-list li:last-child {
+border-bottom: none;
+}
+
+/* =========================================
+CONTACT
+========================================= */
+
 .contact-info p {
-    color: #cccccc;
+margin-bottom: 1rem;
+color: #cccccc;
 }
 
-.business-header .tagline {
-    color: #cfcfcf;
+/* =========================================
+WHATSAPP BUTTON
+========================================= */
+
+.btn-whatsapp {
+display: inline-block;
+
+```
+background-color: var(--orange-accent);
+
+color: #ffffff;
+
+text-decoration: none;
+
+padding: 0.8rem 1.8rem;
+
+border-radius: 4px;
+
+font-weight: 600;
+
+margin-top: 1rem;
+
+transition: background 0.3s;
+```
+
+}
+
+.btn-whatsapp:hover {
+background-color: #d95b00;
+}
+
+/* =========================================
+BACK LINK
+========================================= */
+
+.back-link-wrapper {
+text-align: center;
+margin-top: 2rem;
+}
+
+.btn-back {
+color: #bdbdbd;
+text-decoration: none;
+font-size: 0.9rem;
+transition: color 0.3s;
+}
+
+.btn-back:hover {
+color: #ffffff;
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+```
+nav {
+    padding: 18px 20px;
+}
+
+.nav-links {
+    gap: 15px;
+}
+
+.nav-links > a,
+.contact-button {
+    font-size: 12px;
+}
+
+.hero {
+    min-height: 80vh;
+    padding: 70px 20px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 12vw, 64px);
+    letter-spacing: 3px;
+}
+
+.hero .tagline {
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+section {
+    padding: 65px 20px;
+}
+
+section h2 {
+    font-size: 32px;
+}
+
+.business-card {
+    padding: 30px 25px;
+    min-height: 240px;
+}
+
+.business-card h3 {
+    font-size: 24px;
+}
+
+.business-container {
+    padding: 2rem 1rem;
 }
 
 .business-header h1 {
-    color: #ffffff;
+    font-size: 2.2rem;
 }
 
-.category-badge {
-    color: #ff6d00;
+.about-card,
+.services-card,
+.contact-card {
+    padding: 1.5rem;
 }
+
+.project-grid {
+    grid-template-columns: 1fr;
+}
+```
+
+}
+
+/* =========================================
+FINAL TEXT VISIBILITY
+========================================= */
+
+.business-container,
+.about-card,
+.services-card,
+.contact-card {
+color: #f0f0f0;
+}
+
+.business-container p,
+.about-card p,
+.services-card p,
+.contact-card p {
+color: #cccccc;
+}
+
+.business-container h1,
+.business-container h2,
+.business-container h3,
+.about-card h2,
+.services-card h2,
+.contact-card h2 {
+color: #ffffff;
+}
+
+   
+    
