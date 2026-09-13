@@ -648,8 +648,63 @@
 </footer>
 
 
-<script src="script.js"></script>
-```
+<script>
+const menuButton = document.getElementById("menuButton");
+const menuPanel = document.getElementById("menuPanel");
+
+menuButton.addEventListener("click", function () {
+
+    menuPanel.classList.toggle("open");
+    menuButton.classList.toggle("active");
+
+    const isOpen = menuPanel.classList.contains("open");
+
+    menuButton.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+    );
+
+});
+
+
+const menuLinks = document.querySelectorAll(".menu-links a");
+
+menuLinks.forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        menuPanel.classList.remove("open");
+        menuButton.classList.remove("active");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    });
+
+});
+
+
+document.addEventListener("click", function(event) {
+
+    if (
+        !menuPanel.contains(event.target) &&
+        !menuButton.contains(event.target)
+    ) {
+
+        menuPanel.classList.remove("open");
+        menuButton.classList.remove("active");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    }
+
+});
+</script>
 
 </body>
 
