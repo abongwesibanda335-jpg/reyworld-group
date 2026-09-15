@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Businesses | REYWORLD GROUP</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #080808;
+    color: #f4efe5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 6%;
+
+    background: rgba(8, 8, 8, 0.97);
+    border-bottom: 1px solid rgba(202, 167, 91, 0.18);
+}
+
+.logo {
+    color: #f4efe5;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.logo span {
+    color: #caa75b;
+}
+
+.menu {
+    color: #caa75b;
+    font-size: 26px;
+}
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+    width: min(1250px, 90%);
+    margin: auto;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    min-height: 70vh;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 100px 0 90px;
+
+    border-bottom: 1px solid rgba(202, 167, 91, 0.2);
+}
+
+.eyebrow {
+    margin-bottom: 25px;
+
+    color: #caa75b;
+
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.intro h1 {
+    max-width: 1050px;
+
+    margin: 0;
+
+    font-size: clamp(55px, 11vw, 140px);
+
+    line-height: 0.84;
+
+    letter-spacing: -6px;
+
+    text-transform: uppercase;
+}
+
+.intro h1 span {
+    color: transparent;
+    -webkit-text-stroke: 1px #f4efe5;
+}
+
+.intro p {
+    max-width: 550px;
+
+    margin: 50px 0 0 auto;
+
+    color: #aaa397;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+/* =========================
+   PORTFOLIO
+========================= */
+
+.portfolio {
+    padding: 110px 0;
+}
+
+.business {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1.15fr 0.85fr;
+
+    min-height: 520px;
+
+    margin-bottom: 30px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(202, 167, 91, 0.16);
+
+    background: #0d0d0d;
+}
+
+.business.reverse {
+    grid-template-columns: 0.85fr 1.15fr;
+}
+
+.business-image {
+    position: relative;
+
+    min-height: 520px;
+
+    overflow: hidden;
+}
+
+.business-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.7s ease;
+}
+
+.business:hover .business-image img {
+    transform: scale(1.04);
+}
+
+.business-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,0.02),
+        rgba(0,0,0,0.35)
+    );
+}
+
+/* =========================
+   BUSINESS CONTENT
+========================= */
+
+.business-content {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 60px;
+}
+
+.business-number {
+    position: absolute;
+
+    top: 30px;
+    right: 35px;
+
+    color: #625d55;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+.business-tag {
+    margin-bottom: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+.business h2 {
+    margin: 0 0 25px;
+
+    font-size: clamp(35px, 5vw, 60px);
+
+    line-height: 0.95;
+
+    letter-spacing: -2px;
+}
+
+.business p {
+    max-width: 480px;
+
+    margin: 0 0 30px;
+
+    color: #99948b;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+.view {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    width: fit-content;
+
+    padding: 14px 20px;
+
+    color: #f4efe5;
+
+    text-decoration: none;
+
+    border: 1px solid rgba(202, 167, 91, 0.45);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+}
+
+.view span {
+    color: #caa75b;
+
+    font-size: 18px;
+
+    transition: 0.3s ease;
+}
+
+.view:hover {
+    background: #caa75b;
+    color: #080808;
+}
+
+.view:hover span {
+    color: #080808;
+    transform: translateX(5px);
+}
+
+/* =========================
+   COLOUR IDENTITIES
+========================= */
+
+.construction .business-tag {
+    color: #d47a32;
+}
+
+.pool .business-tag {
+    color: #25c6d9;
+}
+
+.auto .business-tag {
+    color: #b93636;
+}
+
+.sales .business-tag {
+    color: #caa75b;
+}
+
+.records .business-tag {
+    color: #9b68d8;
+}
+
+.clothing .business-tag {
+    color: #e8dfcf;
+}
+
+/* =========================
+   NO IMAGE PANELS
+========================= */
+
+.no-image {
+    background:
+        radial-gradient(
+            circle at 70% 30%,
+            rgba(202, 167, 91, 0.12),
+            transparent 30%
+        ),
+        #101010;
+}
+
+.no-image .business-content {
+    min-height: 520px;
+}
+
+/* =========================
+   FUTURE
+========================= */
+
+.future {
+    position: relative;
+
+    padding: 130px 0 150px;
+
+    border-top: 1px solid rgba(202, 167, 91, 0.2);
+
+    text-align: center;
+}
+
+.future small {
+    color: #caa75b;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+.future h2 {
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    font-size: clamp(45px, 8vw, 95px);
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    text-transform: uppercase;
+}
+
+.future h2 span {
+    color: #caa75b;
+}
+
+.future p {
+    max-width: 600px;
+
+    margin: auto;
+
+    color: #88847b;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 35px 6%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    border-top: 1px solid rgba(202, 167, 91, 0.18);
+
+    color: #67635c;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .page {
+        width: 84%;
+    }
+
+    .intro {
+        min-height: 65vh;
+        padding: 80px 0;
+    }
+
+    .intro h1 {
+        letter-spacing: -4px;
+    }
+
+    .intro p {
+        margin: 40px 0 0;
+    }
+
+    .portfolio {
+        padding: 80px 0;
+    }
+
+    .business,
+    .business.reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .business-image {
+        min-height: 300px;
+    }
+
+    .business-content {
+        min-height: 420px;
+        padding: 40px 30px;
+    }
+
+    .no-image .business-content {
+        min-height: 400px;
+    }
+
+    .future {
+        padding: 100px 0;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+```
+<div class="logo">
+    REY<span>WORLD</span> GROUP
+</div>
+
+<div class="menu">
+    ⋮
+</div>
+```
+
+</nav>
+
+<main class="page">
+
+```
+<!-- INTRO -->
+
+<section class="intro">
+
+    <div>
+
+        <div class="eyebrow">
+            The Portfolio
+        </div>
+
+        <h1>
+            Built for
+            <span>more.</span>
+        </h1>
+
+        <p>
+            REYWORLD GROUP brings together ventures with different
+            identities, purposes and audiences, connected by one
+            larger vision for growth.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- BUSINESSES -->
+
+<section class="portfolio">
+
+
+    <!-- TONY & BRIAN -->
+
+    <article class="business construction">
+
+        <div class="business-image">
+
+            <div class="no-image" style="width:100%;height:100%;"></div>
+
+        </div>
+
+        <div class="business-content">
+
+            <div class="business-number">
+                PORTFOLIO
+            </div>
+
+            <div class="business-tag">
+                Construction
+            </div>
+
+            <h2>
+                Tony & Brian Projects
+            </h2>
+
+            <p>
+                A registered construction company with more than
+                20 years of experience in the building industry,
+                specialising in house and shop renovations and
+                building projects across Cape Town.
+            </p>
+
+            <a href="tony-brian.html" class="view">
+                View business
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <!-- MAGMA POOLS -->
+
+    <article class="business pool reverse">
+
+        <div class="business-content">
+
+            <div class="business-number">
+                PORTFOLIO
+            </div>
+
+            <div class="business-tag">
+                Pool Construction & Care
+            </div>
+
+            <h2>
+                Magma Pools
+            </h2>
+
+            <p>
+                Pool construction, installation, cleaning and
+                maintenance focused on creating outdoor spaces
+                that are made to enjoy and cared for properly.
+            </p>
+
+            <a href="magma-pools.html" class="view">
+                View business
+                <span>→</span>
+            </a>
+
+        </div>
+
+        <div class="business-image">
+
+            <img
+                src="images/WhatsApp Image 2026-09-11 at 10.52.59.jpeg"
+                alt="Magma Pools swimming pool"
+            >
+
+        </div>
+
+    </article>
+
+
+    <!-- COLMAD -->
+
+    <article class="business auto">
+
+        <div class="business-image">
+
+            <img
+                src="images/WhatsApp Image 2026-09-12 at 19.15.59.jpeg"
+                alt="Colmad Auto vehicle workshop"
+            >
+
+        </div>
+
+        <div class="business-content">
+
+            <div class="business-number">
+                PORTFOLIO
+            </div>
+
+            <div class="business-tag">
+                Automotive
+            </div>
+
+            <h2>
+                Colmad Auto
+            </h2>
+
+            <p>
+                An automotive business based in Killarney Gardens,
+                Cape Town, focused on quality workmanship and
+                attention to detail.
+            </p>
+
+            <a href="colmad-auto.html" class="view">
+                View business
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <!-- AUTO SALES -->
+
+    <article class="business sales reverse">
+
+        <div class="business-content">
+
+            <div class="business-number">
+                PORTFOLIO
+            </div>
+
+            <div class="business-tag">
+                Vehicle Sales
+            </div>
+
+            <h2>
+                Auto Sales
+            </h2>
+
+            <p>
+                A growing vehicle sales division connecting
+                buyers with available cars across a range of
+                styles, specifications and price points.
+            </p>
+
+            <a href="auto-sales.html" class="view">
+                View vehicles
+                <span>→</span>
+            </a>
+
+        </div>
+
+        <div class="business-image">
+
+            <img
+                src="images/WhatsApp Image 2026-09-12 at 19.15.19.jpeg"
+                alt="Vehicle available through Auto Sales"
+            >
+
+        </div>
+
+    </article>
+
+
+    <!-- MOB RECORDS -->
+
+    <article class="business records no-image">
+
+        <div class="business-image">
+
+            <div
+                style="
+                width:100%;
+                height:100%;
+                background:
+                radial-gradient(
+                    circle at center,
+                    rgba(155,104,216,0.18),
+                    transparent 45%
+                ),
+                #100d14;
+                "
+            ></div>
+
+        </div>
+
+        <div class="business-content">
+
+            <div class="business-number">
+                CREATIVE
+            </div>
+
+            <div class="business-tag">
+                Music & Culture
+            </div>
+
+            <h2>
+                MOB Records
+            </h2>
+
+            <p>
+                A creative division built around music, production,
+                artistic expression and culture, with room for
+                creative talent to develop.
+            </p>
+
+            <a href="mob-records.html" class="view">
+                Enter MOB Records
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <!-- SLATT -->
+
+    <article class="business clothing no-image reverse">
+
+        <div class="business-content">
+
+            <div class="business-number">
+                CREATIVE
+            </div>
+
+            <div class="business-tag">
+                Fashion
+            </div>
+
+            <h2>
+                Slatt Clothing
+            </h2>
+
+            <p>
+                A fashion venture built around identity,
+                self-expression and the idea that what you wear
+                can communicate the vision behind you.
+            </p>
+
+            <a href="slatt-clothing.html" class="view">
+                Enter Slatt Clothing
+                <span>→</span>
+            </a>
+
+        </div>
+
+        <div class="business-image">
+
+            <div
+                style="
+                width:100%;
+                height:100%;
+                background:
+                linear-gradient(
+                    135deg,
+                    #191713,
+                    #0b0b0b
+                );
+                "
+            ></div>
+
+        </div>
+
+    </article>
+
+
+</section>
+
+
+<!-- FUTURE -->
+
+<section class="future">
+
+    <small>
+        And this is only the beginning
+    </small>
+
+    <h2>
+        The portfolio<br>
+        keeps <span>growing.</span>
+    </h2>
+
+    <p>
+        REYWORLD GROUP is not limited to what exists today.
+        As new ideas, partnerships and ventures develop,
+        there is room for more to become part of the world.
+    </p>
+
+</section>
+```
+
+</main>
+
+<footer>
+
+```
+<span>
+    REYWORLD GROUP
+</span>
+
+<span>
+    Building Vision. Creating Legacy.
+</span>
+```
+
+</footer>
+
+</body>
+</html>
