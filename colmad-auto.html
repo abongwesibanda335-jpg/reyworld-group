@@ -1,1417 +1,1003 @@
 <!DOCTYPE html>
-<html>
 
+<html lang="en">
 <head>
 
-    <title>Colmad Auto | REYWORLD GROUP</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
+<title>Colmad Auto | REYWORLD GROUP</title>
 
-        * {
-            box-sizing: border-box;
-        }
+<style>
 
-        html {
-            scroll-behavior: smooth;
-        }
+* {
+    box-sizing: border-box;
+}
 
-        body {
-            margin: 0;
-            background: #090909;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        a {
-            color: white;
-            text-decoration: none;
-        }
+body {
+    margin: 0;
+    background: #090909;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 
-        /* NAVIGATION */
+/* ==============================
+   NAVIGATION
+============================== */
 
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-            padding: 20px 45px;
+    padding: 22px 6%;
 
-            background: rgba(9, 9, 9, 0.97);
+    background: rgba(9, 9, 9, 0.97);
+    border-bottom: 1px solid #2a1717;
+}
 
-            border-bottom: 1px solid #321515;
-        }
+.logo {
+    color: #c93636;
+    font-size: 21px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
 
-        .logo {
-            color: #d93636;
+.logo span {
+    color: white;
+}
 
-            font-size: 23px;
-            font-weight: bold;
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
 
-            letter-spacing: 4px;
-        }
+.nav-links a {
+    color: white;
+    text-decoration: none;
 
-        .back {
-            color: #b7b7b7;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
 
-            font-size: 14px;
-            font-weight: bold;
+    transition: 0.3s;
+}
 
-            letter-spacing: 1px;
+.nav-links a:hover {
+    color: #d33a3a;
+}
 
-            transition: 0.3s ease;
-        }
 
-        .back:hover {
-            color: #d93636;
-        }
+/* ==============================
+   MAIN
+============================== */
 
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+    padding: 70px 0 100px;
+}
 
-        /* HERO */
 
-        .hero {
-            min-height: 88vh;
+/* ==============================
+   HERO
+============================== */
 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+.hero {
+    position: relative;
 
-            padding: 90px 30px;
+    min-height: 620px;
 
-            text-align: center;
+    display: flex;
+    align-items: center;
 
-            background:
-                radial-gradient(
-                    circle at 50% 35%,
-                    rgba(217, 54, 54, 0.20),
-                    transparent 45%
-                ),
-                linear-gradient(
-                    180deg,
-                    #111111,
-                    #090909
-                );
-        }
+    padding: 60px;
 
-        .hero-label {
-            margin-bottom: 20px;
+    overflow: hidden;
 
-            color: #d93636;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 5, 5, 0.95),
+            rgba(5, 5, 5, 0.62),
+            rgba(5, 5, 5, 0.25)
+        ),
+        url("images/WhatsApp Image 2026-09-12 at 19.15.59.jpeg");
 
-            font-size: 13px;
-            font-weight: bold;
+    background-size: cover;
+    background-position: center;
 
-            letter-spacing: 4px;
+    border: 1px solid #2a1717;
 
-            text-transform: uppercase;
-        }
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.5);
+}
 
-        .hero h1 {
-            margin: 0 0 18px;
+.hero::after {
+    content: "";
 
-            font-size: clamp(55px, 9vw, 105px);
+    position: absolute;
 
-            line-height: 1;
+    left: 0;
+    bottom: 0;
 
-            letter-spacing: 7px;
-        }
+    width: 100%;
+    height: 3px;
 
-        .hero h2 {
-            margin: 0 0 25px;
+    background: #c93636;
+}
 
-            color: #d93636;
+.hero-content {
+    position: relative;
+    z-index: 2;
 
-            font-size: 25px;
-            font-weight: normal;
+    max-width: 720px;
+}
 
-            letter-spacing: 2px;
-        }
+.badge {
+    display: inline-block;
 
-        .hero p {
-            max-width: 720px;
+    margin-bottom: 25px;
+    padding: 10px 18px;
 
-            margin: 0 auto 35px;
+    border: 1px solid #c93636;
 
-            color: #b8b8b8;
+    color: #e04a4a;
 
-            font-size: 18px;
+    font-size: 11px;
+    font-weight: bold;
 
-            line-height: 1.8;
-        }
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
-        .hero-buttons {
-            display: flex;
+.hero h1 {
+    margin: 0 0 20px;
 
-            gap: 15px;
+    color: white;
 
-            flex-wrap: wrap;
+    font-size: clamp(55px, 9vw, 105px);
+    line-height: 0.92;
 
-            justify-content: center;
-        }
+    letter-spacing: 3px;
+}
 
-        .hero-button {
-            display: inline-block;
+.hero h1 span {
+    color: #c93636;
+}
 
-            padding: 15px 30px;
+.tagline {
+    margin: 0;
 
-            border: 1px solid #d93636;
+    color: #d8d8d8;
 
-            color: #d93636;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
 
-            font-size: 13px;
-            font-weight: bold;
 
-            letter-spacing: 1px;
+/* ==============================
+   INTRO
+============================== */
 
-            transition: 0.3s ease;
-        }
+.intro {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
 
-        .hero-button:hover {
-            background: #d93636;
+    gap: 30px;
 
-            color: #090909;
-        }
+    margin-top: 30px;
+}
 
-        .hero-button.secondary {
-            border-color: #555555;
+.intro-main {
+    padding: 45px;
 
-            color: #b8b8b8;
-        }
+    background: #111111;
 
-        .hero-button.secondary:hover {
-            background: #555555;
+    border-left: 4px solid #c93636;
+    border-top: 1px solid #2a1717;
+    border-right: 1px solid #2a1717;
+    border-bottom: 1px solid #2a1717;
+}
 
-            color: white;
-        }
+.intro-main h2 {
+    margin: 0 0 20px;
 
+    color: white;
 
-        /* GENERAL SECTIONS */
+    font-size: 31px;
+}
 
-        .section {
-            max-width: 1200px;
+.intro-main p {
+    margin: 0 0 18px;
 
-            margin: auto;
+    color: #c5c5c5;
 
-            padding: 100px 30px;
-        }
+    font-size: 16px;
+    line-height: 1.8;
+}
 
-        .section-title {
-            margin-bottom: 18px;
+.intro-main p:last-child {
+    margin-bottom: 0;
+}
 
-            text-align: center;
+.intro-main strong {
+    color: white;
+}
 
-            font-size: 42px;
+.intro-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-            letter-spacing: 2px;
-        }
+    padding: 40px;
 
-        .section-subtitle {
-            max-width: 720px;
+    background: #0d0d0d;
 
-            margin: 0 auto 55px;
+    border: 1px solid #2a1717;
+}
 
-            text-align: center;
+.stat {
+    padding: 20px 0;
 
-            color: #999999;
+    border-bottom: 1px solid #2a1717;
+}
 
-            font-size: 17px;
+.stat:first-child {
+    padding-top: 0;
+}
 
-            line-height: 1.8;
-        }
+.stat:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
 
-        .section-title::after {
-            content: "";
+.stat-label {
+    display: block;
 
-            display: block;
+    margin-bottom: 7px;
 
-            width: 55px;
-            height: 3px;
+    color: #8d4a4a;
 
-            margin: 18px auto 0;
+    font-size: 10px;
+    font-weight: bold;
 
-            background: #d93636;
-        }
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
+.stat-value {
+    color: white;
 
-        /* INTRO */
+    font-size: 18px;
+    font-weight: bold;
+}
 
-        .intro-section {
-            background: #0d0d0d;
-        }
 
-        .intro-content {
-            max-width: 900px;
+/* ==============================
+   SECTION TITLE
+============================== */
 
-            margin: auto;
+.section-title {
+    margin: 85px 0 35px;
 
-            text-align: center;
-        }
+    color: white;
 
-        .intro-content p {
-            color: #b8b8b8;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
 
-            font-size: 18px;
+.section-title::after {
+    content: "";
 
-            line-height: 1.9;
-        }
+    display: block;
 
-        .intro-highlight {
-            margin-top: 35px;
+    width: 55px;
+    height: 3px;
 
-            color: white !important;
+    margin-top: 14px;
 
-            font-size: 24px !important;
+    background: #c93636;
+}
 
-            font-weight: bold;
-        }
 
+/* ==============================
+   WORKSHOP GALLERY
+============================== */
 
-        /* WHY COLMAD */
+.gallery {
+    display: grid;
 
-        .why-grid {
-            display: grid;
+    grid-template-columns: 1.35fr 0.65fr;
 
-            grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 330px 330px;
 
-            gap: 20px;
-        }
+    gap: 20px;
+}
 
-        .why-card {
-            padding: 35px 28px;
+.project {
+    position: relative;
 
-            background: #111111;
+    overflow: hidden;
 
-            border: 1px solid #292929;
+    background: #111111;
 
-            border-top: 3px solid #d93636;
+    border: 1px solid #2a1717;
 
-            transition: 0.3s ease;
-        }
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
 
-        .why-card:hover {
-            transform: translateY(-7px);
+.project:first-child {
+    grid-row: span 2;
+}
 
-            border-color: #d93636;
+.project img {
+    display: block;
 
-            box-shadow:
-                0 15px 40px rgba(217, 54, 54, 0.10);
-        }
+    width: 100%;
+    height: 100%;
 
-        .why-number {
-            margin-bottom: 15px;
+    object-fit: cover;
 
-            color: #d93636;
+    transition: transform 0.7s ease;
+}
 
-            font-size: 14px;
+.project::after {
+    content: "";
 
-            font-weight: bold;
+    position: absolute;
+    inset: 0;
 
-            letter-spacing: 2px;
-        }
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.88),
+            rgba(0, 0, 0, 0.02) 70%
+        );
+}
 
-        .why-card h3 {
-            margin-bottom: 12px;
+.project:hover {
+    transform: translateY(-5px);
 
-            font-size: 20px;
-        }
+    border-color: #c93636;
 
-        .why-card p {
-            margin: 0;
+    box-shadow:
+        0 20px 45px rgba(201, 54, 54, 0.15);
+}
 
-            color: #999999;
+.project:hover img {
+    transform: scale(1.06);
+}
 
-            line-height: 1.7;
-        }
+.caption {
+    position: absolute;
 
+    left: 25px;
+    bottom: 23px;
 
-        /* SERVICES */
+    z-index: 2;
 
-        .services {
-            display: grid;
+    color: white;
 
-            grid-template-columns: repeat(2, 1fr);
+    font-size: 15px;
+    font-weight: bold;
 
-            gap: 25px;
-        }
+    letter-spacing: 1px;
+}
 
-        .service {
-            padding: 38px 32px;
+.caption span {
+    display: block;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #151515,
-                    #0d0d0d
-                );
+    margin-bottom: 7px;
 
-            border: 1px solid #292929;
+    color: #d84747;
 
-            border-left: 4px solid #d93636;
+    font-size: 9px;
 
-            transition: 0.3s ease;
-        }
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
-        .service:hover {
-            transform: translateY(-5px);
 
-            box-shadow:
-                0 15px 35px rgba(217, 54, 54, 0.10);
-        }
+/* ==============================
+   SERVICES
+============================== */
 
-        .service h3 {
-            margin-bottom: 15px;
+.services-section {
+    margin-top: 85px;
+}
 
-            color: #d93636;
+.services-grid {
+    display: grid;
 
-            font-size: 22px;
-        }
+    grid-template-columns: repeat(3, 1fr);
 
-        .service p {
-            margin: 0;
+    gap: 15px;
+}
 
-            color: #aaaaaa;
+.service {
+    min-height: 150px;
 
-            font-size: 16px;
+    display: flex;
+    align-items: flex-end;
 
-            line-height: 1.8;
-        }
+    padding: 25px;
 
+    background: #111111;
 
-        /* WORK GALLERY */
+    border: 1px solid #2a1717;
 
-        .gallery {
-            display: grid;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
 
-            grid-template-columns: repeat(2, 1fr);
+.service:hover {
+    transform: translateY(-5px);
 
-            gap: 25px;
-        }
+    border-color: #c93636;
+}
 
-        .gallery-item {
-            overflow: hidden;
+.service p {
+    margin: 0;
 
-            background: #111111;
+    color: white;
 
-            border: 1px solid #292929;
-        }
+    font-size: 15px;
+    font-weight: bold;
 
-        .gallery img {
-            width: 100%;
+    line-height: 1.4;
+}
 
-            height: 420px;
 
-            display: block;
+/* ==============================
+   CONTACT
+============================== */
 
-            object-fit: cover;
+.contact-section {
+    display: grid;
 
-            transition: transform 0.5s ease;
-        }
+    grid-template-columns: 1fr 1fr;
 
-        .gallery-item:hover img {
-            transform: scale(1.04);
-        }
+    gap: 25px;
 
-        .gallery-caption {
-            padding: 20px;
-        }
+    margin-top: 85px;
+}
 
-        .gallery-caption h3 {
-            margin: 0 0 7px;
+.contact-card {
+    padding: 40px;
 
-            color: #d93636;
+    background: #111111;
 
-            font-size: 18px;
-        }
+    border: 1px solid #2a1717;
+}
 
-        .gallery-caption p {
-            margin: 0;
+.contact-card h2 {
+    margin: 0 0 30px;
 
-            color: #888888;
+    color: white;
 
-            font-size: 14px;
+    font-size: 28px;
+}
 
-            line-height: 1.6;
-        }
+.contact-card h2::after {
+    content: "";
 
+    display: block;
 
-        /* AUTOMOTIVE APPROACH */
+    width: 45px;
+    height: 3px;
 
-        .approach {
-            background:
-                linear-gradient(
-                    135deg,
-                    #151010,
-                    #090909
-                );
-        }
+    margin-top: 13px;
 
-        .approach-content {
-            max-width: 900px;
+    background: #c93636;
+}
 
-            margin: auto;
+.contact-item {
+    margin-bottom: 23px;
+}
 
-            text-align: center;
-        }
+.contact-item:last-child {
+    margin-bottom: 0;
+}
 
-        .approach-content p {
-            color: #b8b8b8;
+.contact-label {
+    display: block;
 
-            font-size: 18px;
+    margin-bottom: 6px;
 
-            line-height: 1.9;
-        }
+    color: #8d4a4a;
 
-        .approach-list {
-            display: grid;
+    font-size: 10px;
+    font-weight: bold;
 
-            grid-template-columns: repeat(2, 1fr);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
-            gap: 12px;
+.contact-value {
+    color: #d8d8d8;
 
-            margin-top: 35px;
+    font-size: 16px;
+    line-height: 1.6;
+}
 
-            text-align: left;
-        }
+.whatsapp {
+    display: inline-block;
 
-        .approach-list div {
-            padding: 17px 20px;
+    margin-top: 28px;
 
-            background: rgba(255,255,255,0.03);
+    padding: 14px 25px;
 
-            border-left: 2px solid #d93636;
+    border: 1px solid #25D366;
 
-            color: #d0d0d0;
-        }
+    color: #25D366;
 
+    text-decoration: none;
 
-        /* PROCESS */
+    font-size: 12px;
+    font-weight: bold;
 
-        .process {
-            display: grid;
+    letter-spacing: 1px;
 
-            grid-template-columns: repeat(4, 1fr);
+    transition: 0.3s;
+}
 
-            gap: 18px;
-        }
+.whatsapp:hover {
+    background: #25D366;
+    color: #07140b;
+}
 
-        .process-step {
-            padding: 30px 20px;
 
-            text-align: center;
+/* ==============================
+   LOCATION
+============================== */
 
-            background: #111111;
+.location-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-            border: 1px solid #292929;
-        }
+    min-height: 100%;
+}
 
-        .process-number {
-            width: 42px;
-            height: 42px;
+.location-card p {
+    margin: 0;
 
-            display: flex;
+    color: #c5c5c5;
 
-            justify-content: center;
-            align-items: center;
+    font-size: 16px;
+    line-height: 1.8;
+}
 
-            margin: 0 auto 18px;
+.location-card strong {
+    color: white;
+}
 
-            border: 1px solid #d93636;
 
-            border-radius: 50%;
+/* ==============================
+   BACK BUTTON
+============================== */
 
-            color: #d93636;
+.back {
+    display: block;
 
-            font-weight: bold;
-        }
+    width: fit-content;
 
-        .process-step h3 {
-            margin-bottom: 10px;
+    margin: 60px auto 0;
 
-            font-size: 17px;
-        }
+    padding: 13px 24px;
 
-        .process-step p {
-            margin: 0;
+    border: 1px solid #3b2828;
 
-            color: #888888;
+    color: #999999;
 
-            font-size: 14px;
+    text-decoration: none;
 
-            line-height: 1.6;
-        }
+    font-size: 12px;
 
+    letter-spacing: 1px;
 
-        /* CTA */
+    transition: 0.3s;
+}
 
-        .cta {
-            padding: 110px 30px;
+.back:hover {
+    border-color: #c93636;
+    color: #d84747;
+}
 
-            text-align: center;
 
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(217, 54, 54, 0.16),
-                    transparent 55%
-                ),
-                #090909;
-        }
+/* ==============================
+   MOBILE
+============================== */
 
-        .cta h2 {
-            margin-bottom: 20px;
+@media (max-width: 900px) {
 
-            font-size: 45px;
+    nav {
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px;
+    }
 
-            letter-spacing: 2px;
-        }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
 
-        .cta p {
-            max-width: 650px;
+    .container {
+        width: 92%;
+        padding: 45px 0 70px;
+    }
 
-            margin: 0 auto 35px;
+    .hero {
+        min-height: 500px;
+        padding: 40px 30px;
+    }
 
-            color: #aaaaaa;
+    .hero h1 {
+        font-size: 58px;
+    }
 
-            font-size: 18px;
+    .intro {
+        grid-template-columns: 1fr;
+    }
 
-            line-height: 1.8;
-        }
+    .intro-main,
+    .intro-side {
+        padding: 30px 25px;
+    }
 
-        .cta-button {
-            display: inline-block;
+    .gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
 
-            padding: 17px 35px;
+    .project,
+    .project:first-child {
+        grid-row: auto;
+        height: 320px;
+    }
 
-            background: #d93636;
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 
-            color: white;
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+}
 
-            font-size: 14px;
+@media (max-width: 550px) {
 
-            font-weight: bold;
+    .hero {
+        padding: 35px 20px;
+    }
 
-            letter-spacing: 1px;
+    .hero h1 {
+        font-size: 45px;
+    }
 
-            transition: 0.3s ease;
-        }
+    .tagline {
+        font-size: 16px;
+    }
 
-        .cta-button:hover {
-            background: white;
+    .section-title {
+        font-size: 29px;
+    }
 
-            color: #090909;
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
 
-            transform: translateY(-3px);
-        }
+    .project,
+    .project:first-child {
+        height: 280px;
+    }
 
+}
 
-        /* CONTACT */
-
-        .contact {
-            text-align: center;
-        }
-
-        .contact-info {
-            max-width: 550px;
-
-            margin: 35px auto;
-        }
-
-        .contact-info p {
-            margin: 12px 0;
-
-            color: #aaaaaa;
-
-            font-size: 17px;
-        }
-
-        .contact-info strong {
-            color: #d93636;
-        }
-
-        .contact-buttons {
-            display: flex;
-
-            justify-content: center;
-
-            gap: 15px;
-
-            flex-wrap: wrap;
-        }
-
-        .contact-button {
-            display: inline-block;
-
-            padding: 15px 28px;
-
-            border: 1px solid #d93636;
-
-            color: #d93636;
-
-            font-weight: bold;
-
-            transition: 0.3s ease;
-        }
-
-        .contact-button:hover {
-            background: #d93636;
-
-            color: white;
-        }
-
-
-        /* BACK TO BUSINESSES */
-
-        .return-section {
-            padding: 20px 30px 100px;
-
-            text-align: center;
-        }
-
-        .back-to-businesses {
-            display: inline-block;
-
-            padding: 15px 30px;
-
-            border: 1px solid #d93636;
-
-            color: #d93636;
-
-            font-size: 13px;
-
-            font-weight: bold;
-
-            letter-spacing: 1px;
-
-            transition: 0.3s ease;
-        }
-
-        .back-to-businesses:hover {
-            background: #d93636;
-
-            color: #090909;
-
-            transform: translateY(-3px);
-        }
-
-
-        /* FOOTER */
-
-        footer {
-            padding: 50px 25px 25px;
-
-            background: #050505;
-
-            border-top: 1px solid #292929;
-
-            text-align: center;
-        }
-
-        .footer-logo {
-            margin-bottom: 12px;
-
-            color: #d93636;
-
-            font-size: 22px;
-
-            font-weight: bold;
-
-            letter-spacing: 4px;
-        }
-
-        footer p {
-            margin: 6px 0;
-
-            color: #666666;
-
-            font-size: 13px;
-        }
-
-        .footer-brand {
-            margin-top: 20px;
-
-            color: #4d4d4d;
-
-            font-size: 12px;
-        }
-
-
-        /* MOBILE */
-
-        @media (max-width: 850px) {
-
-            nav {
-                padding: 18px 20px;
-            }
-
-            .logo {
-                font-size: 18px;
-
-                letter-spacing: 3px;
-            }
-
-            .back {
-                font-size: 12px;
-            }
-
-            .hero {
-                min-height: 80vh;
-
-                padding: 80px 20px;
-            }
-
-            .hero h1 {
-                font-size: clamp(45px, 13vw, 70px);
-
-                letter-spacing: 4px;
-            }
-
-            .hero h2 {
-                font-size: 20px;
-            }
-
-            .section {
-                padding: 75px 20px;
-            }
-
-            .section-title {
-                font-size: 34px;
-            }
-
-            .why-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .services {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery img {
-                height: 320px;
-            }
-
-            .approach-list {
-                grid-template-columns: 1fr;
-            }
-
-            .process {
-                grid-template-columns: 1fr;
-            }
-
-            .cta h2 {
-                font-size: 34px;
-            }
-
-            .return-section {
-                padding: 10px 20px 75px;
-            }
-
-        }
-
-    </style>
+</style>
 
 </head>
 
-
 <body>
-
 
 <!-- NAVIGATION -->
 
 <nav>
 
-    <div class="logo">
-        COLMAD AUTO
-    </div>
+```
+<div class="logo">
+    COLMAD <span>AUTO</span>
+</div>
 
-    <a
-        href="index.html"
-        class="back"
-    >
-        ← REYWORLD GROUP
+<div class="nav-links">
+
+    <a href="index.html">
+        Home
     </a>
+
+    <a href="businesses.html">
+        Businesses
+    </a>
+
+    <a href="about.html">
+        About
+    </a>
+
+</div>
+```
 
 </nav>
 
+<!-- MAIN -->
 
+<main class="container">
+
+```
 <!-- HERO -->
 
-<section class="hero">
+<header class="hero">
 
-    <div class="hero-label">
-        REYWORLD GROUP BUSINESS
-    </div>
+    <div class="hero-content">
 
-    <h1>
-        COLMAD AUTO
-    </h1>
+        <span class="badge">
+            Automotive
+        </span>
 
-    <h2>
-        Quality in every detail.
-    </h2>
+        <h1>
+            COLMAD <span>AUTO</span>
+        </h1>
 
-    <p>
-        Keeping your vehicle running, looking right and
-        ready for the road. From automotive repairs and
-        servicing to vehicle detailing, Colmad Auto is built
-        around practical vehicle care and attention to detail.
-    </p>
-
-    <div class="hero-buttons">
-
-        <a
-            href="https://wa.me/27844195749"
-            target="_blank"
-            class="hero-button"
-        >
-            CONTACT US
-        </a>
-
-        <a
-            href="#work"
-            class="hero-button secondary"
-        >
-            VIEW OUR WORK
-        </a>
+        <p class="tagline">
+            Quality in every detail.
+        </p>
 
     </div>
 
-</section>
+</header>
 
 
 <!-- INTRO -->
 
-<section class="section intro-section">
+<section class="intro">
 
-    <div class="intro-content">
 
-        <h2 class="section-title">
-            YOUR CAR DESERVES PROPER CARE
+    <div class="intro-main">
+
+        <h2>
+            Built around your vehicle.
         </h2>
 
         <p>
-            Your vehicle is more than just something that gets
-            you from one place to another. Regular servicing,
-            repairs and proper maintenance can make a difference
-            in how your vehicle performs and how confident you feel
-            behind the wheel.
+            <strong>Colmad Auto</strong> is an automotive business
+            based in Killarney Gardens, Cape Town.
         </p>
 
         <p>
-            Colmad Auto focuses on helping vehicle owners keep
-            their cars in good condition, from mechanical attention
-            to the finishing touches that keep a vehicle looking
-            its best.
+            The workshop environment reflects a practical,
+            hands-on approach to automotive work, with attention
+            to the details that keep vehicles looking and running
+            right.
         </p>
 
-        <p class="intro-highlight">
-            Look after your car. Keep it moving.
-        </p>
+    </div>
+
+
+    <div class="intro-side">
+
+        <div class="stat">
+
+            <span class="stat-label">
+                Industry
+            </span>
+
+            <span class="stat-value">
+                Automotive
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <span class="stat-label">
+                Location
+            </span>
+
+            <span class="stat-value">
+                Killarney Gardens
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <span class="stat-label">
+                Service Area
+            </span>
+
+            <span class="stat-value">
+                Cape Town
+            </span>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- WHY COLMAD AUTO -->
+<!-- WORKSHOP -->
 
-<section class="section">
-
-    <h2 class="section-title">
-        WHY COLMAD AUTO?
-    </h2>
-
-    <p class="section-subtitle">
-        Good automotive care starts with paying attention to
-        the vehicle, understanding the problem and taking care
-        of the details that matter.
-    </p>
+<h2 class="section-title">
+    Inside Colmad Auto
+</h2>
 
 
-    <div class="why-grid">
+<section class="gallery">
 
 
-        <div class="why-card">
+    <div class="project">
 
-            <div class="why-number">
-                01
-            </div>
+        <img
+            src="images/WhatsApp Image 2026-09-12 at 19.15.59.jpeg"
+            alt="Silver BMW convertible on a workshop hydraulic lift"
+        >
 
-            <h3>
-                Practical Vehicle Care
-            </h3>
+        <div class="caption">
 
-            <p>
-                Whether your vehicle needs attention under the
-                bonnet or general servicing, the focus is on
-                keeping your car road-ready and properly cared for.
-            </p>
+            <span>
+                Workshop
+            </span>
+
+            Automotive Work
 
         </div>
-
-
-        <div class="why-card">
-
-            <div class="why-number">
-                02
-            </div>
-
-            <h3>
-                Attention To Detail
-            </h3>
-
-            <p>
-                Small details can make a big difference. We look
-                beyond simply getting the job done and focus on
-                the condition and presentation of your vehicle.
-            </p>
-
-        </div>
-
-
-        <div class="why-card">
-
-            <div class="why-number">
-                03
-            </div>
-
-            <h3>
-                One Place For Your Car
-            </h3>
-
-            <p>
-                From servicing and repairs to detailing and
-                general vehicle care, Colmad Auto brings different
-                aspects of automotive care together.
-            </p>
-
-        </div>
-
 
     </div>
+
+
+    <div class="project">
+
+        <img
+            src="images/WhatsApp Image 2026-09-12 at 19.16.01.jpeg"
+            alt="White BMW in an automotive workshop"
+        >
+
+        <div class="caption">
+
+            <span>
+                Workshop View
+            </span>
+
+            Vehicle Care
+
+        </div>
+
+    </div>
+
 
 </section>
 
 
 <!-- SERVICES -->
 
-<section class="section">
+<section class="services-section">
 
     <h2 class="section-title">
-        OUR SERVICES
+        The Colmad Standard
     </h2>
 
-    <p class="section-subtitle">
-        Automotive services designed to help you maintain,
-        repair and care for your vehicle.
-    </p>
 
-
-    <div class="services">
+    <div class="services-grid">
 
 
         <div class="service">
-
-            <h3>
-                Automotive Repairs
-            </h3>
-
             <p>
-                When your vehicle isn't performing as it should,
-                proper attention can help identify the issue and
-                get you moving again. We provide automotive repair
-                support for vehicles requiring mechanical attention.
+                Automotive Workshop Services
             </p>
-
         </div>
 
 
         <div class="service">
-
-            <h3>
-                Vehicle Servicing
-            </h3>
-
             <p>
-                Regular servicing is an important part of looking
-                after your vehicle. Routine checks and maintenance
-                help you stay aware of your vehicle's condition.
+                Vehicle Inspection & Care
             </p>
-
         </div>
 
 
         <div class="service">
-
-            <h3>
-                Vehicle Detailing
-            </h3>
-
             <p>
-                A well-maintained vehicle should look as good as
-                it runs. Detailing focuses on the appearance and
-                presentation of your vehicle, inside and out.
+                Hands-On Automotive Work
             </p>
-
-        </div>
-
-
-        <div class="service">
-
-            <h3>
-                General Vehicle Care
-            </h3>
-
-            <p>
-                Need advice about maintaining your vehicle or
-                dealing with an automotive issue? Get in touch
-                and discuss what your vehicle needs.
-            </p>
-
         </div>
 
 
     </div>
-
-</section>
-
-
-<!-- OUR WORK -->
-
-<section
-    class="section"
-    id="work"
->
-
-    <h2 class="section-title">
-        OUR WORK
-    </h2>
-
-    <p class="section-subtitle">
-        A look inside the workshop and at the vehicles receiving
-        automotive attention.
-    </p>
-
-
-    <div class="gallery">
-
-
-        <div class="gallery-item">
-
-            <img
-                src="images/WhatsApp Image 2026-09-12 at 19.15.59.jpeg"
-                alt="Silver BMW E46 convertible raised on a hydraulic lift"
-            >
-
-            <div class="gallery-caption">
-
-                <h3>
-                    Workshop Repairs
-                </h3>
-
-                <p>
-                    A BMW E46 convertible raised on a hydraulic
-                    lift for workshop attention.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="gallery-item">
-
-            <img
-                src="images/WhatsApp Image 2026-09-12 at 19.16.01.jpeg"
-                alt="White BMW E90 with the hood open inside an auto shop"
-            >
-
-            <div class="gallery-caption">
-
-                <h3>
-                    Under The Bonnet
-                </h3>
-
-                <p>
-                    A BMW E90 receiving attention inside the
-                    automotive workshop.
-                </p>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- APPROACH -->
-
-<section class="section approach">
-
-    <div class="approach-content">
-
-        <h2 class="section-title">
-            LOOK AFTER WHAT YOU DRIVE
-        </h2>
-
-        <p>
-            Vehicles perform better when they are properly looked
-            after. Staying on top of servicing, repairs and general
-            maintenance can help you understand your vehicle and
-            avoid leaving important issues unattended.
-        </p>
-
-        <div class="approach-list">
-
-            <div>
-                Routine vehicle servicing
-            </div>
-
-            <div>
-                Mechanical repairs
-            </div>
-
-            <div>
-                Vehicle checks and attention
-            </div>
-
-            <div>
-                General maintenance
-            </div>
-
-            <div>
-                Exterior vehicle care
-            </div>
-
-            <div>
-                Vehicle detailing
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- PROCESS -->
-
-<section class="section">
-
-    <h2 class="section-title">
-        THE COLMAD APPROACH
-    </h2>
-
-    <p class="section-subtitle">
-        Every vehicle is different. The process starts by
-        understanding what your vehicle needs.
-    </p>
-
-
-    <div class="process">
-
-
-        <div class="process-step">
-
-            <div class="process-number">
-                01
-            </div>
-
-            <h3>
-                Discuss
-            </h3>
-
-            <p>
-                Tell us what's happening with your vehicle.
-            </p>
-
-        </div>
-
-
-        <div class="process-step">
-
-            <div class="process-number">
-                02
-            </div>
-
-            <h3>
-                Assess
-            </h3>
-
-            <p>
-                Look at the vehicle and identify the work required.
-            </p>
-
-        </div>
-
-
-        <div class="process-step">
-
-            <div class="process-number">
-                03
-            </div>
-
-            <h3>
-                Work
-            </h3>
-
-            <p>
-                The vehicle receives the required attention.
-            </p>
-
-        </div>
-
-
-        <div class="process-step">
-
-            <div class="process-number">
-                04
-            </div>
-
-            <h3>
-                Drive
-            </h3>
-
-            <p>
-                Get back on the road with your vehicle cared for.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="cta">
-
-    <h2>
-        NEED ATTENTION FOR YOUR VEHICLE?
-    </h2>
-
-    <p>
-        Whether your car needs servicing, repairs, detailing
-        or general automotive attention, get in touch with
-        Colmad Auto and tell us what your vehicle needs.
-    </p>
-
-    <a
-        href="https://wa.me/27844195749"
-        target="_blank"
-        class="cta-button"
-    >
-        WHATSAPP COLMAD AUTO
-    </a>
 
 </section>
 
 
 <!-- CONTACT -->
 
-<section class="section contact">
-
-    <h2 class="section-title">
-        CONTACT COLMAD AUTO
-    </h2>
-
-    <p class="section-subtitle">
-        Have a question about your vehicle or want to discuss
-        a service? Get in touch with the Colmad Auto team.
-    </p>
+<section class="contact-section">
 
 
-    <div class="contact-info">
+    <div class="contact-card">
 
-        <p>
-            <strong>Phone / WhatsApp</strong>
-        </p>
-
-        <p>
-            084 419 5749
-        </p>
+        <h2>
+            Contact Colmad
+        </h2>
 
 
-        <p>
-            <strong>Location</strong>
-        </p>
+        <div class="contact-item">
 
-        <p>
-            Killarney Gardens, Cape Town
-        </p>
+            <span class="contact-label">
+                Phone
+            </span>
 
-    </div>
+            <span class="contact-value">
+                084 419 5749
+            </span>
 
+        </div>
 
-    <div class="contact-buttons">
 
         <a
             href="https://wa.me/27844195749"
+            class="whatsapp"
             target="_blank"
-            class="contact-button"
+            rel="noopener noreferrer"
         >
-            WhatsApp Us
+            WhatsApp Colmad Auto
         </a>
 
     </div>
 
-</section>
 
+    <div class="contact-card location-card">
 
-<!-- BACK TO BUSINESSES -->
+        <h2>
+            Find Us
+        </h2>
 
-<section class="return-section">
+        <p>
+            <strong>Killarney Gardens</strong><br>
+            Cape Town
+        </p>
 
-    <a
-        href="index.html#businesses"
-        class="back-to-businesses"
-    >
-        ← Back to Businesses
-    </a>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    <div class="footer-logo">
-        COLMAD AUTO
     </div>
 
-    <p>
-        Quality in every detail.
-    </p>
 
-    <p>
-        084 419 5749 · Killarney Gardens, Cape Town
-    </p>
+</section>
 
-    <p class="footer-brand">
-        A REYWORLD GROUP business
-    </p>
 
-    <p>
-        © 2026 Colmad Auto | REYWORLD GROUP
-    </p>
+<!-- BACK -->
 
-</footer>
+<a
+    href="businesses.html"
+    class="back"
+>
+    ← Back to Businesses
+</a>
+```
 
+</main>
 
 </body>
-
 </html>
