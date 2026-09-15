@@ -10,12 +10,11 @@
 
 <title>REYWORLD GROUP | Building Vision. Creating Legacy.</title>
 
-
 <style>
 
-/* =====================================================
+/* ==============================
    RESET
-===================================================== */
+============================== */
 
 * {
     box-sizing: border-box;
@@ -27,15 +26,9 @@ html {
 
 body {
     margin: 0;
-
     background: #f5f1e8;
-
     color: #111;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -43,22 +36,17 @@ a {
 }
 
 
-/* =====================================================
+/* ==============================
    HEADER
-===================================================== */
+============================== */
 
 .site-header {
-
     position: sticky;
-
     top: 0;
-
     z-index: 9999;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     padding: 22px 6%;
@@ -74,75 +62,61 @@ a {
 /* LOGO */
 
 .logo {
-
     text-decoration: none;
 
     font-size: 21px;
-
     font-weight: 800;
-
     letter-spacing: 4px;
 
     color: #111;
 }
 
 .logo span {
-
     color: #b38a3c;
 }
 
 
-/* MENU BUTTON */
+/* ==============================
+   THREE DOT MENU
+============================== */
 
 .menu-button {
-
     width: 48px;
-
     height: 48px;
 
     border: 1px solid #cfc6b8;
-
     border-radius: 50%;
 
     background: transparent;
-
     color: #111;
 
     font-size: 28px;
-
     line-height: 1;
 
     cursor: pointer;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     transition: 0.3s ease;
 }
 
 .menu-button:hover {
-
     background: #111;
-
     color: #fff;
-
     border-color: #111;
 }
 
 
-/* =====================================================
+/* ==============================
    DROPDOWN MENU
-===================================================== */
+============================== */
 
 .menu-panel {
-
     position: absolute;
 
     top: 82px;
-
     right: 6%;
 
     width: 260px;
@@ -157,7 +131,6 @@ a {
         0 20px 50px rgba(0,0,0,0.25);
 
     opacity: 0;
-
     visibility: hidden;
 
     transform: translateY(-10px);
@@ -169,20 +142,15 @@ a {
 }
 
 .menu-panel.open {
-
     opacity: 1;
-
     visibility: visible;
 
     transform: translateY(0);
 }
 
 .menu-panel a {
-
     display: flex;
-
     align-items: center;
-
     gap: 15px;
 
     padding: 16px;
@@ -192,7 +160,6 @@ a {
     text-decoration: none;
 
     font-size: 13px;
-
     letter-spacing: 1px;
 
     border-bottom: 1px solid #2c2c2c;
@@ -201,63 +168,47 @@ a {
 }
 
 .menu-panel a:last-child {
-
     border-bottom: none;
 }
 
 .menu-panel a:hover {
-
     color: #c9a65b;
-
     padding-left: 22px;
 }
 
 .menu-number {
-
     color: #777;
-
     font-size: 10px;
-
     letter-spacing: 1px;
 }
 
 
-/* =====================================================
+/* ==============================
    HERO
-===================================================== */
+============================== */
 
 .hero {
-
     min-height: 88vh;
 
     padding: 90px 6%;
 
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
 
     position: relative;
-
     overflow: hidden;
 
     background: #111;
-
     color: #fff;
 }
 
-
-/* Decorative gold line */
-
 .hero::before {
-
     content: "";
 
     position: absolute;
 
     width: 420px;
-
     height: 420px;
 
     border: 1px solid rgba(201,166,91,0.25);
@@ -265,18 +216,15 @@ a {
     border-radius: 50%;
 
     right: -170px;
-
     top: -130px;
 }
 
 .hero::after {
-
     content: "";
 
     position: absolute;
 
     width: 260px;
-
     height: 260px;
 
     border: 1px solid rgba(201,166,91,0.15);
@@ -284,23 +232,17 @@ a {
     border-radius: 50%;
 
     right: -90px;
-
     top: -50px;
 }
 
-
 .hero-content {
-
     position: relative;
-
     z-index: 2;
 
     max-width: 950px;
 }
 
-
 .hero-label {
-
     display: inline-block;
 
     margin-bottom: 28px;
@@ -308,15 +250,12 @@ a {
     color: #c9a65b;
 
     font-size: 11px;
-
     font-weight: 700;
 
     letter-spacing: 4px;
 }
 
-
 .hero h1 {
-
     margin: 0;
 
     font-size: clamp(60px, 11vw, 145px);
@@ -328,17 +267,12 @@ a {
     font-weight: 800;
 }
 
-
 .hero h1 span {
-
     display: block;
-
     color: #c9a65b;
 }
 
-
 .hero-text {
-
     max-width: 580px;
 
     margin-top: 42px;
@@ -350,13 +284,10 @@ a {
     line-height: 1.8;
 }
 
-
 .hero-button {
-
     display: inline-flex;
 
     align-items: center;
-
     gap: 18px;
 
     margin-top: 35px;
@@ -379,27 +310,21 @@ a {
 }
 
 .hero-button:hover {
-
     background: #fff;
-
     transform: translateY(-3px);
 }
 
 
-/* =====================================================
-   INTRO
-===================================================== */
+/* ==============================
+   ABOUT
+============================== */
 
 .intro {
-
     padding: 120px 6%;
-
     background: #f5f1e8;
 }
 
-
 .intro-grid {
-
     display: grid;
 
     grid-template-columns: 0.7fr 1.3fr;
@@ -411,9 +336,7 @@ a {
     margin: auto;
 }
 
-
 .intro-label {
-
     color: #a07a35;
 
     font-size: 11px;
@@ -423,9 +346,7 @@ a {
     letter-spacing: 3px;
 }
 
-
 .intro h2 {
-
     margin: 0;
 
     font-size: clamp(40px, 6vw, 75px);
@@ -435,9 +356,7 @@ a {
     letter-spacing: -3px;
 }
 
-
 .intro-text p {
-
     margin: 0 0 25px;
 
     color: #555;
@@ -447,19 +366,16 @@ a {
     line-height: 1.9;
 }
 
-
 .intro-text strong {
-
     color: #111;
 }
 
 
-/* =====================================================
-   BUSINESS SECTION
-===================================================== */
+/* ==============================
+   BUSINESSES
+============================== */
 
 .businesses {
-
     padding: 120px 6%;
 
     background: #111;
@@ -467,9 +383,7 @@ a {
     color: #fff;
 }
 
-
 .business-header {
-
     display: flex;
 
     justify-content: space-between;
@@ -483,9 +397,7 @@ a {
     margin: 0 auto 65px;
 }
 
-
 .business-label {
-
     color: #c9a65b;
 
     font-size: 11px;
@@ -495,9 +407,7 @@ a {
     letter-spacing: 3px;
 }
 
-
 .business-header h2 {
-
     margin: 12px 0 0;
 
     font-size: clamp(42px, 6vw, 75px);
@@ -507,9 +417,7 @@ a {
     letter-spacing: -3px;
 }
 
-
 .business-header p {
-
     max-width: 390px;
 
     margin: 0;
@@ -525,7 +433,6 @@ a {
 /* BUSINESS GRID */
 
 .business-grid {
-
     max-width: 1200px;
 
     margin: auto;
@@ -543,7 +450,6 @@ a {
 /* BUSINESS CARD */
 
 .business-card {
-
     position: relative;
 
     min-height: 310px;
@@ -563,19 +469,15 @@ a {
         background 0.35s ease;
 }
 
-
 .business-card::before {
-
     content: "";
 
     position: absolute;
 
     left: 0;
-
     bottom: 0;
 
     width: 100%;
-
     height: 4px;
 
     background: var(--accent);
@@ -587,15 +489,11 @@ a {
     transition: 0.4s ease;
 }
 
-
 .business-card:hover::before {
-
     transform: scaleX(1);
 }
 
-
 .business-card:hover {
-
     background: #191919;
 
     transform: translateY(-4px);
@@ -607,7 +505,6 @@ a {
 /* NUMBER */
 
 .business-number {
-
     color: #555;
 
     font-size: 12px;
@@ -621,7 +518,6 @@ a {
 /* CATEGORY */
 
 .business-category {
-
     margin-top: 65px;
 
     color: var(--accent);
@@ -634,8 +530,9 @@ a {
 }
 
 
-.business-card h3 {
+/* BUSINESS NAME */
 
+.business-card h3 {
     margin: 12px 0 10px;
 
     font-size: clamp(27px, 3vw, 42px);
@@ -646,8 +543,9 @@ a {
 }
 
 
-.business-card p {
+/* TAGLINE */
 
+.business-card p {
     margin: 0;
 
     color: #888;
@@ -661,21 +559,17 @@ a {
 /* ARROW */
 
 .business-arrow {
-
     position: absolute;
 
     right: 30px;
-
     top: 30px;
 
     width: 42px;
-
     height: 42px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     border: 1px solid #444;
@@ -687,9 +581,7 @@ a {
     transition: 0.35s ease;
 }
 
-
 .business-card:hover .business-arrow {
-
     background: var(--accent);
 
     border-color: var(--accent);
@@ -700,69 +592,56 @@ a {
 }
 
 
-/* ACCENTS */
+/* BUSINESS COLOURS */
 
 .construction {
-
     --accent: #d87832;
 }
 
 .pools {
-
     --accent: #25c6d9;
 }
 
 .automotive {
-
     --accent: #b52f35;
 }
 
 .sales {
-
     --accent: #c9a65b;
 }
 
 .records {
-
     --accent: #9364c4;
 }
 
 .clothing {
-
     --accent: #e6d8b8;
 }
 
 
-/* =====================================================
+/* ==============================
    SERVICES
-===================================================== */
+============================== */
 
 .services {
-
     padding: 120px 6%;
 
     background: #f5f1e8;
 }
 
-
 .services-inner {
-
     max-width: 1200px;
 
     margin: auto;
 }
 
-
 .services-top {
-
     max-width: 700px;
 
     margin-bottom: 65px;
 }
 
-
 .services-label {
-
     color: #a07a35;
 
     font-size: 11px;
@@ -772,9 +651,7 @@ a {
     letter-spacing: 3px;
 }
 
-
 .services h2 {
-
     margin: 14px 0 0;
 
     font-size: clamp(42px, 6vw, 75px);
@@ -784,9 +661,7 @@ a {
     letter-spacing: -3px;
 }
 
-
 .services-grid {
-
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
@@ -796,9 +671,7 @@ a {
     border-left: 1px solid #d5cec1;
 }
 
-
 .service {
-
     min-height: 190px;
 
     padding: 30px;
@@ -808,9 +681,7 @@ a {
     border-bottom: 1px solid #d5cec1;
 }
 
-
 .service-number {
-
     color: #aaa;
 
     font-size: 11px;
@@ -818,17 +689,13 @@ a {
     letter-spacing: 2px;
 }
 
-
 .service h3 {
-
     margin: 45px 0 10px;
 
     font-size: 21px;
 }
 
-
 .service p {
-
     margin: 0;
 
     color: #777;
@@ -839,12 +706,11 @@ a {
 }
 
 
-/* =====================================================
+/* ==============================
    CONTACT
-===================================================== */
+============================== */
 
 .contact {
-
     padding: 120px 6%;
 
     background: #111;
@@ -852,9 +718,7 @@ a {
     color: #fff;
 }
 
-
 .contact-inner {
-
     max-width: 1200px;
 
     margin: auto;
@@ -868,9 +732,7 @@ a {
     align-items: center;
 }
 
-
 .contact-label {
-
     color: #c9a65b;
 
     font-size: 11px;
@@ -880,9 +742,7 @@ a {
     letter-spacing: 3px;
 }
 
-
 .contact h2 {
-
     margin: 15px 0 25px;
 
     font-size: clamp(45px, 6vw, 80px);
@@ -892,9 +752,7 @@ a {
     letter-spacing: -4px;
 }
 
-
 .contact-intro {
-
     max-width: 500px;
 
     color: #999;
@@ -904,9 +762,7 @@ a {
     line-height: 1.8;
 }
 
-
 .contact-box {
-
     padding: 45px;
 
     border: 1px solid #333;
@@ -914,9 +770,7 @@ a {
     background: #151515;
 }
 
-
 .contact-box h3 {
-
     margin: 0 0 30px;
 
     color: #c9a65b;
@@ -926,9 +780,7 @@ a {
     letter-spacing: 2px;
 }
 
-
 .contact-link {
-
     display: block;
 
     padding: 18px 0;
@@ -944,21 +796,18 @@ a {
     transition: 0.25s ease;
 }
 
-
 .contact-link:hover {
-
     color: #c9a65b;
 
     padding-left: 8px;
 }
 
 
-/* =====================================================
+/* ==============================
    FOOTER
-===================================================== */
+============================== */
 
 footer {
-
     padding: 30px 6%;
 
     background: #0b0b0b;
@@ -976,124 +825,92 @@ footer {
     letter-spacing: 1px;
 }
 
-
 footer strong {
-
     color: #c9a65b;
 }
 
 
-/* =====================================================
+/* ==============================
    MOBILE
-===================================================== */
+============================== */
 
 @media (max-width: 850px) {
 
     .site-header {
-
         padding: 18px 5%;
     }
 
     .menu-panel {
-
         right: 5%;
-
         width: 230px;
     }
 
-
     .hero {
-
         min-height: 80vh;
-
         padding: 80px 6%;
     }
 
     .hero h1 {
-
         font-size: clamp(60px, 18vw, 100px);
-
         letter-spacing: -5px;
     }
 
-
     .intro {
-
         padding: 80px 6%;
     }
 
     .intro-grid {
-
         grid-template-columns: 1fr;
-
         gap: 35px;
     }
 
-
     .businesses {
-
         padding: 80px 6%;
     }
 
     .business-header {
-
         display: block;
 
         margin-bottom: 45px;
     }
 
     .business-header p {
-
         margin-top: 25px;
     }
 
     .business-grid {
-
         grid-template-columns: 1fr;
     }
 
     .business-card {
-
         min-height: 260px;
     }
 
-
     .services {
-
         padding: 80px 6%;
     }
 
     .services-grid {
-
         grid-template-columns: 1fr;
     }
 
-
     .contact {
-
         padding: 80px 6%;
     }
 
     .contact-inner {
-
         grid-template-columns: 1fr;
-
         gap: 45px;
     }
 
     .contact-box {
-
         padding: 30px;
     }
 
-
     footer {
-
         flex-direction: column;
-
         text-align: center;
     }
-
 }
 
 
@@ -1102,33 +919,25 @@ footer strong {
 @media (max-width: 500px) {
 
     .logo {
-
         font-size: 17px;
-
         letter-spacing: 3px;
     }
 
     .menu-button {
-
         width: 44px;
-
         height: 44px;
     }
 
     .hero-text {
-
         font-size: 15px;
     }
 
     .business-card {
-
         padding: 28px;
-
         min-height: 245px;
     }
 
     .business-category {
-
         margin-top: 55px;
     }
 
@@ -1142,9 +951,9 @@ footer strong {
 <body>
 
 
-<!-- =====================================================
+<!-- ==============================
      HEADER
-===================================================== -->
+============================== -->
 
 <header class="site-header">
 
@@ -1196,9 +1005,9 @@ footer strong {
 
 
 
-<!-- =====================================================
+<!-- ==============================
      HERO
-===================================================== -->
+============================== -->
 
 <section class="hero" id="home">
 
@@ -1232,9 +1041,9 @@ footer strong {
 
 
 
-<!-- =====================================================
+<!-- ==============================
      ABOUT
-===================================================== -->
+============================== -->
 
 <section class="intro" id="about">
 
@@ -1285,9 +1094,9 @@ footer strong {
 
 
 
-<!-- =====================================================
+<!-- ==============================
      BUSINESSES
-===================================================== -->
+============================== -->
 
 <section class="businesses" id="businesses">
 
@@ -1320,7 +1129,7 @@ footer strong {
     <div class="business-grid">
 
 
-        <!-- TONY & BRIAN -->
+        <!-- 01 TONY & BRIAN -->
 
         <a
             href="tony-brian.html"
@@ -1351,7 +1160,7 @@ footer strong {
 
 
 
-        <!-- MAGMA POOLS -->
+        <!-- 02 MAGMA POOLS -->
 
         <a
             href="magma-pools.html"
@@ -1382,7 +1191,7 @@ footer strong {
 
 
 
-        <!-- COLMAD AUTO -->
+        <!-- 03 COLMAD AUTO -->
 
         <a
             href="colmad-auto.html"
@@ -1413,7 +1222,7 @@ footer strong {
 
 
 
-        <!-- AUTO SALES -->
+        <!-- 04 AUTO SALES -->
 
         <a
             href="auto-sales.html"
@@ -1444,10 +1253,10 @@ footer strong {
 
 
 
-        <!-- REY RECORDS -->
+        <!-- 05 MOB RECORDS -->
 
         <a
-            href="rey-records.html"
+            href="mob-records.html"
             class="business-card records"
         >
 
@@ -1456,11 +1265,11 @@ footer strong {
             </div>
 
             <div class="business-category">
-                ENTERTAINMENT
+                MUSIC / RECORD LABEL
             </div>
 
             <h3>
-                Rey Records
+                MOB Records
             </h3>
 
             <p>
@@ -1475,10 +1284,10 @@ footer strong {
 
 
 
-        <!-- REY CLOTHING -->
+        <!-- 06 SLATT CLOTHING -->
 
         <a
-            href="rey-clothing.html"
+            href="slatt-clothing.html"
             class="business-card clothing"
         >
 
@@ -1491,7 +1300,7 @@ footer strong {
             </div>
 
             <h3>
-                Rey Clothing
+                Slatt Clothing
             </h3>
 
             <p>
@@ -1511,9 +1320,9 @@ footer strong {
 
 
 
-<!-- =====================================================
+<!-- ==============================
      SERVICES
-===================================================== -->
+============================== -->
 
 <section class="services" id="services">
 
@@ -1654,9 +1463,9 @@ footer strong {
 
 
 
-<!-- =====================================================
+<!-- ==============================
      CONTACT
-===================================================== -->
+============================== -->
 
 <section class="contact" id="contact">
 
@@ -1732,6 +1541,22 @@ footer strong {
                 Auto Sales →
             </a>
 
+
+            <a
+                href="mob-records.html"
+                class="contact-link"
+            >
+                MOB Records →
+            </a>
+
+
+            <a
+                href="slatt-clothing.html"
+                class="contact-link"
+            >
+                Slatt Clothing →
+            </a>
+
         </div>
 
 
@@ -1741,9 +1566,9 @@ footer strong {
 
 
 
-<!-- =====================================================
+<!-- ==============================
      FOOTER
-===================================================== -->
+============================== -->
 
 <footer>
 
@@ -1752,22 +1577,26 @@ footer strong {
     </div>
 
     <div>
-        <strong>BUILDING VISION. CREATING LEGACY.</strong>
+        <strong>
+            BUILDING VISION. CREATING LEGACY.
+        </strong>
     </div>
 
 </footer>
 
 
 
-<!-- =====================================================
+<!-- ==============================
      MENU JAVASCRIPT
-===================================================== -->
+============================== -->
 
 <script>
 
-const menuButton = document.getElementById("menuButton");
+const menuButton =
+    document.getElementById("menuButton");
 
-const menuPanel = document.getElementById("menuPanel");
+const menuPanel =
+    document.getElementById("menuPanel");
 
 
 menuButton.addEventListener("click", function () {
@@ -1785,22 +1614,24 @@ menuButton.addEventListener("click", function () {
 });
 
 
-/* Close menu when clicking a link */
+/* Close menu after clicking a link */
 
-document.querySelectorAll(".menu-panel a").forEach(function(link) {
+document
+    .querySelectorAll(".menu-panel a")
+    .forEach(function(link) {
 
-    link.addEventListener("click", function() {
+        link.addEventListener("click", function() {
 
-        menuPanel.classList.remove("open");
+            menuPanel.classList.remove("open");
 
-        menuButton.setAttribute(
-            "aria-expanded",
-            "false"
-        );
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        });
 
     });
-
-});
 
 
 /* Close menu when clicking outside */
