@@ -1,9 +1,7 @@
-```html
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,1757 +19,1381 @@ html {
 
 body {
     margin: 0;
-    background: #f5f1e8;
-    color: #111;
+    background: #f4f0e8;
+    color: #171717;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-a {
-    color: inherit;
-}
-
-
-/* ==============================
+/* =========================
    HEADER
-============================== */
+========================= */
 
-.site-header {
+header {
     position: sticky;
     top: 0;
-    z-index: 9999;
+    z-index: 1000;
+    background: rgba(244,240,232,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #d9d1c3;
+}
 
+.nav {
+    width: min(1280px, 92%);
+    margin: auto;
+    min-height: 76px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    padding: 22px 6%;
-
-    background: rgba(245, 241, 232, 0.96);
-
-    backdrop-filter: blur(15px);
-
-    border-bottom: 1px solid #ddd5c8;
 }
 
 .logo {
     text-decoration: none;
-
-    font-size: 21px;
+    color: #111;
+    font-size: 18px;
     font-weight: 800;
     letter-spacing: 4px;
-
-    color: #111;
 }
 
 .logo span {
-    color: #b38a3c;
+    color: #a47b2c;
 }
 
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
 
-/* ==============================
-   THREE DOT MENU
-============================== */
+.nav-links a {
+    color: #222;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover {
+    color: #a47b2c;
+}
 
 .menu-button {
-    width: 48px;
-    height: 48px;
-
-    border: 1px solid #cfc6b8;
-    border-radius: 50%;
-
-    background: transparent;
-    color: #111;
-
-    font-size: 28px;
-    line-height: 1;
-
+    display: none;
+    border: 0;
+    background: none;
+    font-size: 25px;
     cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: 0.3s ease;
 }
 
-.menu-button:hover {
-    background: #111;
-    color: #fff;
-    border-color: #111;
+.mobile-menu {
+    display: none;
 }
 
-.menu-panel {
-    position: absolute;
+/* =========================
+   MAIN
+========================= */
 
-    top: 82px;
-    right: 6%;
-
-    width: 260px;
-
-    padding: 14px;
-
-    background: #111;
-
-    border: 1px solid #292929;
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,0.25);
-
-    opacity: 0;
-    visibility: hidden;
-
-    transform: translateY(-10px);
-
-    transition:
-        opacity 0.25s ease,
-        transform 0.25s ease,
-        visibility 0.25s ease;
+.container {
+    width: min(1280px, 92%);
+    margin: auto;
 }
 
-.menu-panel.open {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.menu-panel a {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
-    padding: 16px;
-
-    color: #fff;
-
-    text-decoration: none;
-
-    font-size: 13px;
-    letter-spacing: 1px;
-
-    border-bottom: 1px solid #2c2c2c;
-
-    transition: 0.25s ease;
-}
-
-.menu-panel a:last-child {
-    border-bottom: none;
-}
-
-.menu-panel a:hover {
-    color: #c9a65b;
-    padding-left: 22px;
-}
-
-.menu-number {
-    color: #777;
-    font-size: 10px;
-    letter-spacing: 1px;
-}
-
-
-/* ==============================
+/* =========================
    HERO
-============================== */
+========================= */
 
 .hero {
-    min-height: 88vh;
-
-    padding: 90px 6%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    position: relative;
-    overflow: hidden;
-
-    background: #111;
-    color: #fff;
+    min-height: 680px;
+    padding: 65px 0 75px;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 65px;
+    align-items: center;
 }
 
-.hero::before {
-    content: "";
-
-    position: absolute;
-
-    width: 420px;
-    height: 420px;
-
-    border: 1px solid rgba(201,166,91,0.25);
-
-    border-radius: 50%;
-
-    right: -170px;
-    top: -130px;
+.hero-copy {
+    max-width: 560px;
 }
 
-.hero::after {
-    content: "";
-
-    position: absolute;
-
-    width: 260px;
-    height: 260px;
-
-    border: 1px solid rgba(201,166,91,0.15);
-
-    border-radius: 50%;
-
-    right: -90px;
-    top: -50px;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-
-    max-width: 1000px;
-}
-
-.hero-label {
+.eyebrow {
     display: inline-block;
-
-    margin-bottom: 28px;
-
-    color: #c9a65b;
-
+    margin-bottom: 22px;
+    color: #a47b2c;
     font-size: 11px;
-    font-weight: 700;
-
-    letter-spacing: 4px;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
 }
 
 .hero h1 {
     margin: 0;
-
-    font-size: clamp(60px, 11vw, 145px);
-
-    line-height: 0.84;
-
-    letter-spacing: -7px;
-
-    font-weight: 800;
+    font-family: Georgia, serif;
+    font-size: clamp(48px, 6vw, 78px);
+    line-height: 0.98;
+    font-weight: 500;
+    letter-spacing: -2px;
 }
 
 .hero h1 span {
-    display: block;
-    color: #c9a65b;
+    color: #a47b2c;
 }
 
-.hero-text {
-    max-width: 700px;
-
-    margin-top: 42px;
-
-    color: #bcbcbc;
-
-    font-size: 18px;
-
+.hero-description {
+    max-width: 520px;
+    margin: 30px 0;
+    color: #5e5a53;
+    font-size: 17px;
     line-height: 1.8;
 }
 
-.hero-button {
-    display: inline-flex;
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
 
-    align-items: center;
-    gap: 18px;
-
-    margin-top: 35px;
-
-    padding: 16px 25px;
-
-    background: #c9a65b;
-
-    color: #111;
-
+.button {
+    display: inline-block;
+    padding: 14px 23px;
     text-decoration: none;
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-    letter-spacing: 1.5px;
-
-    transition: 0.3s ease;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
 }
 
-.hero-button:hover {
-    background: #fff;
-    transform: translateY(-3px);
+.button-dark {
+    background: #171717;
+    color: white;
 }
 
+.button-outline {
+    border: 1px solid #aaa094;
+    color: #171717;
+}
 
-/* ==============================
-   ABOUT
-============================== */
+.button:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   HERO GALLERY
+========================= */
+
+.hero-gallery {
+    height: 540px;
+    display: grid;
+    grid-template-columns: 1.35fr 0.65fr;
+    grid-template-rows: 1fr 0.72fr;
+    gap: 12px;
+}
+
+.hero-image {
+    position: relative;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.hero-image:first-child {
+    grid-row: span 2;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.hero-image:hover img {
+    transform: scale(1.04);
+}
+
+.image-label {
+    position: absolute;
+    left: 18px;
+    bottom: 18px;
+    padding: 8px 11px;
+    background: rgba(0,0,0,.72);
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* =========================
+   GROUP INTRO
+========================= */
 
 .intro {
-    padding: 120px 6%;
-    background: #f5f1e8;
-}
-
-.intro-grid {
     display: grid;
-
-    grid-template-columns: 0.7fr 1.3fr;
-
-    gap: 80px;
-
-    max-width: 1200px;
-
-    margin: auto;
+    grid-template-columns: .7fr 1.3fr;
+    gap: 70px;
+    padding: 85px 0;
+    border-top: 1px solid #d8d0c3;
+    border-bottom: 1px solid #d8d0c3;
 }
 
-.intro-label {
-    color: #a07a35;
-
+.section-label {
+    color: #a47b2c;
     font-size: 11px;
-
-    font-weight: 700;
-
-    letter-spacing: 3px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-.intro h2 {
-    margin: 0;
-
-    font-size: clamp(40px, 6vw, 75px);
-
-    line-height: 0.95;
-
-    letter-spacing: -3px;
+.intro h2,
+.section-heading h2 {
+    margin: 12px 0 0;
+    font-family: Georgia, serif;
+    font-weight: 500;
+    font-size: 43px;
+    line-height: 1.08;
 }
 
-.intro-text p {
-    margin: 0 0 25px;
-
-    color: #555;
-
-    font-size: 17px;
-
-    line-height: 1.9;
+.intro-content p {
+    margin: 0 0 20px;
+    color: #555149;
+    font-size: 16px;
+    line-height: 1.85;
 }
 
-.intro-text strong {
-    color: #111;
+.intro-content p:last-child {
+    margin-bottom: 0;
 }
 
+/* =========================
+   FACTS
+========================= */
 
-/* ==============================
-   GROUP FACTS
-============================== */
-
-.group-facts {
-    max-width: 1200px;
-
-    margin: 70px auto 0;
-
+.facts {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
-    border-top: 1px solid #d5cec1;
-
-    border-left: 1px solid #d5cec1;
+    margin: 0;
+    border-bottom: 1px solid #d8d0c3;
 }
 
 .fact {
-    padding: 30px;
+    padding: 38px 30px;
+    border-right: 1px solid #d8d0c3;
+}
 
-    border-right: 1px solid #d5cec1;
-
-    border-bottom: 1px solid #d5cec1;
+.fact:last-child {
+    border-right: 0;
 }
 
 .fact-number {
     display: block;
-
-    margin-bottom: 12px;
-
-    color: #a07a35;
-
-    font-size: 25px;
-
-    font-weight: 800;
+    margin-bottom: 8px;
+    font-family: Georgia, serif;
+    font-size: 35px;
+    color: #a47b2c;
 }
 
-.fact-label {
-    color: #666;
-
-    font-size: 12px;
-
-    letter-spacing: 1px;
-}
-
-
-/* ==============================
-   BUSINESSES
-============================== */
-
-.businesses {
-    padding: 120px 6%;
-
-    background: #111;
-
-    color: #fff;
-}
-
-.business-header {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: flex-end;
-
-    gap: 40px;
-
-    max-width: 1200px;
-
-    margin: 0 auto 65px;
-}
-
-.business-label {
-    color: #c9a65b;
-
+.fact-title {
     font-size: 11px;
-
-    font-weight: 700;
-
-    letter-spacing: 3px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
-.business-header h2 {
-    margin: 12px 0 0;
+/* =========================
+   BUSINESS SECTION
+========================= */
 
-    font-size: clamp(42px, 6vw, 75px);
-
-    line-height: 0.9;
-
-    letter-spacing: -3px;
+.business-section {
+    padding: 100px 0;
 }
 
-.business-header p {
-    max-width: 430px;
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-bottom: 45px;
+}
 
+.section-heading p {
+    max-width: 470px;
     margin: 0;
-
-    color: #999;
-
+    color: #676158;
+    font-size: 15px;
     line-height: 1.7;
-
-    font-size: 14px;
 }
-
-
-/* BUSINESS GRID */
 
 .business-grid {
-    max-width: 1200px;
-
-    margin: auto;
-
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
-    border-top: 1px solid #333;
-
-    border-left: 1px solid #333;
+    gap: 18px;
 }
-
-
-/* BUSINESS CARD */
 
 .business-card {
     position: relative;
-
-    min-height: 330px;
-
-    padding: 35px;
-
+    min-height: 285px;
+    padding: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-decoration: none;
-
+    color: white;
     overflow: hidden;
-
-    border-right: 1px solid #333;
-
-    border-bottom: 1px solid #333;
-
-    transition:
-        transform 0.35s ease,
-        background 0.35s ease;
+    background: #191919;
 }
 
 .business-card::before {
     content: "";
-
     position: absolute;
-
-    left: 0;
-    bottom: 0;
-
-    width: 100%;
-    height: 4px;
-
-    background: var(--accent);
-
-    transform: scaleX(0);
-
-    transform-origin: left;
-
-    transition: 0.4s ease;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        rgba(0,0,0,.92),
+        rgba(0,0,0,.35)
+    );
+    z-index: 1;
 }
 
-.business-card:hover::before {
-    transform: scaleX(1);
-}
-
-.business-card:hover {
-    background: #191919;
-
-    transform: translateY(-4px);
-
+.business-card-content {
+    position: relative;
     z-index: 2;
 }
 
 .business-number {
-    color: #555;
-
-    font-size: 12px;
-
-    letter-spacing: 2px;
-
-    font-weight: 700;
-}
-
-.business-category {
-    margin-top: 55px;
-
-    color: var(--accent);
-
     font-size: 10px;
-
-    font-weight: 700;
-
     letter-spacing: 2px;
+    color: #d7b66d;
 }
 
 .business-card h3 {
-    margin: 12px 0 12px;
+    margin: 42px 0 8px;
+    font-family: Georgia, serif;
+    font-size: 31px;
+    font-weight: 500;
+}
 
-    font-size: clamp(27px, 3vw, 42px);
-
-    line-height: 1;
-
-    letter-spacing: -1px;
+.business-type {
+    color: #d7b66d;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
 }
 
 .business-card p {
-    max-width: 420px;
-
-    margin: 0;
-
-    color: #999;
-
+    max-width: 500px;
+    margin: 18px 0 0;
+    color: #ddd;
     font-size: 14px;
-
     line-height: 1.7;
 }
 
-.business-arrow {
-    position: absolute;
-
-    right: 30px;
-    top: 30px;
-
-    width: 42px;
-    height: 42px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid #444;
-
-    border-radius: 50%;
-
-    font-size: 19px;
-
-    transition: 0.35s ease;
+.explore {
+    position: relative;
+    z-index: 2;
+    margin-top: 30px;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
-.business-card:hover .business-arrow {
-    background: var(--accent);
-
-    border-color: var(--accent);
-
-    color: #111;
-
-    transform: rotate(45deg);
+.business-card:hover .explore {
+    color: #d7b66d;
 }
 
-
-/* BUSINESS COLOURS */
-
-.construction {
-    --accent: #d87832;
-}
-
-.pools {
-    --accent: #25c6d9;
-}
-
-.automotive {
-    --accent: #b52f35;
-}
-
-.sales {
-    --accent: #c9a65b;
-}
-
-.records {
-    --accent: #9364c4;
-}
-
-.clothing {
-    --accent: #e6d8b8;
-}
-
-
-/* ==============================
+/* =========================
    SERVICES
-============================== */
+========================= */
 
-.services {
-    padding: 120px 6%;
-
-    background: #f5f1e8;
+.services-section {
+    padding: 90px 0;
+    background: #171717;
+    color: white;
 }
 
-.services-inner {
-    max-width: 1200px;
-
-    margin: auto;
+.services-layout {
+    display: grid;
+    grid-template-columns: .75fr 1.25fr;
+    gap: 80px;
 }
 
-.services-top {
-    max-width: 750px;
-
-    margin-bottom: 65px;
+.services-section .section-label {
+    color: #d7b66d;
 }
 
-.services-label {
-    color: #a07a35;
-
-    font-size: 11px;
-
-    font-weight: 700;
-
-    letter-spacing: 3px;
-}
-
-.services h2 {
-    margin: 14px 0 0;
-
-    font-size: clamp(42px, 6vw, 75px);
-
-    line-height: 0.9;
-
-    letter-spacing: -3px;
+.services-section h2 {
+    margin: 13px 0 0;
+    font-family: Georgia, serif;
+    font-size: 44px;
+    font-weight: 500;
 }
 
 .services-intro {
-    max-width: 700px;
-
-    margin-top: 30px;
-
-    color: #666;
-
-    font-size: 16px;
-
+    margin-top: 25px;
+    color: #aaa;
+    font-size: 14px;
     line-height: 1.8;
 }
 
-.services-grid {
+.service-list {
     display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    border-top: 1px solid #d5cec1;
-
-    border-left: 1px solid #d5cec1;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .service {
-    min-height: 210px;
+    padding: 28px 22px;
+    border-top: 1px solid #353535;
+}
 
-    padding: 30px;
-
-    border-right: 1px solid #d5cec1;
-
-    border-bottom: 1px solid #d5cec1;
+.service:nth-child(odd) {
+    border-right: 1px solid #353535;
 }
 
 .service-number {
-    color: #aaa;
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
+    color: #d7b66d;
+    font-size: 10px;
+    letter-spacing: 1px;
 }
 
 .service h3 {
-    margin: 40px 0 10px;
-
-    font-size: 21px;
+    margin: 15px 0 8px;
+    font-size: 17px;
 }
 
 .service p {
     margin: 0;
-
-    color: #777;
-
+    color: #999;
     font-size: 13px;
-
-    line-height: 1.7;
+    line-height: 1.65;
 }
 
+/* =========================
+   APPROACH
+========================= */
 
-/* ==============================
+.approach {
+    padding: 100px 0;
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 35px;
+    margin-top: 50px;
+}
+
+.approach-card {
+    padding-top: 25px;
+    border-top: 2px solid #171717;
+}
+
+.approach-card span {
+    color: #a47b2c;
+    font-family: Georgia, serif;
+    font-size: 27px;
+}
+
+.approach-card h3 {
+    margin: 14px 0 10px;
+    font-size: 17px;
+}
+
+.approach-card p {
+    margin: 0;
+    color: #686159;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+/* =========================
    CONTACT
-============================== */
+========================= */
 
-.contact {
-    padding: 120px 6%;
-
-    background: #111;
-
-    color: #fff;
+.contact-section {
+    padding: 85px 0;
+    background: #d8c9ad;
 }
 
 .contact-inner {
-    max-width: 1200px;
-
-    margin: auto;
-
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
-    gap: 80px;
-
+    gap: 70px;
     align-items: center;
 }
 
-.contact-label {
-    color: #c9a65b;
-
-    font-size: 11px;
-
-    font-weight: 700;
-
-    letter-spacing: 3px;
+.contact-section h2 {
+    margin: 12px 0 18px;
+    font-family: Georgia, serif;
+    font-size: 46px;
+    font-weight: 500;
 }
 
-.contact h2 {
-    margin: 15px 0 25px;
-
-    font-size: clamp(45px, 6vw, 80px);
-
-    line-height: 0.9;
-
-    letter-spacing: -4px;
-}
-
-.contact-intro {
-    max-width: 520px;
-
-    color: #999;
-
+.contact-section p {
+    max-width: 560px;
+    color: #514a40;
     font-size: 15px;
-
     line-height: 1.8;
 }
 
 .contact-box {
-    padding: 45px;
+    padding: 30px;
+    background: #171717;
+    color: white;
+}
 
-    border: 1px solid #333;
-
-    background: #151515;
+.contact-box small {
+    color: #d7b66d;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
 .contact-box h3 {
-    margin: 0 0 30px;
-
-    color: #c9a65b;
-
-    font-size: 12px;
-
-    letter-spacing: 2px;
+    margin: 12px 0 18px;
+    font-size: 24px;
 }
 
-.contact-link {
+.contact-box a {
     display: block;
-
-    padding: 18px 0;
-
-    color: #fff;
-
+    margin-top: 10px;
+    color: white;
     text-decoration: none;
-
-    font-size: 17px;
-
-    border-bottom: 1px solid #333;
-
-    transition: 0.25s ease;
+    font-size: 14px;
 }
 
-.contact-link:hover {
-    color: #c9a65b;
-
-    padding-left: 8px;
+.contact-box a:hover {
+    color: #d7b66d;
 }
 
-
-/* ==============================
+/* =========================
    FOOTER
-============================== */
+========================= */
 
 footer {
-    padding: 30px 6%;
+    padding: 30px 0;
+    background: #111;
+    color: #777;
+}
 
-    background: #0b0b0b;
-
-    color: #666;
-
+.footer-inner {
+    width: min(1280px, 92%);
+    margin: auto;
     display: flex;
-
     justify-content: space-between;
-
-    gap: 30px;
-
-    font-size: 11px;
-
-    letter-spacing: 1px;
+    gap: 20px;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
 }
 
-footer strong {
-    color: #c9a65b;
-}
-
-
-/* ==============================
+/* =========================
    MOBILE
-============================== */
+========================= */
 
 @media (max-width: 850px) {
 
-    .site-header {
-        padding: 18px 5%;
+    .nav {
+        min-height: 68px;
     }
 
-    .menu-panel {
-        right: 5%;
-        width: 230px;
+    .nav-links {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .mobile-menu {
+        padding: 10px 6% 20px;
+        background: #f4f0e8;
+        border-top: 1px solid #ddd4c7;
+    }
+
+    .mobile-menu a {
+        display: block;
+        padding: 12px 0;
+        color: #222;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 1px;
     }
 
     .hero {
-        min-height: 80vh;
-        padding: 80px 6%;
-    }
-
-    .hero h1 {
-        font-size: clamp(60px, 18vw, 100px);
-        letter-spacing: -5px;
-    }
-
-    .intro {
-        padding: 80px 6%;
-    }
-
-    .intro-grid {
         grid-template-columns: 1fr;
-        gap: 35px;
+        padding: 50px 0;
     }
 
-    .group-facts {
+    .hero-gallery {
+        height: 430px;
+    }
+
+    .intro,
+    .services-layout,
+    .contact-inner {
         grid-template-columns: 1fr;
+        gap: 40px;
     }
 
-    .businesses {
-        padding: 80px 6%;
-    }
-
-    .business-header {
+    .section-heading {
         display: block;
-
-        margin-bottom: 45px;
     }
 
-    .business-header p {
-        margin-top: 25px;
+    .section-heading p {
+        margin-top: 20px;
     }
 
     .business-grid {
         grid-template-columns: 1fr;
     }
 
-    .business-card {
-        min-height: 280px;
-    }
-
-    .services {
-        padding: 80px 6%;
-    }
-
-    .services-grid {
+    .approach-grid {
         grid-template-columns: 1fr;
     }
 
-    .contact {
-        padding: 80px 6%;
-    }
-
-    .contact-inner {
+    .facts {
         grid-template-columns: 1fr;
-        gap: 45px;
     }
 
-    .contact-box {
-        padding: 30px;
+    .fact {
+        border-right: 0;
+        border-bottom: 1px solid #d8d0c3;
     }
 
-    footer {
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+
+    .service:nth-child(odd) {
+        border-right: 0;
+    }
+
+    .footer-inner {
         flex-direction: column;
-        text-align: center;
     }
-}
-
-
-/* ==============================
-   SMALL PHONES
-============================== */
-
-@media (max-width: 500px) {
-
-    .logo {
-        font-size: 17px;
-        letter-spacing: 3px;
-    }
-
-    .menu-button {
-        width: 44px;
-        height: 44px;
-    }
-
-    .hero-text {
-        font-size: 15px;
-    }
-
-    .business-card {
-        padding: 28px;
-        min-height: 260px;
-    }
-
-    .business-category {
-        margin-top: 50px;
-    }
-
 }
 
 </style>
 
 </head>
 
-
 <body>
 
+<header>
 
-<!-- ==============================
-     HEADER
-============================== -->
+```
+<div class="nav">
 
-<header class="site-header">
-
-    <a href="index.html" class="logo">
+    <a href="#home" class="logo">
         REY<span>WORLD</span>
     </a>
 
+    <nav class="nav-links">
 
-    <button
-        class="menu-button"
-        id="menuButton"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-    >
-        ⋮
-    </button>
+        <a href="#about">About</a>
 
+        <a href="#businesses">Businesses</a>
 
-    <nav class="menu-panel" id="menuPanel">
+        <a href="#services">Services</a>
 
-        <a href="#home">
-            <span class="menu-number">01</span>
-            HOME
-        </a>
-
-        <a href="#about">
-            <span class="menu-number">02</span>
-            ABOUT
-        </a>
-
-        <a href="#businesses">
-            <span class="menu-number">03</span>
-            BUSINESSES
-        </a>
-
-        <a href="#services">
-            <span class="menu-number">04</span>
-            SERVICES
-        </a>
-
-        <a href="#contact">
-            <span class="menu-number">05</span>
-            CONTACT
-        </a>
+        <a href="#contact">Contact</a>
 
     </nav>
 
+    <button class="menu-button" onclick="toggleMenu()">
+        ⋮
+    </button>
+
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <a href="#about" onclick="toggleMenu()">About</a>
+
+    <a href="#businesses" onclick="toggleMenu()">Businesses</a>
+
+    <a href="#services" onclick="toggleMenu()">Services</a>
+
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+
+</div>
+```
+
 </header>
 
+<main>
 
+<div class="container">
 
-<!-- ==============================
-     HERO
-============================== -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
-    <div class="hero-content">
+```
+<div class="hero-copy">
 
-        <span class="hero-label">
-            REYWORLD GROUP
-        </span>
+    <span class="eyebrow">
+        REYWORLD GROUP
+    </span>
 
+    <h1>
+        Building Vision.<br>
+        <span>Creating Legacy.</span>
+    </h1>
 
-        <h1>
-            BUILDING
-            <span>VISION.</span>
-        </h1>
+    <p class="hero-description">
+        REYWORLD GROUP brings together a growing portfolio of businesses
+        operating across construction, pool services, automotive,
+        vehicle sales, music and fashion.
+    </p>
 
+    <div class="hero-actions">
 
-        <p class="hero-text">
-            REYWORLD GROUP is a growing portfolio of businesses
-            operating across construction, pool services,
-            automotive, vehicle sales, music and fashion.
-            Each business has its own purpose and identity,
-            while forming part of one larger group.
-        </p>
+        <a href="#businesses" class="button button-dark">
+            Explore Businesses
+        </a>
 
-
-        <a href="#businesses" class="hero-button">
-            EXPLORE OUR BUSINESSES
-            <span>→</span>
+        <a href="#about" class="button button-outline">
+            Discover REYWORLD
         </a>
 
     </div>
 
+</div>
+
+
+<div class="hero-gallery">
+
+    <div class="hero-image">
+
+        <img
+            src="images/WhatsApp Image 2026-09-11 at 10.52.59.jpeg"
+            alt="Magma Pools swimming pool project"
+        >
+
+        <div class="image-label">
+            Magma Pools
+        </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <img
+            src="images/WhatsApp Image 2026-09-12 at 19.15.19.jpeg"
+            alt="BMW 320i"
+        >
+
+        <div class="image-label">
+            Auto Sales
+        </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <img
+            src="images/WhatsApp Image 2026-09-12 at 19.15.59.jpeg"
+            alt="Colmad Auto workshop"
+        >
+
+        <div class="image-label">
+            Colmad Auto
+        </div>
+
+    </div>
+
+</div>
+```
+
 </section>
 
-
-
-<!-- ==============================
-     ABOUT
-============================== -->
+<!-- ABOUT -->
 
 <section class="intro" id="about">
 
-    <div class="intro-grid">
+```
+<div>
+
+    <span class="section-label">
+        About the Group
+    </span>
+
+    <h2>
+        Different businesses.<br>
+        One wider vision.
+    </h2>
+
+</div>
 
 
-        <div>
+<div class="intro-content">
 
-            <span class="intro-label">
-                01 / ABOUT REYWORLD
-            </span>
+    <p>
+        REYWORLD GROUP is a growing business portfolio bringing
+        different ventures together under one wider identity.
+        The group spans several industries, with each business
+        maintaining its own purpose, services and character.
+    </p>
 
-            <h2>
-                One group.
-                Six directions.
-            </h2>
+    <p>
+        Our portfolio currently includes construction and renovation,
+        swimming pool services, automotive services, vehicle sales,
+        music and fashion. Together, these businesses represent
+        different areas of creativity, practical work and enterprise.
+    </p>
 
-        </div>
+    <p>
+        REYWORLD is built around the idea that businesses can develop
+        in different directions while still contributing to one
+        larger vision — building businesses, creating opportunities
+        and developing something that can last.
+    </p>
 
-
-        <div class="intro-text">
-
-            <p>
-                <strong>REYWORLD GROUP</strong> brings together
-                a collection of businesses working across
-                different industries. The group currently
-                includes construction, swimming pool services,
-                automotive services, vehicle sales, music and
-                fashion.
-            </p>
-
-
-            <p>
-                Each business operates with its own name,
-                services and identity. The purpose of the group
-                is to bring these different ventures together
-                under one wider vision while allowing each
-                business to develop in its own direction.
-            </p>
-
-
-            <p>
-                From construction projects and pool installations
-                to vehicle services, vehicle sales, music
-                production and clothing, REYWORLD GROUP is
-                focused on developing businesses that can grow,
-                create opportunities and build a lasting presence.
-            </p>
-
-        </div>
-
-    </div>
-
-
-
-    <div class="group-facts">
-
-
-        <div class="fact">
-
-            <span class="fact-number">
-                06
-            </span>
-
-            <span class="fact-label">
-                BUSINESS AREAS
-            </span>
-
-        </div>
-
-
-        <div class="fact">
-
-            <span class="fact-number">
-                01
-            </span>
-
-            <span class="fact-label">
-                GROUP VISION
-            </span>
-
-        </div>
-
-
-        <div class="fact">
-
-            <span class="fact-number">
-                ∞
-            </span>
-
-            <span class="fact-label">
-                ROOM TO GROW
-            </span>
-
-        </div>
-
-
-    </div>
+</div>
+```
 
 </section>
 
+<!-- FACTS -->
+
+<section class="facts">
+
+```
+<div class="fact">
+
+    <span class="fact-number">06</span>
+
+    <span class="fact-title">
+        Business Areas
+    </span>
+
+</div>
 
 
-<!-- ==============================
-     BUSINESSES
-============================== -->
+<div class="fact">
 
-<section class="businesses" id="businesses">
+    <span class="fact-number">01</span>
 
-    <div class="business-header">
+    <span class="fact-title">
+        Group Vision
+    </span>
 
-        <div>
-
-            <span class="business-label">
-                02 / OUR BUSINESSES
-            </span>
-
-            <h2>
-                Explore<br>
-                REYWORLD.
-            </h2>
-
-        </div>
+</div>
 
 
-        <p>
-            REYWORLD GROUP operates across six different
-            business areas. Select a business to learn more
-            about its services, work and identity.
-        </p>
+<div class="fact">
+
+    <span class="fact-number">∞</span>
+
+    <span class="fact-title">
+        Room to Grow
+    </span>
+
+</div>
+```
+
+</section>
+
+<!-- BUSINESSES -->
+
+<section class="business-section" id="businesses">
+
+```
+<div class="section-heading">
+
+    <div>
+
+        <span class="section-label">
+            Our Portfolio
+        </span>
+
+        <h2>
+            The businesses<br>
+            behind REYWORLD.
+        </h2>
 
     </div>
 
 
+    <p>
+        Explore the businesses that make up the REYWORLD GROUP portfolio,
+        from practical services and automotive work to music and fashion.
+    </p>
 
-    <div class="business-grid">
+</div>
 
 
-        <!-- 01 TONY & BRIAN -->
+<div class="business-grid">
 
-        <a
-            href="tony-brian.html"
-            class="business-card construction"
-        >
 
-            <div class="business-number">
-                01
-            </div>
+    <a href="tony-brian.html" class="business-card">
 
-            <div class="business-category">
-                CONSTRUCTION
-            </div>
+        <div class="business-card-content">
+
+            <span class="business-number">
+                01 / CONSTRUCTION
+            </span>
 
             <h3>
                 Tony & Brian Projects
             </h3>
 
+            <span class="business-type">
+                Construction & Renovation
+            </span>
+
             <p>
-                Construction and renovation services for
-                residential and commercial projects, including
-                building work and property improvements.
+                Construction and renovation services for residential
+                and commercial projects, including building work and
+                property improvements.
             </p>
 
-            <div class="business-arrow">
-                ↗
-            </div>
+        </div>
 
-        </a>
+        <span class="explore">
+            Explore Business →
+        </span>
+
+    </a>
 
 
+    <a href="magma-pools.html" class="business-card">
 
-        <!-- 02 MAGMA POOLS -->
+        <div class="business-card-content">
 
-        <a
-            href="magma-pools.html"
-            class="business-card pools"
-        >
-
-            <div class="business-number">
-                02
-            </div>
-
-            <div class="business-category">
-                POOL SERVICES
-            </div>
+            <span class="business-number">
+                02 / POOLS
+            </span>
 
             <h3>
                 Magma Pools
             </h3>
 
+            <span class="business-type">
+                Pool Construction & Care
+            </span>
+
             <p>
-                Pool construction, installation, cleaning,
-                maintenance and custom water features for
-                swimming and outdoor spaces.
+                Pool construction, installation, cleaning, maintenance
+                and custom water features for swimming and outdoor spaces.
             </p>
 
-            <div class="business-arrow">
-                ↗
-            </div>
+        </div>
 
-        </a>
+        <span class="explore">
+            Explore Business →
+        </span>
+
+    </a>
 
 
+    <a href="colmad-auto.html" class="business-card">
 
-        <!-- 03 COLMAD AUTO -->
+        <div class="business-card-content">
 
-        <a
-            href="colmad-auto.html"
-            class="business-card automotive"
-        >
-
-            <div class="business-number">
-                03
-            </div>
-
-            <div class="business-category">
-                AUTOMOTIVE
-            </div>
+            <span class="business-number">
+                03 / AUTOMOTIVE
+            </span>
 
             <h3>
                 Colmad Auto
             </h3>
 
+            <span class="business-type">
+                Automotive Services
+            </span>
+
             <p>
                 Automotive services focused on vehicle care,
-                maintenance and quality workmanship for
-                everyday drivers.
+                maintenance and quality workmanship for everyday drivers.
             </p>
 
-            <div class="business-arrow">
-                ↗
-            </div>
+        </div>
 
-        </a>
+        <span class="explore">
+            Explore Business →
+        </span>
+
+    </a>
 
 
+    <a href="auto-sales.html" class="business-card">
 
-        <!-- 04 AUTO SALES -->
+        <div class="business-card-content">
 
-        <a
-            href="auto-sales.html"
-            class="business-card sales"
-        >
-
-            <div class="business-number">
-                04
-            </div>
-
-            <div class="business-category">
-                VEHICLE SALES
-            </div>
+            <span class="business-number">
+                04 / VEHICLE SALES
+            </span>
 
             <h3>
                 Auto Sales
             </h3>
 
+            <span class="business-type">
+                Vehicle Sales
+            </span>
+
             <p>
-                A vehicle sales division offering selected
-                pre-owned vehicles for customers looking for
-                their next drive.
+                A vehicle sales division offering selected pre-owned
+                vehicles for customers looking for their next drive.
             </p>
 
-            <div class="business-arrow">
-                ↗
-            </div>
+        </div>
 
-        </a>
+        <span class="explore">
+            Explore Business →
+        </span>
+
+    </a>
 
 
+    <a href="mob-records.html" class="business-card">
 
-        <!-- 05 MOB RECORDS -->
+        <div class="business-card-content">
 
-        <a
-            href="mob-records.html"
-            class="business-card records"
-        >
-
-            <div class="business-number">
-                05
-            </div>
-
-            <div class="business-category">
-                MUSIC / RECORD LABEL
-            </div>
+            <span class="business-number">
+                05 / MUSIC
+            </span>
 
             <h3>
                 MOB Records
             </h3>
 
+            <span class="business-type">
+                Record Label
+            </span>
+
             <p>
-                A music-focused business centred around
-                producers, artists, music creation, creativity
-                and the development of music culture.
+                A music-focused business centred around producers,
+                artists, music creation, creativity and music culture.
             </p>
 
-            <div class="business-arrow">
-                ↗
-            </div>
+        </div>
 
-        </a>
+        <span class="explore">
+            Explore Business →
+        </span>
+
+    </a>
 
 
+    <a href="slatt-clothing.html" class="business-card">
 
-        <!-- 06 SLATT CLOTHING -->
+        <div class="business-card-content">
 
-        <a
-            href="slatt-clothing.html"
-            class="business-card clothing"
-        >
-
-            <div class="business-number">
-                06
-            </div>
-
-            <div class="business-category">
-                FASHION
-            </div>
+            <span class="business-number">
+                06 / FASHION
+            </span>
 
             <h3>
                 Slatt Clothing
             </h3>
 
+            <span class="business-type">
+                Fashion & Clothing
+            </span>
+
             <p>
-                A clothing brand focused on fashion,
-                personal style, self-expression and building
-                an identity through what you wear.
+                A clothing brand focused on fashion, personal style,
+                self-expression and building identity through what you wear.
             </p>
 
-            <div class="business-arrow">
-                ↗
-            </div>
+        </div>
 
+        <span class="explore">
+            Explore Business →
+        </span>
+
+    </a>
+
+</div>
+```
+
+</section>
+
+</div>
+
+<!-- SERVICES -->
+
+<section class="services-section" id="services">
+
+<div class="container">
+
+```
+<div class="services-layout">
+
+    <div>
+
+        <span class="section-label">
+            What We Do
+        </span>
+
+        <h2>
+            A portfolio built<br>
+            across industries.
+        </h2>
+
+        <p class="services-intro">
+            REYWORLD brings together practical services, creative
+            businesses and consumer-focused ventures under one group.
+        </p>
+
+    </div>
+
+
+    <div class="service-list">
+
+        <div class="service">
+
+            <span class="service-number">01</span>
+
+            <h3>Construction</h3>
+
+            <p>
+                Building, renovation and property improvement services.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <span class="service-number">02</span>
+
+            <h3>Pool Services</h3>
+
+            <p>
+                Pool construction, cleaning, maintenance and water features.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <span class="service-number">03</span>
+
+            <h3>Automotive</h3>
+
+            <p>
+                Vehicle care, maintenance and automotive workmanship.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <span class="service-number">04</span>
+
+            <h3>Vehicle Sales</h3>
+
+            <p>
+                Selected pre-owned vehicles for customers and drivers.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <span class="service-number">05</span>
+
+            <h3>Music</h3>
+
+            <p>
+                Artists, producers, music creation and creative development.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <span class="service-number">06</span>
+
+            <h3>Fashion</h3>
+
+            <p>
+                Clothing, personal style and creative self-expression.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</div>
+
+</section>
+
+<!-- APPROACH -->
+
+<div class="container">
+
+<section class="approach">
+
+```
+<span class="section-label">
+    The REYWORLD Approach
+</span>
+
+<div class="approach-grid">
+
+    <div class="approach-card">
+
+        <span>01</span>
+
+        <h3>Build</h3>
+
+        <p>
+            We focus on developing businesses with clear identities,
+            practical services and room for long-term growth.
+        </p>
+
+    </div>
+
+
+    <div class="approach-card">
+
+        <span>02</span>
+
+        <h3>Create</h3>
+
+        <p>
+            Creativity sits across the portfolio, from visual design
+            and fashion to music, vehicles and physical spaces.
+        </p>
+
+    </div>
+
+
+    <div class="approach-card">
+
+        <span>03</span>
+
+        <h3>Grow</h3>
+
+        <p>
+            The group allows different ventures to develop in their
+            own direction while remaining connected to a wider vision.
+        </p>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+</div>
+
+<!-- CONTACT -->
+
+<section class="contact-section" id="contact">
+
+<div class="container">
+
+```
+<div class="contact-inner">
+
+    <div>
+
+        <span class="section-label">
+            Get In Touch
+        </span>
+
+        <h2>
+            Let's build<br>
+            something.
+        </h2>
+
+        <p>
+            Interested in one of the REYWORLD businesses, looking
+            for a service or wanting to connect with the group?
+            Explore the individual business pages or get in touch
+            with the relevant team.
+        </p>
+
+    </div>
+
+
+    <div class="contact-box">
+
+        <small>
+            REYWORLD GROUP
+        </small>
+
+        <h3>
+            Building Vision.<br>
+            Creating Legacy.
+        </h3>
+
+        <a href="#businesses">
+            View Our Businesses →
         </a>
 
+        <a href="#services">
+            View Our Services →
+        </a>
 
     </div>
 
-</section>
+</div>
+```
 
-
-
-<!-- ==============================
-     SERVICES
-============================== -->
-
-<section class="services" id="services">
-
-    <div class="services-inner">
-
-
-        <div class="services-top">
-
-            <span class="services-label">
-                03 / WHAT WE DO
-            </span>
-
-            <h2>
-                Different
-                industries.
-                One group.
-            </h2>
-
-
-            <p class="services-intro">
-                The businesses within REYWORLD GROUP operate
-                across several industries, each providing its
-                own products, services or creative work.
-            </p>
-
-        </div>
-
-
-
-        <div class="services-grid">
-
-
-            <div class="service">
-
-                <span class="service-number">
-                    01
-                </span>
-
-                <h3>
-                    Construction
-                </h3>
-
-                <p>
-                    Building, renovations and construction
-                    projects through Tony & Brian Projects.
-                </p>
-
-            </div>
-
-
-            <div class="service">
-
-                <span class="service-number">
-                    02
-                </span>
-
-                <h3>
-                    Pool Services
-                </h3>
-
-                <p>
-                    Pool construction, installation, cleaning,
-                    maintenance and water features through
-                    Magma Pools.
-                </p>
-
-            </div>
-
-
-            <div class="service">
-
-                <span class="service-number">
-                    03
-                </span>
-
-                <h3>
-                    Automotive
-                </h3>
-
-                <p>
-                    Vehicle care and automotive services
-                    provided through Colmad Auto.
-                </p>
-
-            </div>
-
-
-            <div class="service">
-
-                <span class="service-number">
-                    04
-                </span>
-
-                <h3>
-                    Vehicle Sales
-                </h3>
-
-                <p>
-                    Selected pre-owned vehicles available
-                    through the REYWORLD Auto Sales division.
-                </p>
-
-            </div>
-
-
-            <div class="service">
-
-                <span class="service-number">
-                    05
-                </span>
-
-                <h3>
-                    Music
-                </h3>
-
-                <p>
-                    Music production, creative development
-                    and work surrounding artists and producers
-                    through MOB Records.
-                </p>
-
-            </div>
-
-
-            <div class="service">
-
-                <span class="service-number">
-                    06
-                </span>
-
-                <h3>
-                    Fashion
-                </h3>
-
-                <p>
-                    Clothing, personal style and fashion
-                    through the Slatt Clothing brand.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-
-
-<!-- ==============================
-     CONTACT
-============================== -->
-
-<section class="contact" id="contact">
-
-    <div class="contact-inner">
-
-
-        <div>
-
-            <span class="contact-label">
-                04 / CONTACT REYWORLD
-            </span>
-
-
-            <h2>
-                Let's build
-                something.
-            </h2>
-
-
-            <p class="contact-intro">
-                Looking for one of our businesses, interested
-                in a service, want to enquire about a vehicle,
-                or interested in working with the group?
-                Explore the businesses below to find the
-                right point of contact.
-            </p>
-
-        </div>
-
-
-
-        <div class="contact-box">
-
-            <h3>
-                EXPLORE THE GROUP
-            </h3>
-
-
-            <a
-                href="#businesses"
-                class="contact-link"
-            >
-                View All Businesses →
-            </a>
-
-
-            <a
-                href="tony-brian.html"
-                class="contact-link"
-            >
-                Tony & Brian Projects →
-            </a>
-
-
-            <a
-                href="magma-pools.html"
-                class="contact-link"
-            >
-                Magma Pools →
-            </a>
-
-
-            <a
-                href="colmad-auto.html"
-                class="contact-link"
-            >
-                Colmad Auto →
-            </a>
-
-
-            <a
-                href="auto-sales.html"
-                class="contact-link"
-            >
-                Auto Sales →
-            </a>
-
-
-            <a
-                href="mob-records.html"
-                class="contact-link"
-            >
-                MOB Records →
-            </a>
-
-
-            <a
-                href="slatt-clothing.html"
-                class="contact-link"
-            >
-                Slatt Clothing →
-            </a>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- ==============================
-     FOOTER
-============================== -->
+</main>
 
 <footer>
 
-    <div>
-        © 2026 REYWORLD GROUP
-    </div>
+```
+<div class="footer-inner">
 
-    <div>
-        <strong>
-            BUILDING VISION. CREATING LEGACY.
-        </strong>
-    </div>
+    <span>
+        © 2026 REYWORLD GROUP
+    </span>
+
+    <span>
+        Building Vision. Creating Legacy.
+    </span>
+
+</div>
+```
 
 </footer>
 
-
-
-<!-- ==============================
-     MENU JAVASCRIPT
-============================== -->
-
 <script>
 
-const menuButton =
-    document.getElementById("menuButton");
+function toggleMenu() {
 
-const menuPanel =
-    document.getElementById("menuPanel");
+    const menu = document.getElementById("mobileMenu");
 
+    if (menu.style.display === "block") {
 
-menuButton.addEventListener("click", function () {
+        menu.style.display = "none";
 
-    menuPanel.classList.toggle("open");
+    } else {
 
-    const isOpen =
-        menuPanel.classList.contains("open");
-
-    menuButton.setAttribute(
-        "aria-expanded",
-        isOpen
-    );
-
-});
-
-
-document
-    .querySelectorAll(".menu-panel a")
-    .forEach(function(link) {
-
-        link.addEventListener("click", function() {
-
-            menuPanel.classList.remove("open");
-
-            menuButton.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-        });
-
-    });
-
-
-document.addEventListener("click", function(event) {
-
-    if (
-        !menuPanel.contains(event.target) &&
-        !menuButton.contains(event.target)
-    ) {
-
-        menuPanel.classList.remove("open");
-
-        menuButton.setAttribute(
-            "aria-expanded",
-            "false"
-        );
+        menu.style.display = "block";
 
     }
 
-});
+}
 
 </script>
 
-
 </body>
-
 </html>
-```
