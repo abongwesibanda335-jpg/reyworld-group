@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
 <head>
-
-```
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,637 +9,882 @@
 
 <style>
 
-    * {
-        box-sizing: border-box;
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #090909;
+    color: #f5f1e8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 6%;
+
+    background: rgba(9, 9, 9, 0.96);
+
+    border-bottom: 1px solid rgba(217, 120, 50, 0.2);
+
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    color: #f5f1e8;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+.logo span {
+    color: #d97832;
+}
+
+.menu {
+    color: #d97832;
+
+    font-size: 25px;
+}
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+    width: min(1250px, 90%);
+    margin: auto;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+
+    min-height: 82vh;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 80px 7%;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.88),
+            rgba(0,0,0,0.35),
+            rgba(0,0,0,0.2)
+        ),
+        url("images/tb-project-1.png");
+
+    background-size: cover;
+    background-position: center;
+
+    border-left: 1px solid rgba(217, 120, 50, 0.2);
+    border-right: 1px solid rgba(217, 120, 50, 0.2);
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    left: 7%;
+    bottom: 0;
+
+    width: 100px;
+    height: 3px;
+
+    background: #d97832;
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+}
+
+.eyebrow {
+    margin-bottom: 25px;
+
+    color: #d97832;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 0;
+
+    font-size: clamp(52px, 9vw, 120px);
+
+    line-height: 0.85;
+
+    letter-spacing: -5px;
+
+    text-transform: uppercase;
+}
+
+.hero h1 span {
+    color: transparent;
+
+    -webkit-text-stroke: 1px #f5f1e8;
+}
+
+.tagline {
+    margin: 38px 0 0;
+
+    color: #ddd5c8;
+
+    font-size: 18px;
+
+    letter-spacing: 2px;
+}
+
+/* =========================
+   INTRODUCTION
+========================= */
+
+.introduction {
+    display: grid;
+
+    grid-template-columns: 0.6fr 1.4fr;
+
+    gap: 80px;
+
+    padding: 120px 0;
+
+    border-bottom: 1px solid rgba(217, 120, 50, 0.18);
+}
+
+.label {
+    color: #d97832;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+.introduction h2 {
+    margin: 0 0 35px;
+
+    font-size: clamp(38px, 5vw, 65px);
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+}
+
+.introduction p {
+    max-width: 720px;
+
+    margin: 0 0 24px;
+
+    color: #a7a197;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+}
+
+.introduction strong {
+    color: #f5f1e8;
+}
+
+/* =========================
+   EXPERIENCE STRIP
+========================= */
+
+.experience {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-bottom: 1px solid rgba(217, 120, 50, 0.18);
+}
+
+.experience-item {
+    min-height: 210px;
+
+    padding: 45px 35px;
+
+    border-right: 1px solid rgba(217, 120, 50, 0.15);
+}
+
+.experience-item:last-child {
+    border-right: none;
+}
+
+.experience-number {
+    color: #d97832;
+
+    font-size: 38px;
+    font-weight: bold;
+
+    letter-spacing: -2px;
+}
+
+.experience-title {
+    margin-top: 15px;
+
+    color: #f5f1e8;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.experience-text {
+    margin-top: 12px;
+
+    color: #77736b;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+/* =========================
+   PORTFOLIO
+========================= */
+
+.portfolio {
+    padding: 120px 0;
+}
+
+.portfolio-heading {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 40px;
+
+    margin-bottom: 60px;
+}
+
+.portfolio-heading h2 {
+    margin: 0;
+
+    font-size: clamp(42px, 6vw, 75px);
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+}
+
+.portfolio-heading p {
+    max-width: 360px;
+
+    margin: 0;
+
+    color: #817c73;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: 1.25fr 0.75fr;
+
+    gap: 20px;
+}
+
+.project {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 520px;
+
+    border: 1px solid rgba(217, 120, 50, 0.16);
+
+    background: #111;
+}
+
+.project.small {
+    min-height: 250px;
+}
+
+.project img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.7s ease;
+}
+
+.project:hover img {
+    transform: scale(1.045);
+}
+
+.project::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,0.85),
+            rgba(0,0,0,0.02) 65%
+        );
+}
+
+.project-caption {
+    position: absolute;
+
+    left: 30px;
+    bottom: 28px;
+
+    z-index: 2;
+}
+
+.project-caption small {
+    color: #d97832;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.project-caption h3 {
+    margin: 10px 0 0;
+
+    font-size: 20px;
+}
+
+/* =========================
+   STACK
+========================= */
+
+.project-stack {
+    display: grid;
+
+    grid-template-rows: 1fr 1fr;
+
+    gap: 20px;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    padding: 110px 0;
+
+    border-top: 1px solid rgba(217, 120, 50, 0.18);
+}
+
+.services-heading {
+    max-width: 700px;
+
+    margin-bottom: 60px;
+}
+
+.services-heading h2 {
+    margin: 0 0 20px;
+
+    font-size: clamp(40px, 6vw, 70px);
+
+    line-height: 0.9;
+
+    letter-spacing: -3px;
+}
+
+.services-heading p {
+    margin: 0;
+
+    color: #858078;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+.service-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    border-top: 1px solid rgba(217, 120, 50, 0.18);
+}
+
+.service {
+    padding: 27px 0;
+
+    border-bottom: 1px solid rgba(217, 120, 50, 0.12);
+}
+
+.service:nth-child(odd) {
+    margin-right: 35px;
+}
+
+.service:nth-child(even) {
+    padding-left: 35px;
+
+    border-left: 1px solid rgba(217, 120, 50, 0.12);
+}
+
+.service span {
+    color: #d97832;
+
+    margin-right: 15px;
+
+    font-size: 12px;
+}
+
+.service strong {
+    font-size: 15px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    padding: 120px 0;
+
+    border-top: 1px solid rgba(217, 120, 50, 0.18);
+}
+
+.contact h2 {
+    margin: 0;
+
+    font-size: clamp(45px, 7vw, 90px);
+
+    line-height: 0.88;
+
+    letter-spacing: -4px;
+}
+
+.contact h2 span {
+    color: #d97832;
+}
+
+.contact-info {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.contact-item {
+    padding: 20px 0;
+
+    border-bottom: 1px solid rgba(217, 120, 50, 0.13);
+}
+
+.contact-item small {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #d97832;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.contact-item a,
+.contact-item p {
+    margin: 0;
+
+    color: #ddd5c8;
+
+    text-decoration: none;
+
+    font-size: 16px;
+}
+
+.contact-item a:hover {
+    color: #d97832;
+}
+
+.whatsapp {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 15px 24px;
+
+    border: 1px solid #25D366;
+
+    color: #25D366;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s;
+}
+
+.whatsapp:hover {
+    background: #25D366;
+
+    color: #07140b;
+}
+
+/* =========================
+   BACK
+========================= */
+
+.back {
+    display: block;
+
+    width: fit-content;
+
+    margin: 0 auto 70px;
+
+    padding: 15px 24px;
+
+    border: 1px solid rgba(217, 120, 50, 0.35);
+
+    color: #aaa39a;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s;
+}
+
+.back:hover {
+    border-color: #d97832;
+
+    color: #d97832;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .page {
+        width: 88%;
     }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        margin: 0;
-        background: #0b0b0b;
-        color: #f5f5f5;
-        font-family: Arial, sans-serif;
-    }
-
-    /* ==============================
-       NAVIGATION
-    ============================== */
-
-    nav {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        padding: 22px 6%;
-
-        background: rgba(11, 11, 11, 0.97);
-        border-bottom: 1px solid #292929;
-    }
-
-    .logo {
-        color: #d4af37;
-        font-size: 22px;
-        font-weight: bold;
-        letter-spacing: 4px;
-    }
-
-    .logo span {
-        color: white;
-    }
-
-    .nav-links {
-        display: flex;
-        gap: 28px;
-    }
-
-    .nav-links a {
-        color: white;
-        text-decoration: none;
-
-        font-size: 14px;
-        font-weight: bold;
-        letter-spacing: 1px;
-
-        transition: 0.3s;
-    }
-
-    .nav-links a:hover {
-        color: #d97832;
-    }
-
-
-    /* ==============================
-       MAIN
-    ============================== */
-
-    .container {
-        width: min(1150px, 92%);
-        margin: auto;
-
-        padding: 70px 0 100px;
-    }
-
-
-    /* ==============================
-       HERO
-    ============================== */
 
     .hero {
-        position: relative;
+        min-height: 70vh;
 
-        min-height: 500px;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        padding: 50px 30px;
-
-        text-align: center;
-
-        overflow: hidden;
-
-        background:
-            linear-gradient(
-                rgba(0, 0, 0, 0.68),
-                rgba(0, 0, 0, 0.82)
-            ),
-            url("images/tb-project-1.png");
-
-        background-size: cover;
-        background-position: center;
-
-        border: 1px solid #292929;
-    }
-
-    .hero::after {
-        content: "";
-
-        position: absolute;
-
-        bottom: 0;
-        left: 50%;
-
-        width: 80px;
-        height: 3px;
-
-        transform: translateX(-50%);
-
-        background: #d97832;
-    }
-
-    .badge {
-        margin-bottom: 20px;
-        padding: 9px 16px;
-
-        border: 1px solid #d97832;
-
-        color: #d97832;
-
-        font-size: 12px;
-        font-weight: bold;
-
-        letter-spacing: 2px;
-        text-transform: uppercase;
+        padding: 55px 7%;
     }
 
     .hero h1 {
-        margin: 0 0 18px;
-
-        color: white;
-
-        font-size: clamp(42px, 7vw, 76px);
-
-        line-height: 1.1;
-        letter-spacing: 2px;
+        letter-spacing: -3px;
     }
 
-    .tagline {
-        margin: 0;
+    .introduction {
+        grid-template-columns: 1fr;
 
-        color: #d97832;
+        gap: 35px;
 
-        font-size: 20px;
-        letter-spacing: 2px;
+        padding: 85px 0;
     }
 
-
-    /* ==============================
-       ABOUT
-    ============================== */
-
-    .about {
-        margin-top: 30px;
-        padding: 45px;
-
-        background: #121212;
-
-        border-left: 4px solid #d97832;
-        border-top: 1px solid #292929;
-        border-right: 1px solid #292929;
-        border-bottom: 1px solid #292929;
+    .experience {
+        grid-template-columns: 1fr;
     }
 
-    .about p {
-        margin: 0 0 20px;
+    .experience-item {
+        border-right: none;
 
-        color: #c9c9c9;
-
-        font-size: 17px;
-        line-height: 1.8;
+        border-bottom: 1px solid rgba(217, 120, 50, 0.15);
     }
 
-    .about p:last-child {
-        margin-bottom: 0;
+    .experience-item:last-child {
+        border-bottom: none;
     }
 
-    .about strong {
-        color: white;
+    .portfolio {
+        padding: 85px 0;
     }
 
+    .portfolio-heading {
+        flex-direction: column;
 
-    /* ==============================
-       SECTION HEADINGS
-    ============================== */
-
-    .section-title {
-        margin: 80px 0 35px;
-
-        color: white;
-
-        font-size: 34px;
-        letter-spacing: 1px;
+        align-items: flex-start;
     }
-
-    .section-title::after {
-        content: "";
-
-        display: block;
-
-        width: 50px;
-        height: 3px;
-
-        margin-top: 14px;
-
-        background: #d97832;
-    }
-
-
-    /* ==============================
-       PORTFOLIO
-    ============================== */
 
     .gallery {
-        display: grid;
-
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 22px;
+        grid-template-columns: 1fr;
     }
 
     .project {
-        position: relative;
-
-        height: 360px;
-
-        overflow: hidden;
-
-        background: #151515;
-
-        border: 1px solid #292929;
-
-        transition:
-            transform 0.35s ease,
-            border-color 0.35s ease,
-            box-shadow 0.35s ease;
+        min-height: 400px;
     }
 
-    .project:first-child {
-        grid-column: span 2;
-        height: 470px;
+    .project-stack {
+        grid-template-rows: 300px 300px;
     }
 
-    .project img {
-        display: block;
-
-        width: 100%;
-        height: 100%;
-
-        object-fit: cover;
-        object-position: center;
-
-        transition: transform 0.6s ease;
+    .service-list {
+        grid-template-columns: 1fr;
     }
 
-    .project::after {
-        content: "";
-
-        position: absolute;
-        inset: 0;
-
-        background:
-            linear-gradient(
-                to top,
-                rgba(0, 0, 0, 0.9),
-                rgba(0, 0, 0, 0.05) 70%
-            );
+    .service:nth-child(odd) {
+        margin-right: 0;
     }
 
-    .project:hover {
-        transform: translateY(-6px);
+    .service:nth-child(even) {
+        padding-left: 0;
 
-        border-color: #d97832;
-
-        box-shadow:
-            0 20px 45px rgba(217, 120, 50, 0.15);
+        border-left: none;
     }
 
-    .project:hover img {
-        transform: scale(1.05);
+    .contact {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        padding: 85px 0;
     }
-
-    .caption {
-        position: absolute;
-
-        left: 25px;
-        bottom: 22px;
-
-        z-index: 2;
-
-        color: white;
-
-        font-size: 16px;
-        font-weight: bold;
-
-        letter-spacing: 1px;
-    }
-
-
-    /* ==============================
-       SERVICES + CONTACT
-    ============================== */
-
-    .bottom-grid {
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 25px;
-
-        margin-top: 80px;
-    }
-
-    .card {
-        padding: 40px;
-
-        background: #121212;
-
-        border: 1px solid #292929;
-    }
-
-    .card h2 {
-        margin: 0 0 30px;
-
-        color: white;
-
-        font-size: 28px;
-    }
-
-    .card h2::after {
-        content: "";
-
-        display: block;
-
-        width: 45px;
-        height: 3px;
-
-        margin-top: 13px;
-
-        background: #d97832;
-    }
-
-
-    /* ==============================
-       SERVICES
-    ============================== */
-
-    .services {
-        margin: 0;
-        padding: 0;
-
-        list-style: none;
-    }
-
-    .services li {
-        margin-bottom: 10px;
-        padding: 15px 18px;
-
-        background: #181818;
-
-        border-left: 2px solid #d97832;
-
-        color: #cccccc;
-    }
-
-    .services li:last-child {
-        margin-bottom: 0;
-    }
-
-
-    /* ==============================
-       CONTACT
-    ============================== */
-
-    .contact p {
-        margin: 0 0 22px;
-
-        color: #bdbdbd;
-
-        font-size: 15px;
-        line-height: 1.7;
-    }
-
-    .contact strong {
-        color: white;
-
-        font-size: 13px;
-
-        letter-spacing: 1px;
-        text-transform: uppercase;
-    }
-
-    .whatsapp {
-        display: inline-block;
-
-        margin-top: 5px;
-        padding: 13px 24px;
-
-        border: 1px solid #25D366;
-
-        color: #25D366;
-
-        text-decoration: none;
-
-        font-size: 13px;
-        font-weight: bold;
-
-        letter-spacing: 1px;
-
-        transition: 0.3s;
-    }
-
-    .whatsapp:hover {
-        background: #25D366;
-        color: #07140b;
-    }
-
-
-    /* ==============================
-       BACK BUTTON
-    ============================== */
-
-    .back {
-        display: block;
-
-        width: fit-content;
-
-        margin: 55px auto 0;
-        padding: 13px 24px;
-
-        border: 1px solid #444;
-
-        color: #aaa;
-
-        text-decoration: none;
-
-        font-size: 13px;
-
-        letter-spacing: 1px;
-
-        transition: 0.3s;
-    }
-
-    .back:hover {
-        border-color: #d97832;
-        color: #d97832;
-    }
-
-
-    /* ==============================
-       MOBILE
-    ============================== */
-
-    @media (max-width: 800px) {
-
-        nav {
-            flex-direction: column;
-            gap: 18px;
-
-            padding: 20px;
-        }
-
-        .nav-links {
-            flex-wrap: wrap;
-            justify-content: center;
-
-            gap: 15px;
-        }
-
-        .container {
-            width: 92%;
-
-            padding: 45px 0 70px;
-        }
-
-        .hero {
-            min-height: 430px;
-
-            padding: 40px 20px;
-        }
-
-        .hero h1 {
-            font-size: 42px;
-        }
-
-        .tagline {
-            font-size: 17px;
-        }
-
-        .about {
-            padding: 30px 25px;
-        }
-
-        .section-title {
-            margin-top: 60px;
-
-            font-size: 29px;
-        }
-
-        .gallery {
-            grid-template-columns: 1fr;
-        }
-
-        .project,
-        .project:first-child {
-            grid-column: span 1;
-
-            height: 300px;
-        }
-
-        .bottom-grid {
-            grid-template-columns: 1fr;
-
-            margin-top: 60px;
-        }
-
-        .card {
-            padding: 30px 25px;
-        }
-
-    }
+}
 
 </style>
-```
 
 </head>
 
 <body>
 
-```
-<!-- NAVIGATION -->
-
 <nav>
 
-    <div class="logo">
-        REYWORLD <span>GROUP</span>
-    </div>
+```
+<div class="logo">
+    REY<span>WORLD</span> GROUP
+</div>
 
-    <div class="nav-links">
-
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="index.html#businesses">
-            Businesses
-        </a>
-
-        <a href="index.html#services">
-            Services
-        </a>
-
-        <a href="index.html#contact">
-            Contact
-        </a>
-
-    </div>
+<div class="menu">
+    ⋮
+</div>
+```
 
 </nav>
 
+<main class="page">
 
-<!-- MAIN -->
+```
+<!-- HERO -->
 
-<main class="container">
+<section class="hero">
 
+    <div class="hero-content">
 
-    <!-- HERO -->
-
-    <header class="hero">
-
-        <span class="badge">
-            Construction & Development
-        </span>
+        <div class="eyebrow">
+            REYWORLD GROUP · Construction
+        </div>
 
         <h1>
-            Tony & Brian Projects
+            Tony & Brian
+            <span>Projects</span>
         </h1>
 
         <p class="tagline">
-            “Where ideas take shape.”
+            Where ideas take shape.
         </p>
 
-    </header>
+    </div>
+
+</section>
 
 
-    <!-- ABOUT -->
+<!-- INTRODUCTION -->
 
-    <section class="about">
+<section class="introduction">
+
+    <div class="label">
+        The company
+    </div>
+
+    <div>
+
+        <h2>
+            Built on experience.
+        </h2>
 
         <p>
-            For all your house and shop renovations, contact
+            For house and shop renovations, contact
             <strong>Tony & Brian Projects</strong>.
-            We are a registered construction company with more than
-            20 years of experience in the building industry.
+            We are a registered construction company with more
+            than 20 years of experience in the building industry.
         </p>
 
         <p>
-            We have successfully completed various building contracts
-            to a high standard, with a commitment to quality workmanship
-            and customer satisfaction.
+            Over the years, the company has completed various
+            building contracts, with a focus on delivering
+            quality construction and renovation work.
         </p>
 
-    </section>
+        <p>
+            From improving existing spaces to taking on new
+            building projects, Tony & Brian Projects brings
+            practical construction experience to every project.
+        </p>
+
+    </div>
+
+</section>
 
 
-    <!-- PORTFOLIO -->
+<!-- EXPERIENCE -->
 
-    <h2 class="section-title">
-        Featured Portfolio
-    </h2>
+<section class="experience">
+
+    <div class="experience-item">
+
+        <div class="experience-number">
+            20+
+        </div>
+
+        <div class="experience-title">
+            Years Experience
+        </div>
+
+        <div class="experience-text">
+            More than two decades in the building industry.
+        </div>
+
+    </div>
 
 
-    <section class="gallery">
+    <div class="experience-item">
+
+        <div class="experience-number">
+            T&B
+        </div>
+
+        <div class="experience-title">
+            Registered Company
+        </div>
+
+        <div class="experience-text">
+            A registered construction company serving clients
+            across Cape Town.
+        </div>
+
+    </div>
 
 
-        <!-- IMAGE 1 -->
+    <div class="experience-item">
+
+        <div class="experience-number">
+            04
+        </div>
+
+        <div class="experience-title">
+            Key Areas
+        </div>
+
+        <div class="experience-text">
+            Milnerton, Groot Constantia, Cape Town and Durbanville.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section class="portfolio">
+
+    <div class="portfolio-heading">
+
+        <div>
+
+            <div class="label">
+                Selected work
+            </div>
+
+            <h2>
+                Featured<br>
+                projects.
+            </h2>
+
+        </div>
+
+        <p>
+            A look at work represented through the Tony & Brian
+            Projects portfolio.
+        </p>
+
+    </div>
+
+
+    <div class="gallery">
+
+
+        <!-- LARGE IMAGE -->
 
         <div class="project">
 
@@ -651,157 +893,215 @@
                 alt="Tony and Brian construction project"
             >
 
-            <div class="caption">
-                Construction & Renovation
+            <div class="project-caption">
+
+                <small>
+                    Construction
+                </small>
+
+                <h3>
+                    Building & Renovation
+                </h3>
+
             </div>
 
         </div>
 
 
-        <!-- IMAGE 2 -->
+        <!-- SMALL IMAGE STACK -->
 
-        <div class="project">
+        <div class="project-stack">
 
-            <img
-                src="images/tb-project-2.png"
-                alt="Tony and Brian renovation project"
-            >
+            <div class="project small">
 
-            <div class="caption">
-                Renovation & Finishing
+                <img
+                    src="images/tb-project-2.png"
+                    alt="Tony and Brian renovation project"
+                >
+
+                <div class="project-caption">
+
+                    <small>
+                        Renovation
+                    </small>
+
+                    <h3>
+                        Renovation & Finishing
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="project small">
+
+                <img
+                    src="images/tb-project-3.png"
+                    alt="Tony and Brian interior project"
+                >
+
+                <div class="project-caption">
+
+                    <small>
+                        Interior
+                    </small>
+
+                    <h3>
+                        Interior Space Design
+                    </h3>
+
+                </div>
+
             </div>
 
         </div>
 
+    </div>
 
-        <!-- IMAGE 3 -->
+</section>
 
-        <div class="project">
 
-            <img
-                src="images/tb-project-3.png"
-                alt="Custom Interior Space Design"
-            >
+<!-- SERVICES -->
 
-            <div class="caption">
-                Custom Interior Space Design
-            </div>
+<section class="services">
 
+    <div class="services-heading">
+
+        <div class="label">
+            What they do
         </div>
 
+        <h2>
+            From structure<br>
+            to finish.
+        </h2>
 
-    </section>
-
-
-    <!-- SERVICES + CONTACT -->
-
-    <div class="bottom-grid">
-
-
-        <!-- SERVICES -->
-
-        <section class="card">
-
-            <h2>
-                Our Services
-            </h2>
-
-            <ul class="services">
-
-                <li>
-                    House Renovations
-                </li>
-
-                <li>
-                    Shop Renovations
-                </li>
-
-                <li>
-                    Building Projects
-                </li>
-
-                <li>
-                    Construction & Development
-                </li>
-
-                <li>
-                    Renovation Projects
-                </li>
-
-            </ul>
-
-        </section>
-
-
-        <!-- CONTACT -->
-
-        <section class="card contact">
-
-            <h2>
-                Contact Us
-            </h2>
-
-            <p>
-                <strong>Address</strong><br>
-                60 North Road, Table View, 7441
-            </p>
-
-            <p>
-                <strong>Phone</strong><br>
-                +27 84 783 3719
-            </p>
-
-            <p>
-                <strong>Email</strong><br>
-                brianmhondoro@gmail.com
-            </p>
-
-            <a
-                href="https://wa.me/27847833719"
-                class="whatsapp"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                WhatsApp Us
-            </a>
-
-        </section>
-
+        <p>
+            Tony & Brian Projects works across construction and
+            renovation projects, helping clients improve,
+            develop and transform their spaces.
+        </p>
 
     </div>
 
 
-    <!-- BACK -->
+    <div class="service-list">
 
-    <a
-        href="index.html#businesses"
-        class="back"
-    >
-        ← Back to Businesses
-    </a>
+        <div class="service">
+            <span>01</span>
+            <strong>House Renovations</strong>
+        </div>
 
+        <div class="service">
+            <span>02</span>
+            <strong>Shop Renovations</strong>
+        </div>
+
+        <div class="service">
+            <span>03</span>
+            <strong>Building Projects</strong>
+        </div>
+
+        <div class="service">
+            <span>04</span>
+            <strong>Construction & Development</strong>
+        </div>
+
+        <div class="service">
+            <span>05</span>
+            <strong>Renovation Projects</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+    <div>
+
+        <div class="label">
+            Start a conversation
+        </div>
+
+        <h2>
+            Let's build<br>
+            <span>something.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="contact-info">
+
+        <div class="contact-item">
+
+            <small>
+                Address
+            </small>
+
+            <p>
+                60 North Road, Table View, 7441
+            </p>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <small>
+                Phone
+            </small>
+
+            <a href="tel:+27847833719">
+                +27 84 783 3719
+            </a>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <small>
+                Email
+            </small>
+
+            <a href="mailto:brianmhondoro@gmail.com">
+                brianmhondoro@gmail.com
+            </a>
+
+        </div>
+
+
+        <a
+            href="https://wa.me/27847833719"
+            class="whatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            WhatsApp Tony & Brian
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- BACK -->
+
+<a
+    href="businesses.html"
+    class="back"
+>
+    ← Back to Businesses
+</a>
+```
 
 </main>
-```
 
 </body>
-
 </html>
-```
-
-### One important thing 😭
-
-This version **doesn't use your external `style.css` at all** for the Tony & Brian page. Everything needed for this page is inside the HTML, so we don't have to worry about your homepage CSS interfering with it.
-
-And the three images are already correctly connected:
-
-```text
-images/tb-project-1.png
-images/tb-project-2.png
-images/tb-project-3.png
-```
-
-The pictures will **fill their frames without being stretched** because we're using `object-fit: cover`.
-
-If one of the pictures gets cropped a little, that's normal with `cover` — it keeps the image proportional rather than squashing it.
-
