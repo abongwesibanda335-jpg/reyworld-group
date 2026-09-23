@@ -2,369 +2,1404 @@
 
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>REYWORLD GROUP</title>
+<title>REYWORLD GROUP | Building Vision. Creating Legacy.</title>
 
 <style>
+
 * {
     box-sizing: border-box;
 }
 
-html,
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    width: 100%;
-    min-height: 100%;
-}
-
-body {
     background: #080808;
-    color: #f4efe5;
+    color: #f5f1e8;
     font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
 }
 
-/* =========================
-   COVER
-========================= */
 
-.cover {
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background:
-        radial-gradient(
-            circle at 75% 35%,
-            rgba(194, 153, 67, 0.16),
-            transparent 28%
-        ),
-        linear-gradient(
-            120deg,
-            #050505 0%,
-            #0c0b09 48%,
-            #15110a 100%
-        );
-}
+/* ==============================
+   NAVIGATION
+============================== */
 
-/* subtle gold light */
-
-.cover::before {
-    content: "";
-    position: absolute;
-    width: 55vw;
-    height: 55vw;
-    right: -18vw;
-    top: -20vw;
-    border-radius: 50%;
-    border: 1px solid rgba(205, 166, 82, 0.15);
-    box-shadow:
-        0 0 100px rgba(190, 145, 45, 0.08);
-}
-
-/* vertical architectural line */
-
-.cover::after {
-    content: "";
-    position: absolute;
-    left: 8%;
-    top: 0;
-    width: 1px;
-    height: 100%;
-    background: linear-gradient(
-        transparent,
-        rgba(205, 166, 82, 0.3),
-        transparent
-    );
-}
-
-/* =========================
-   TOP BAR
-========================= */
-
-.topbar {
-    position: absolute;
+nav {
+    position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;
+
     width: 100%;
-    padding: 30px 6%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 5;
+
+    padding: 22px 6%;
+
+    background: rgba(8, 8, 8, 0.9);
+
+    border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+
+    backdrop-filter: blur(10px);
 }
 
-.brand {
-    font-size: 15px;
+.logo {
+    color: #d4af37;
+
+    font-size: 20px;
     font-weight: bold;
+
     letter-spacing: 4px;
-    color: #f4efe5;
 }
 
-.brand span {
-    color: #caa75b;
+.logo span {
+    color: white;
 }
 
-.menu {
-    color: #caa75b;
-    font-size: 28px;
-    line-height: 1;
+.nav-links {
+    display: flex;
+    gap: 28px;
 }
 
-/* =========================
-   MAIN CONTENT
-========================= */
+.nav-links a {
+    color: #ddd;
 
-.cover-content {
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d4af37;
+}
+
+
+/* ==============================
+   HERO
+============================== */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    padding: 120px 7% 80px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(212, 175, 55, 0.08),
+            transparent 35%
+        ),
+        #080808;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    border: 1px solid rgba(212, 175, 55, 0.12);
+
+    border-radius: 50%;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.hero-content {
     position: relative;
     z-index: 2;
-    width: min(1200px, 88%);
-    padding: 80px 0;
+
+    width: min(1100px, 100%);
+
+    text-align: center;
 }
 
 .eyebrow {
-    margin-bottom: 28px;
-    color: #caa75b;
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    color: #d4af37;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 0;
+
+    color: white;
+
+    font-size: clamp(65px, 13vw, 170px);
+
+    line-height: 0.82;
+
+    letter-spacing: -5px;
+
+    font-weight: 900;
+}
+
+.hero h1 span {
+    color: #d4af37;
+}
+
+.hero-subtitle {
+    margin: 35px auto 0;
+
+    max-width: 620px;
+
+    color: #bdb8ac;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    letter-spacing: 1px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    margin-top: 40px;
+
+    padding: 15px 30px;
+
+    border: 1px solid #d4af37;
+
+    color: #d4af37;
+
+    text-decoration: none;
+
     font-size: 12px;
     font-weight: bold;
-    letter-spacing: 5px;
-    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
 }
 
-h1 {
-    margin: 0;
-    max-width: 1000px;
-    font-size: clamp(65px, 13vw, 175px);
-    line-height: 0.82;
-    letter-spacing: -7px;
-    font-weight: 700;
-    text-transform: uppercase;
+.hero-button:hover {
+    background: #d4af37;
+    color: #080808;
 }
 
-h1 span {
-    display: block;
-    color: transparent;
-    -webkit-text-stroke: 1px #f4efe5;
-}
+
+/* ==============================
+   STATEMENT
+============================== */
 
 .statement {
-    max-width: 520px;
-    margin-top: 48px;
-    color: #bcb5a7;
+    padding: 120px 7%;
+
+    border-top: 1px solid #24211a;
+    border-bottom: 1px solid #24211a;
+
+    text-align: center;
+}
+
+.statement p {
+    width: min(850px, 100%);
+
+    margin: auto;
+
+    color: #ddd7ca;
+
+    font-size: clamp(25px, 4vw, 48px);
+
+    line-height: 1.25;
+
+    letter-spacing: -1px;
+}
+
+.statement span {
+    color: #d4af37;
+}
+
+
+/* ==============================
+   GROWTH
+============================== */
+
+.growth {
+    width: min(1100px, 88%);
+
+    margin: auto;
+
+    padding: 110px 0;
+}
+
+.growth-label {
+    color: #d4af37;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.growth h2 {
+    margin: 15px 0 25px;
+
+    color: white;
+
+    font-size: clamp(38px, 6vw, 70px);
+
+    line-height: 1;
+}
+
+.growth p {
+    max-width: 700px;
+
+    color: #aaa59b;
+
     font-size: 17px;
-    line-height: 1.7;
+
+    line-height: 1.8;
 }
 
-.statement strong {
-    color: #f4efe5;
-}
+.growth-link {
+    display: inline-block;
 
-/* =========================
-   ENTER BUTTON
-========================= */
+    margin-top: 25px;
 
-.enter {
-    display: inline-flex;
-    align-items: center;
-    gap: 18px;
-    margin-top: 48px;
-    padding: 16px 24px;
-    border: 1px solid rgba(202, 167, 91, 0.55);
-    color: #f4efe5;
+    color: #d4af37;
+
     text-decoration: none;
+
     font-size: 12px;
     font-weight: bold;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    transition: 0.35s ease;
+
+    letter-spacing: 2px;
 }
 
-.enter span {
-    color: #caa75b;
-    font-size: 20px;
-    transition: 0.35s ease;
+.growth-link:hover {
+    text-decoration: underline;
 }
 
-.enter:hover {
-    background: #caa75b;
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+    padding: 45px 7%;
+
+    border-top: 1px solid #24211a;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+footer p {
+    margin: 0;
+
+    color: #77736b;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+.footer-brand {
+    color: #d4af37;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==============================
+   REY AI BUTTON
+============================== */
+
+#rey-ai-button {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    z-index: 9999;
+
+    padding: 15px 21px;
+
+    border: 1px solid #d4af37;
+    border-radius: 50px;
+
+    background: #0b0b0b;
+
+    color: #d4af37;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,0.45);
+
+    transition: 0.3s;
+}
+
+#rey-ai-button:hover {
+    background: #d4af37;
+
+    color: #080808;
+
+    transform: translateY(-3px);
+}
+
+
+/* ==============================
+   REY AI WINDOW
+============================== */
+
+#rey-ai-window {
+    position: fixed;
+
+    right: 25px;
+    bottom: 85px;
+
+    z-index: 9998;
+
+    width: 370px;
+    max-width: calc(100vw - 30px);
+
+    height: 520px;
+
+    display: none;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: #0d0d0d;
+
+    border: 1px solid #3b321c;
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,0.7);
+}
+
+
+/* AI HEADER */
+
+.rey-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 19px;
+
+    background: #111;
+
+    border-bottom: 1px solid #332b17;
+}
+
+.rey-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+.rey-symbol {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #d4af37;
+
+    color: #d4af37;
+
+    font-weight: bold;
+}
+
+.rey-title {
+    color: white;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.rey-status {
+    margin-top: 4px;
+
+    color: #777;
+
+    font-size: 9px;
+}
+
+#rey-close {
+    border: none;
+
+    background: none;
+
+    color: #777;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+#rey-close:hover {
+    color: white;
+}
+
+
+/* MESSAGES */
+
+#rey-messages {
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 18px;
+}
+
+.rey-message {
+    max-width: 88%;
+
+    margin-bottom: 13px;
+
+    padding: 12px 14px;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+}
+
+.rey-message.bot {
+    background: #151515;
+
+    border-left: 2px solid #d4af37;
+
+    color: #d5d5d5;
+}
+
+.rey-message.user {
+    margin-left: auto;
+
+    background: #d4af37;
+
+    color: #080808;
+
+    font-weight: bold;
+}
+
+
+/* QUICK BUTTONS */
+
+.rey-quick {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-top: 13px;
+}
+
+.rey-quick button {
+    padding: 7px 9px;
+
+    border: 1px solid #4b4121;
+
+    background: transparent;
+
+    color: #d4af37;
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.rey-quick button:hover {
+    background: #d4af37;
+
     color: #080808;
 }
 
-.enter:hover span {
+
+/* INPUT */
+
+.rey-input-area {
+    display: flex;
+
+    padding: 11px;
+
+    background: #111;
+
+    border-top: 1px solid #332b17;
+}
+
+#rey-input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 12px;
+
+    border: 1px solid #302d24;
+
+    outline: none;
+
+    background: #181818;
+
+    color: white;
+
+    font-size: 12px;
+}
+
+#rey-input:focus {
+    border-color: #d4af37;
+}
+
+#rey-send {
+    width: 48px;
+
+    margin-left: 7px;
+
+    border: 1px solid #d4af37;
+
+    background: #d4af37;
+
     color: #080808;
-    transform: translateX(6px);
+
+    font-weight: bold;
+
+    cursor: pointer;
 }
 
-/* =========================
-   SIDE TEXT
-========================= */
 
-.side-text {
-    position: absolute;
-    right: 5%;
-    bottom: 70px;
-    z-index: 2;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    color: #756f64;
-    font-size: 10px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-}
-
-/* =========================
-   GOLD DETAIL
-========================= */
-
-.gold-line {
-    position: absolute;
-    right: 9%;
-    bottom: 8%;
-    width: 120px;
-    height: 1px;
-    background: #caa75b;
-}
-
-/* =========================
-   INTRO ANIMATION
-========================= */
-
-.cover-content {
-    animation: rise 1.2s ease forwards;
-}
-
-.topbar {
-    animation: fade 1s ease forwards;
-}
-
-@keyframes rise {
-    from {
-        opacity: 0;
-        transform: translateY(45px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-/* =========================
+/* ==============================
    MOBILE
-========================= */
+============================== */
 
 @media (max-width: 700px) {
 
-    .topbar {
-        padding: 24px 7%;
+    nav {
+        padding: 18px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
     }
 
-    .brand {
-        font-size: 12px;
-        letter-spacing: 3px;
+    .nav-links {
+        gap: 17px;
     }
 
-    .cover-content {
-        width: 82%;
-        padding-top: 100px;
+    .hero {
+        padding: 130px 25px 80px;
     }
 
-    h1 {
-        font-size: clamp(55px, 18vw, 100px);
-        letter-spacing: -4px;
+    .hero h1 {
+        font-size: 65px;
+
+        letter-spacing: -3px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
     }
 
     .statement {
-        font-size: 15px;
-        margin-top: 35px;
+        padding: 80px 25px;
     }
 
-    .enter {
-        margin-top: 35px;
+    .growth {
+        padding: 80px 0;
     }
 
-    .side-text {
-        display: none;
+    footer {
+        flex-direction: column;
+
+        align-items: flex-start;
     }
 
-    .gold-line {
-        right: 8%;
-        bottom: 5%;
-        width: 70px;
+    #rey-ai-button {
+        right: 16px;
+        bottom: 16px;
     }
+
+    #rey-ai-window {
+        right: 15px;
+        bottom: 75px;
+
+        height: 500px;
+    }
+
 }
+
 </style>
 
 </head>
 
 <body>
 
-<section class="cover">
+<!-- ==============================
+     NAVIGATION
+============================== -->
+
+<nav>
 
 ```
-<div class="topbar">
-
-    <div class="brand">
-        REY<span>WORLD</span> GROUP
-    </div>
-
-    <div class="menu">
-        ⋮
-    </div>
-
+<div class="logo">
+    REY<span>WORLD</span>
 </div>
 
+<div class="nav-links">
 
-<div class="cover-content">
+    <a href="about.html">
+        About
+    </a>
 
-    <div class="eyebrow">
-        Building Vision. Creating Legacy.
-    </div>
+    <a href="businesses.html">
+        Businesses
+    </a>
 
-    <h1>
-        REY
-        <span>WORLD</span>
-    </h1>
-
-    <p class="statement">
-        A growing portfolio built around
-        <strong>vision, creativity and opportunity.</strong>
-        From practical businesses to creative ventures,
-        REYWORLD GROUP brings different ideas together
-        under one growing identity.
-    </p>
-
-    <a href="about.html" class="enter">
-        Enter the world
-        <span>→</span>
+    <a href="contact.html">
+        Contact
     </a>
 
 </div>
+```
 
+</nav>
 
-<div class="side-text">
-    Cape Town · South Africa · Est. 2026
+<!-- ==============================
+     HERO
+============================== -->
+
+<section class="hero">
+
+```
+<div class="hero-content">
+
+    <div class="eyebrow">
+        REYWORLD GROUP
+    </div>
+
+    <h1>
+        REY<span>WORLD</span>
+    </h1>
+
+    <p class="hero-subtitle">
+        Building Vision. Creating Legacy.
+    </p>
+
+    <a
+        href="about.html"
+        class="hero-button"
+    >
+        ENTER THE WORLD →
+    </a>
+
 </div>
-
-<div class="gold-line"></div>
 ```
 
 </section>
+
+<!-- ==============================
+     STATEMENT
+============================== -->
+
+<section class="statement">
+
+```
+<p>
+    A growing world of
+    <span>business</span>,
+    creativity and ambition —
+    built to become something bigger.
+</p>
+```
+
+</section>
+
+<!-- ==============================
+     GROWTH
+============================== -->
+
+<section class="growth">
+
+```
+<div class="growth-label">
+    The journey continues
+</div>
+
+<h2>
+    This is not<br>
+    the final form.
+</h2>
+
+<p>
+    REYWORLD GROUP brings different ventures together
+    under one identity while giving each one room to
+    develop, grow and create its own legacy.
+</p>
+
+<a
+    href="businesses.html"
+    class="growth-link"
+>
+    EXPLORE THE BUSINESSES →
+</a>
+```
+
+</section>
+
+<!-- ==============================
+     FOOTER
+============================== -->
+
+<footer>
+
+```
+<div class="footer-brand">
+    REYWORLD GROUP
+</div>
+
+<p>
+    Building Vision. Creating Legacy.
+</p>
+
+<p>
+    © 2026 REYWORLD GROUP
+</p>
+```
+
+</footer>
+
+<!-- ==============================
+     REY AI BUTTON
+============================== -->
+
+<button id="rey-ai-button">
+    ✦ ASK REY
+</button>
+
+<!-- ==============================
+     REY AI WINDOW
+============================== -->
+
+<div id="rey-ai-window">
+
+```
+<div class="rey-header">
+
+    <div class="rey-brand">
+
+        <div class="rey-symbol">
+            R
+        </div>
+
+        <div>
+
+            <div class="rey-title">
+                REY AI
+            </div>
+
+            <div class="rey-status">
+                REYWORLD GROUP ASSISTANT
+            </div>
+
+        </div>
+
+    </div>
+
+    <button id="rey-close">
+        ×
+    </button>
+
+</div>
+
+
+<div id="rey-messages">
+
+    <div class="rey-message bot">
+
+        👋🏽 Hey! I'm <strong>REY AI</strong>.
+
+        <br><br>
+
+        Ask me anything about REYWORLD GROUP
+        or one of the businesses in the portfolio.
+
+        <div class="rey-quick">
+
+            <button onclick="reyQuick('What is REYWORLD GROUP?')">
+                REYWORLD
+            </button>
+
+            <button onclick="reyQuick('What businesses are part of REYWORLD?')">
+                Businesses
+            </button>
+
+            <button onclick="reyQuick('What does Magma Pools do?')">
+                Magma Pools
+            </button>
+
+            <button onclick="reyQuick('Tell me about Colmad Auto.')">
+                Colmad Auto
+            </button>
+
+            <button onclick="reyQuick('What cars are available?')">
+                Auto Sales
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="rey-input-area">
+
+    <input
+        id="rey-input"
+        type="text"
+        placeholder="Ask about REYWORLD..."
+        autocomplete="off"
+    >
+
+    <button id="rey-send">
+        →
+    </button>
+
+</div>
+```
+
+</div>
+
+<!-- ==============================
+     REY AI JAVASCRIPT
+============================== -->
+
+<script>
+
+
+/* ==============================
+   REY AI KNOWLEDGE
+============================== */
+
+const reyKnowledge = {
+
+    reyworld: `
+        REYWORLD GROUP is a growing portfolio of businesses
+        and ventures.
+
+        Its slogan is "Building Vision. Creating Legacy."
+
+        REYWORLD brings different ventures together under one
+        identity while allowing each business to maintain its
+        own identity.
+    `,
+
+
+    businesses: `
+        REYWORLD GROUP currently features:
+
+        Tony & Brian Projects,
+        Magma Pools,
+        Colmad Auto,
+        Auto Sales,
+        MOB Records
+        and Slatt Clothing.
+
+        The portfolio is growing and additional ventures may
+        be introduced in the future.
+    `,
+
+
+    tony: `
+        Tony & Brian Projects is a registered construction
+        company with more than 20 years of experience in
+        the building industry.
+
+        Services include house renovations, shop renovations,
+        building projects, construction and development,
+        and renovation projects.
+
+        Address:
+        60 North Road, Table View, 7441.
+
+        Areas:
+        Milnerton, Groot Constantia, Cape Town and Durbanville.
+
+        Phone:
+        084 783 3719.
+
+        Email:
+        brianmhondoro@gmail.com.
+    `,
+
+
+    magma: `
+        Magma Pools provides:
+
+        Pool Construction,
+        Pool Installation,
+        Pool Cleaning,
+        Pool Maintenance
+        and Water Features.
+
+        Phone:
+        084 651 8219.
+
+        Email:
+        Magmapools8@gmail.com.
+
+        Tagline:
+        "Built to enjoy. Maintained to last."
+    `,
+
+
+    colmad: `
+        Colmad Auto is an automotive business based in
+        Killarney Gardens, Cape Town.
+
+        Phone:
+        084 419 5749.
+
+        WhatsApp:
+        084 419 5749.
+
+        Tagline:
+        "Quality in every detail."
+    `,
+
+
+    autosales: `
+        Auto Sales currently features:
+
+        2010 Chevrolet Aveo Sedan 1.6 LS Manual —
+        R45,000.
+
+        2016 BMW 320i M Sport LCI (B48) —
+        R200,000.
+
+        2012 VW Polo Sedan 1.6 TDI Manual —
+        R95,000.
+
+        Prices are slightly negotiable.
+
+        Buyers should contact the seller to confirm
+        current availability.
+    `,
+
+
+    mob: `
+        MOB Records is the music side of REYWORLD GROUP.
+
+        Its tagline is:
+        "Music. Vision. Culture."
+    `,
+
+
+    slatt: `
+        Slatt Clothing is the clothing and fashion side
+        of REYWORLD GROUP.
+
+        Its tagline is:
+        "Wear the vision."
+    `
+
+};
+
+
+/* ==============================
+   ELEMENTS
+============================== */
+
+const reyButton =
+    document.getElementById("rey-ai-button");
+
+const reyWindow =
+    document.getElementById("rey-ai-window");
+
+const reyClose =
+    document.getElementById("rey-close");
+
+const reyInput =
+    document.getElementById("rey-input");
+
+const reySend =
+    document.getElementById("rey-send");
+
+const reyMessages =
+    document.getElementById("rey-messages");
+
+
+/* ==============================
+   OPEN CHAT
+============================== */
+
+reyButton.addEventListener("click", function() {
+
+    reyWindow.style.display = "flex";
+
+    reyInput.focus();
+
+});
+
+
+/* ==============================
+   CLOSE CHAT
+============================== */
+
+reyClose.addEventListener("click", function() {
+
+    reyWindow.style.display = "none";
+
+});
+
+
+/* ==============================
+   ADD MESSAGE
+============================== */
+
+function reyAddMessage(text, type) {
+
+    const message =
+        document.createElement("div");
+
+    message.className =
+        "rey-message " + type;
+
+    message.innerHTML =
+        text;
+
+    reyMessages.appendChild(message);
+
+    reyMessages.scrollTop =
+        reyMessages.scrollHeight;
+
+}
+
+
+/* ==============================
+   ANSWER QUESTIONS
+============================== */
+
+function reyAnswer(question) {
+
+    const q =
+        question.toLowerCase();
+
+
+    /* REYWORLD */
+
+    if (
+        q.includes("what is reyworld") ||
+        q.includes("what does reyworld") ||
+        q.includes("about reyworld") ||
+        q.includes("reyworld group")
+    ) {
+
+        return reyKnowledge.reyworld;
+
+    }
+
+
+    /* BUSINESS LIST */
+
+    if (
+        q.includes("businesses") ||
+        q.includes("companies") ||
+        q.includes("what businesses") ||
+        q.includes("which businesses")
+    ) {
+
+        return reyKnowledge.businesses;
+
+    }
+
+
+    /* TONY & BRIAN */
+
+    if (
+        q.includes("tony") ||
+        q.includes("brian") ||
+        q.includes("construction") ||
+        q.includes("renovation")
+    ) {
+
+        return reyKnowledge.tony;
+
+    }
+
+
+    /* MAGMA */
+
+    if (
+        q.includes("magma") ||
+        q.includes("pool") ||
+        q.includes("swimming pool")
+    ) {
+
+        return reyKnowledge.magma;
+
+    }
+
+
+    /* COLMAD */
+
+    if (
+        q.includes("colmad") ||
+        q.includes("automotive") ||
+        q.includes("auto workshop")
+    ) {
+
+        return reyKnowledge.colmad;
+
+    }
+
+
+    /* AUTO SALES */
+
+    if (
+        q.includes("auto sales") ||
+        q.includes("cars") ||
+        q.includes("car for sale") ||
+        q.includes("vehicle") ||
+        q.includes("bmw") ||
+        q.includes("polo") ||
+        q.includes("aveo")
+    ) {
+
+        return reyKnowledge.autosales;
+
+    }
+
+
+    /* MOB */
+
+    if (
+        q.includes("mob records") ||
+        q.includes("music") ||
+        q.includes("record label")
+    ) {
+
+        return reyKnowledge.mob;
+
+    }
+
+
+    /* SLATT */
+
+    if (
+        q.includes("slatt") ||
+        q.includes("clothing") ||
+        q.includes("fashion")
+    ) {
+
+        return reyKnowledge.slatt;
+
+    }
+
+
+    /* CONTACT */
+
+    if (
+        q.includes("contact") ||
+        q.includes("phone") ||
+        q.includes("number") ||
+        q.includes("whatsapp")
+    ) {
+
+        return `
+            You can find contact information on
+            the relevant REYWORLD business page.
+
+            Ask me which business you're looking for
+            and I'll give you the available details.
+        `;
+
+    }
+
+
+    /* GREETING */
+
+    if (
+        q.includes("hello") ||
+        q.includes("hi") ||
+        q.includes("hey")
+    ) {
+
+        return `
+            Heyyy 👋🏽
+
+            I'm REY AI.
+
+            Ask me anything about REYWORLD GROUP
+            or one of its businesses.
+        `;
+
+    }
+
+
+    /* UNKNOWN */
+
+    return `
+        I don't have that information yet. 🤍
+
+        Try asking me about:
+
+        REYWORLD GROUP,
+        Tony & Brian Projects,
+        Magma Pools,
+        Colmad Auto,
+        Auto Sales,
+        MOB Records
+        or Slatt Clothing.
+    `;
+
+}
+
+
+/* ==============================
+   SEND
+============================== */
+
+function reySendMessage() {
+
+    const question =
+        reyInput.value.trim();
+
+
+    if (!question) {
+        return;
+    }
+
+
+    reyAddMessage(
+        question,
+        "user"
+    );
+
+
+    reyInput.value = "";
+
+
+    setTimeout(function() {
+
+        const answer =
+            reyAnswer(question);
+
+        reyAddMessage(
+            answer,
+            "bot"
+        );
+
+    }, 300);
+
+}
+
+
+/* ==============================
+   QUICK QUESTIONS
+============================== */
+
+function reyQuick(question) {
+
+    reyAddMessage(
+        question,
+        "user"
+    );
+
+
+    setTimeout(function() {
+
+        const answer =
+            reyAnswer(question);
+
+        reyAddMessage(
+            answer,
+            "bot"
+        );
+
+    }, 300);
+
+}
+
+
+/* ==============================
+   SEND BUTTON
+============================== */
+
+reySend.addEventListener(
+    "click",
+    reySendMessage
+);
+
+
+/* ==============================
+   ENTER KEY
+============================== */
+
+reyInput.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Enter") {
+
+            reySendMessage();
+
+        }
+
+    }
+);
+
+</script>
 
 </body>
 </html>
