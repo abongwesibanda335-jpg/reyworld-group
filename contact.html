@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | REYWORLD GROUP</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #080808;
+    color: #f5f1e8;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 6%;
+
+    border-bottom: 1px solid #29251f;
+}
+
+.logo {
+    color: #c8a35a;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.logo span {
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #aaa59c;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #c8a35a;
+}
+
+main {
+    width: min(1100px, 90%);
+    margin: auto;
+    padding: 100px 0 120px;
+}
+
+.top-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #29251f;
+}
+
+.small {
+    color: #c8a35a;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 20px 0 0;
+
+    font-size: clamp(48px, 8vw, 86px);
+    line-height: 0.95;
+    letter-spacing: -3px;
+}
+
+.intro {
+    max-width: 620px;
+
+    margin: 55px 0 90px;
+
+    color: #aaa59c;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+}
+
+.column {
+    padding-top: 25px;
+
+    border-top: 1px solid #29251f;
+}
+
+.column h2 {
+    margin: 0 0 35px;
+
+    color: #fff;
+
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.item {
+    margin-bottom: 32px;
+}
+
+.item-name {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #777269;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.item a {
+    color: #e8e2d7;
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition: 0.3s;
+}
+
+.item a:hover {
+    color: #c8a35a;
+}
+
+.business-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 0;
+
+    color: #ddd7cc;
+    text-decoration: none;
+
+    border-bottom: 1px solid #29251f;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.business-link span {
+    color: #6f6a62;
+
+    transition: 0.3s;
+}
+
+.business-link:hover {
+    color: #c8a35a;
+}
+
+.business-link:hover span {
+    color: #c8a35a;
+    transform: translateX(5px);
+}
+
+.bottom {
+    margin-top: 110px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #29251f;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom p {
+    margin: 0;
+
+    color: #67625a;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.back {
+    color: #aaa59c;
+    text-decoration: none;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.back:hover {
+    color: #c8a35a;
+}
+
+@media (max-width: 750px) {
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    main {
+        padding: 65px 0 80px;
+    }
+
+    .top-line {
+        display: block;
+    }
+
+    h1 {
+        margin-top: 18px;
+        font-size: 54px;
+    }
+
+    .intro {
+        margin: 45px 0 65px;
+        font-size: 16px;
+    }
+
+    .columns {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        REY<span>WORLD</span>
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="businesses.html">Businesses</a>
+
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+</nav>
+
+
+<main>
+
+    <div class="top-line">
+
+        <div>
+
+            <div class="small">
+                REYWORLD GROUP
+            </div>
+
+            <h1>
+                Contact
+            </h1>
+
+        </div>
+
+    </div>
+
+
+    <p class="intro">
+        For business enquiries, collaborations and opportunities,
+        connect with REYWORLD GROUP or reach out directly to the
+        businesses within the portfolio.
+    </p>
+
+
+    <div class="columns">
+
+
+        <!-- REYWORLD -->
+
+        <section class="column">
+
+            <h2>
+                REYWORLD GROUP
+            </h2>
+
+            <div class="item">
+
+                <span class="item-name">
+                    Instagram
+                </span>
+
+                <a
+                    href="https://www.instagram.com/_reyworldgroup.co.za?stkn=MXBodjloaDAzNmpoOQ=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    @_reyworldgroup.co.za
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- BUSINESS CONTACTS -->
+
+        <section class="column">
+
+            <h2>
+                Portfolio
+            </h2>
+
+
+            <a
+                class="business-link"
+                href="https://www.instagram.com/tony.brian_projects?stkn=MTBwaWh6aGRqNWE4bg=="
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Tony & Brian Projects
+
+                <span>Instagram ↗</span>
+
+            </a>
+
+
+            <a
+                class="business-link"
+                href="https://www.instagram.com/colmad_auto_?stkn=NmlsM3BsMjBiNmJn"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Colmad Auto
+
+                <span>Instagram ↗</span>
+
+            </a>
+
+
+            <a
+                class="business-link"
+                href="https://www.instagram.com/slatt_uncover?stkn=NzVpbmFrc3vueWto"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Slatt Clothing
+
+                <span>Instagram ↗</span>
+
+            </a>
+
+        </section>
+
+    </div>
+
+
+    <div class="bottom">
+
+        <p>
+            Building Vision. Creating Legacy.
+        </p>
+
+        <a
+            href="index.html"
+            class="back"
+        >
+            ← REYWORLD GROUP
+        </a>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>
